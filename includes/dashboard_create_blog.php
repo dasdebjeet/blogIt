@@ -61,11 +61,11 @@
                 <div class="label_text">Tags</div>
                 <div class="label_icon flexc">
                     <i class="fal fa-check">
-                        <div class="label_tooltip">character limit 100</div>
+                        <div class="label_tooltip">tag limit 10</div>
                     </i>
                 </div>
             </div>
-            <div class="blog_inp create_blog_tags_con flexc" style="flex-wrap:wrap">
+            <div class="create_blog_tags_con flexc" style="flex-wrap:wrap">
                 <input class="create_blog_tags_inp" type="text">
             </div>
             <div class="blog_inp_charCount flexc" data_tag_len="10">10</div>

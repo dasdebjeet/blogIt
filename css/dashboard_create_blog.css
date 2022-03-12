@@ -68,8 +68,8 @@
     right: 0;
     background: #e5e5e5;
     padding: 5px 10px;
-    width: 150px;
     color: #000000 !important;
+    white-space: nowrap;
     text-align: center;
     font-size: 13px;
     border-radius: 5px;
@@ -90,7 +90,8 @@
 }
 
 
-.blog_inp_con>.blog_inp {
+.blog_inp_con>.blog_inp,
+.create_blog_tags_con {
     /* position: relative; */
     background: #ffffff;
     padding: 8px;
@@ -137,7 +138,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #e1e1e1;
+    background: #cecece;
     padding: 2px;
     margin: 5px 5px 5px 0;
     font-size: 14px;

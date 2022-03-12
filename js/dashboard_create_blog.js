@@ -1,12 +1,12 @@
 $(document).ready(() => {
 
-    var max_len_checker = (el, val, len, e) => {
-        $(el).next().text(val)
+    var max_len_checker = (el, len, limit, e) => {
+        $(el).next().text(len)
         $(el).next().addClass("active_blog_inp_charCount")
         $(el).prev().children(".label_icon").addClass("active_label_icon")
-        if (val >= len && !(e.keyCode == 8)) {
-            $(el).prev().children(".label_icon").children(".fa-check").addClass("fa-exclamation-circle").css("color", "red")
-        } else if (val == 0) {
+        if (len >= limit && !(e.keyCode == 8)) {
+            $(el).prev().children(".label_icon").children(".fa-check").addClass("fa-exclamation-circle").css("color", "#ff9c9c")
+        } else if (len == 0) {
             $(el).next().removeClass("active_blog_inp_charCount")
             $(el).prev().children(".label_icon").removeClass("active_label_icon")
             $(el).prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
@@ -59,42 +59,35 @@ $(document).ready(() => {
 
     var backpress_key = 0
 
+    var update_tags_limit = (el, len, limit) => {
+        $(el).next().text(len)
+        $(el).next().addClass("active_blog_inp_charCount")
+        $(el).prev().children(".label_icon").addClass("active_label_icon")
+        if (len >= limit) {
+            $(el).prev().children(".label_icon").children(".fa-check").addClass("fa-exclamation-circle").css("color", "#ff9c9c")
+        } else if (len == 0) {
+            $(el).next().removeClass("active_blog_inp_charCount")
+            $(el).prev().children(".label_icon").removeClass("active_label_icon")
+            $(el).prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
+        } else {
+            $(el).prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
+        }
+    }
+
     $(".create_blog_tags_inp").on('keydown', (e) => { // main function of tags by key events
         var inp_tag_val = $(".create_blog_tags_inp").val();
-
-
         var max_len = ($(".create_blog_tags_con").next().attr("data_tag_len"))
-        // console.log(arr_tags.length)
-        // $(".create_blog_tags_con").next().addClass("active_blog_inp_charCount")
-        // $(".create_blog_tags_con").next().text(arr_tags.length)
-        // console.log(inp_tag_val.length)
 
-        var arr_tags_len = arr_tags.length
-        var odd_tags_len = 0
-
-
-        // console.log(arr_tags_len, " ", odd_tags_len)
-
+        // update_tags_limit(".create_blog_tags_con", arr_tags.length, max_len)
         if (arr_tags.length < max_len) {
             if (e.key == "Enter" && inp_tag_val != "") {
                 arr_tags.push(inp_tag_val);
                 addTags();
-                $(".create_blog_tags_inp").val(""); //make the input value empty
-
-                $(".create_blog_tags_con").next().addClass("active_blog_inp_charCount")
-
-                $(".create_blog_tags_con").next().text(arr_tags.length)
-
-                // if (arr_tags_len != odd_tags_len) {
-                // max_len_checker(".create_blog_tags_con", arr_tags.length, max_len, e)
-                // odd_tags_len = arr_tags_len
-                // }
-
-                // maxlimt(".cr_blog_tags_con", arr_tags.length, maxlenght_tags);
-
-
-                // $(blog_cinp).next().addClass("active_blog_inp_charCount")
+                $(".create_blog_tags_inp").val("")
+                update_tags_limit(".create_blog_tags_con", arr_tags.length, max_len)
             }
+        } else {
+            update_tags_limit(".create_blog_tags_con", arr_tags.length, max_len)
         }
 
         if (e.keyCode == 8 && inp_tag_val == 0) {
@@ -103,26 +96,27 @@ $(document).ready(() => {
                 arr_tags.pop(); // method 1 to delete element from arr of tags(arr_tags)
                 // arr_tags = [...arr_tags.slice(0, index), ...arr_tags.slice(index + 1)];  method 2 to delete element from arr of tags(arr_tags)
                 addTags()
+                update_tags_limit(".create_blog_tags_con", arr_tags.length, max_len)
                 backpress_key = 0
             }
             backpress_key += 1;
         }
-    });
+    })
 
     var delete_tags = (e) => { // fn to delete tags
+        var max_len = ($(".create_blog_tags_con").next().attr("data_tag_len"))
         var value = e.target.getAttribute('data-item');
         var index = arr_tags.indexOf(value);
         arr_tags.splice(index, 1); // method 1 to delete element from arr of tags(arr_tags)
-        // arr_tags = [...arr_tags.slice(0, index), ...arr_tags.slice(index + 1)];  method 2 to delete element from arr of tags(arr_tags)
         addTags();
-        // maxlimt(".cr_blog_tags_con", arr_tags.length, maxlenght_tags);
-    };
+        update_tags_limit(".create_blog_tags_con", arr_tags.length, max_len)
+    }
 
     document.addEventListener('click', (e) => { //delete tags on click eventlistener
         if (e.target.id == "tag_remove_btn") {
             delete_tags(e);
-        };
-    });
+        }
+    })
 
 
 

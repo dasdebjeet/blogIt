@@ -71,7 +71,7 @@
 .toolbar_btn:hover:after {
     background: var(--themec);
     position: absolute;
-    top: -50px;
+    top: -40px;
     content: attr(tooltip);
     padding: 5px 15px;
     font-size: 13px;
@@ -85,7 +85,7 @@
 
 .toolbar_btn:hover:before {
     position: absolute;
-    top: -25px;
+    top: -15px;
     content: '';
     width: 0;
     height: 0;
@@ -99,7 +99,7 @@
 .insertImg_btn_dropdown {
     display: none;
     position: absolute;
-    bottom: -80px;
+    bottom: -100px;
     background: #fff;
     width: 150px;
     /* height: 100px; */
