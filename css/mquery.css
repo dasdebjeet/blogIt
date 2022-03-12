@@ -1,0 +1,211 @@
+/* Media Query */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width:481px),
+screen and (max-width: 600px) {
+    .sideBar_mobile_con {
+        display: block !important;
+    }
+
+    .navbar_menu_modal_con {
+        display: none;
+    }
+
+    /* login_signup modal */
+    .login_modal_wrap,
+    .signup_modal_wrap {
+        padding: 100px 20px;
+        width: 100% !important;
+        min-height: 100vh !important;
+    }
+
+    .login_modal_wrap>.member_loginSignup,
+    .signup_modal_wrap>.member_loginSignup {
+        bottom: 100px;
+    }
+
+    /* navbar */
+    .nav_space {
+        width: 8px;
+    }
+
+    .navSearch {
+        margin: 0 10px;
+    }
+
+    .navlogin_dropdown_con {
+        display: none;
+    }
+
+    /* header */
+    .header {
+        padding: 20px 18px;
+    }
+
+    .header>.header_Social_link {
+        padding: 50px 0px;
+        width: 30px !important;
+    }
+
+    .follow_tag {
+        left: 30px
+    }
+
+    .header>.websiteTitle {
+        display: flex;
+        margin-left: 50px;
+        padding: 100px 0 0;
+        width: calc(100% - 80px);
+    }
+
+    .header>.websiteTitle>img {
+        width: 100%;
+    }
+
+    .lastestBlog_feed {
+        display: none;
+    }
+
+    /* catagories */
+    .blog_postsPrev_container {
+        padding: 20px 10px;
+    }
+
+    .catagories_btn {
+        width: 100%;
+    }
+
+    .catagories_active {
+        display: none;
+    }
+
+    .catagories_table>div>div {
+        width: 30% !important;
+    }
+
+    .catagories_table ul li:after {
+        display: none;
+    }
+
+
+    /* main page blog posts [.blog_postsPrev_container] */
+
+    .blog_postsPrev {
+        flex-direction: column;
+        width: 400px !important;
+        height: 380px;
+    }
+
+    .blogP_size_big {
+        height: 100% !important;
+    }
+
+    .blogP_size_smallBgC>.blog_postPrev_content>.blog_postPrev_tag {
+        top: -240px;
+    }
+
+    /* reset password & update password page */
+    .forgot_password_wrap,
+    .update_password_wrap {
+        /* min-height: 100%; */
+        align-items: flex-start !important;
+    }
+
+    .forgot_password_con,
+    .update_password_con {
+        flex-direction: column;
+    }
+
+    .forgot_password_poster,
+    .update_password_poster {
+        width: 100% !important;
+        min-height: 250px !important;
+        padding: 0px 30px;
+    }
+
+    .forgot_password_poster img,
+    .update_password_poster img {
+        width: 100%;
+    }
+
+    .forgot_password_poster>.qoute,
+    .update_password_poster>.qoute {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .forgot_password_form_con,
+    .update_password_form_con {
+        width: 100% !important;
+        min-height: calc(100vh - 250px) !important;
+        /* height: 500px !important; */
+        padding: 50px 20px;
+    }
+
+    /* login & signup page */
+    .login_wrapper,
+    .signup_wrapper {
+        flex-direction: column;
+    }
+
+    .login_poster,
+    .signup_poster {
+        width: 100%;
+        min-height: 250px !important;
+        padding: 0px 50px;
+    }
+
+    .login_poster img,
+    .signup_poster img {
+        width: 100%;
+    }
+
+    .login_poster>.qoute,
+    .signup_poster>.qoute {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .login_form_con,
+    .signup_form_con {
+        width: 100%;
+        min-height: calc(100vh - 250px);
+        padding: 30px 20px;
+    }
+
+    .login_form_con>.member_loginSignup,
+    .signup_form_con>.member_loginSignup {
+        bottom: 30px;
+        transform: translate(-50%, 0%);
+    }
+
+
+    /* dashboard page */
+    .dashboard_sidebar {
+        display: none;
+    }
+
+    .dashboard_con {
+        margin-left: 0;
+    }
+
+    .dashboard_searchbar {
+        min-width: 200px;
+    }
+}
+
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+/* Media Query */

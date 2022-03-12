@@ -1,0 +1,131 @@
+.login_wrapper,
+.signup_wrapper {
+    min-height: 100vh;
+}
+
+.login_poster,
+.signup_poster {
+    flex-direction: column;
+    background: url('../assests/login_posterImg.jpg') center no-repeat, #000000aa;
+    background-blend-mode: multiply;
+    background-size: cover;
+    width: calc(100% - 450px);
+    min-height: 100vh;
+    padding: 50px;
+}
+
+.signup_poster {
+    background: url('../assests/signup_posterImg.jpg') center no-repeat, #000000aa;
+}
+
+.login_poster>.siteTitle,
+.signup_poster>.siteTitle {
+    color: var(--themec);
+    font-family: 'Oswald', sans-serif;
+    font-size: 10em;
+    text-shadow: -2px 4px 8px #000000;
+
+}
+
+.login_poster>.qoute,
+.signup_poster>.qoute {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.login_poster>.qoute>i,
+.signup_poster>.qoute>i {
+    color: var(--themec);
+    font-size: 10px;
+    vertical-align: super;
+}
+
+.login_form_con,
+.signup_form_con {
+    /* background: #f4f7f6; */
+    position: relative;
+    padding: 50px;
+    width: 450px;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+
+.login_title,
+.signup_title {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.login_error,
+.signup_error {
+    margin: 10px 0;
+    height: 16px;
+    color: #d14836;
+    font-size: 13px;
+}
+
+.login_form,
+.signup_form {
+    margin: 10px 0 30px;
+}
+
+.login_form>input,
+.signup_form>input {
+    background: #ffffff;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #dbe0df;
+}
+
+.login_form>input::placeholder,
+.signup_form>input::placeholder {
+    color: #cdcdcd;
+}
+
+.login_form>input:focus,
+.signup_form>input:focus {
+    border: 1px solid var(--themec);
+    /* box-shadow: 0 0 2px var(--themec); */
+}
+
+.login_form>button,
+.signup_form>button {
+    background: #000000;
+    width: 100%;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}
+
+.login_form>button:hover,
+.signup_form>button:hover {
+    background: var(--themec);
+}
+
+.forgot_pass {
+    color: var(--themec);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login_form_con>.member_loginSignup,
+.signup_form_con>.member_loginSignup {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 350px;
+    transform: translate(-50%, 0%);
+}
+
+.toggle_btn {
+    font-weight: 600;
+    cursor: pointer;
+}

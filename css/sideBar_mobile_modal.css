@@ -1,0 +1,75 @@
+.sideBar_mobile_con {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    user-select: none;
+    background: #000000bf;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: space-around;
+    z-index: 9999999;
+
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+}
+
+.sideBar_mobile {
+    position: relative;
+    background: #f1f1f1;
+    width: 300px;
+    height: 100vh;
+    padding: 70px 0;
+
+    overflow-y: scroll;
+}
+
+.sideBar_mobile_closeBtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    justify-content: space-between;
+    padding: 20px 30px;
+    width: 125px;
+    cursor: pointer;
+}
+
+
+.sideBar_mobile_menu {
+    background: #f1f1f1;
+    justify-content: space-between;
+    padding: 20px 30px;
+    font-weight: 600;
+    border-bottom: 1px solid #ebebeb;
+    cursor: pointer;
+
+    transition: all .2s ease-in-out;
+}
+
+.sideBar_mobile_menu:hover {
+    background: #ffffff;
+}
+
+.sideBar_userProfile {
+    display: none;
+}
+
+.sideBar_login_dropdown_con {
+    display: none;
+    background: #ffffff;
+}
+
+.sideBar_login_dropdown_menu {
+    background: #ffffff;
+    justify-content: space-between;
+    padding: 20px 30px;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px solid #ebebeb;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.sideBar_userProfile_active {
+    background: #f1f1f1 !important;
+}

@@ -1,0 +1,252 @@
+.navbar {
+    user-select: none;
+    position: fixed;
+    justify-content: space-between;
+    /* background: #000000; */
+    background: transparent;
+    color: #ffffff;
+    width: 100%;
+    height: 70px;
+    /* padding: 0 20px; */
+    transition: all ease-in-out .2s;
+    z-index: 99999;
+}
+
+.navWrap {
+    height: 100%;
+}
+
+.nav_space {
+    width: 20px;
+}
+
+.nav_btn {
+    position: relative;
+    padding: 5px 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    /* border: 1px red solid; */
+}
+
+.navNotifiy_dot {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background: var(--themec);
+    width: 8px;
+    height: 8px;
+    border-radius: 50px;
+}
+
+.siteTL {
+    width: 80px;
+    font-weight: 600;
+}
+
+.navMenu_btn {
+    position: relative;
+    width: 25px;
+    height: 16px;
+    padding: 5px;
+    transition: all ease-in-out .2s;
+}
+
+.rec {
+    position: absolute;
+    background: #ffffff;
+    height: 1px;
+    transition: all ease-in-out .2s;
+}
+
+.rec_small {
+    width: 50%;
+}
+
+.rec_top {
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+}
+
+.rec_middle {
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.rec_bottom {
+    bottom: 0;
+    right: 0;
+    transform-origin: bottom right;
+}
+
+.navSearch {
+    margin: 0 70px;
+}
+
+.navLogin_btn_con {
+    padding: 0;
+    width: auto;
+}
+
+.navLogin_btn {
+    position: relative;
+    padding: 5px 20px;
+    /* width: 100px !important; */
+    height: 30px;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.navLogin_btn>span {
+    z-index: 1;
+}
+
+.water {
+    position: absolute;
+    /* left: -10px; */
+    background: var(--themec);
+    width: 0px;
+    height: 0px;
+    border-radius: 50px;
+    transition: all ease-in-out .2s;
+}
+
+.navLogin_btn:hover {
+    border: 1px solid var(--themec);
+}
+
+.navLogin_btn:hover .water {
+    width: 1px;
+    height: 1px;
+    transform: scale(100);
+}
+
+.nav_userProfile {
+    position: relative;
+    /* background: #000000; */
+    height: 100%;
+    /* border-radius: 50px; */
+}
+
+.nav_userProfile_img {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.nav_userProfile:hover .navlogin_dropdown_con {
+    /* display: block; */
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.navlogin_dropdown_con {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 80px;
+    right: -20px;
+    background: #f1f1f1;
+    /* width: 350px; */
+    /* height: 200px; */
+    /* padding: 15px 0px; */
+    /* border-bottom: 2px solid var(--themec); */
+    box-shadow: 0 0 10px #000000b8;
+    transition: all .3s ease-in-out;
+}
+
+.navlogin_dropdown_user {
+    flex-direction: column;
+    justify-content: flex-start;
+    background: var(--themec);
+    width: 200px;
+    padding: 10px 15px;
+    color: #ffffff;
+}
+
+.navlogin_dropdown_user>.user_name {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.navlogin_dropdown_user>.user_role {
+    width: 100%;
+    font-size: 12px;
+}
+
+.navlogin_menu {
+    justify-content: flex-start;
+    width: 200px;
+    height: 40px;
+    padding: 5px 15px;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.navlogin_menu:hover {
+    background: #ffffff;
+}
+
+.navlogin_dropdown_con::before {
+    position: absolute;
+    top: -10px;
+    right: 24px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--themec);
+}
+
+.nav_searchBar_con {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.nav_searchBar_form {
+    width: 100%;
+    height: 100%;
+}
+
+.nav_searchBar_inp {
+    background: var(--lightgrey);
+    padding: 10px 20px;
+    width: calc(100% - 70px);
+    height: 100%;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.nav_searchBar_inp::placeholder {
+    color: #cdcdcd;
+    /* font-weight: 600; */
+    text-transform: uppercase;
+}
+
+.nav_searchBar_closeBtn {
+    background: var(--themec);
+    width: 70px;
+    height: 70px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.nav_searchBar_closeBtn:hover {
+    opacity: 0.8;
+}

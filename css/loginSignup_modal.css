@@ -1,0 +1,145 @@
+.loginSignup_modal_con {
+    position: fixed;
+    background: #000000bf;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 9999999;
+
+    transition: 0.2s;
+    animation-name: zoom;
+    animation-duration: 0.2s;
+}
+
+@keyframes zoom {
+    from {
+        /* transform: scale(0.8); */
+        opacity: 0;
+    }
+
+    to {
+        /* transform: scale(1); */
+        opacity: 1;
+    }
+}
+
+
+.loginSignup_modal_closeBtn {
+    position: absolute;
+    background: var(--themec);
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    z-index: 1;
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.loginSignup_modal_closeBtn:hover {
+    opacity: 0.8;
+}
+
+.login_modal_wrap,
+.signup_modal_wrap {
+    position: relative;
+    background: #ffffff;
+    padding: 50px;
+    width: 450px;
+    min-height: 550px;
+    /* min-height: 100vh; */
+    overflow-y: auto;
+}
+
+/* .login_modal_wrap {
+} */
+
+.signup_modal_wrap {
+    display: none;
+}
+
+.login_modal_title,
+.signup_modal_title {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.login_modal_error,
+.signup_modal_error {
+    margin: 10px 0;
+    height: 16px;
+    color: #d14836;
+    font-size: 13px;
+}
+
+.login_modal_form,
+.signup_modal_form {
+    margin: 10px 0 30px;
+}
+
+.login_modal_form>input,
+.signup_modal_form>input {
+    background: #ffffff;
+    margin-bottom: 20px;
+    padding: 15px 10px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #dbe0df;
+}
+
+.login_modal_form>input::placeholder,
+.signup_modal_form>input::placeholder {
+    color: #cdcdcd;
+}
+
+.login_modal_form>input:focus,
+.signup_modal_form>input:focus {
+    border: 1px solid var(--themec);
+    /* box-shadow: 0 0 2px var(--themec); */
+}
+
+.login_modal_form>button,
+.signup_modal_form>button {
+    background: #000000;
+    width: 100%;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+}
+
+.login_modal_form>button:hover,
+.signup_modal_form>button:hover {
+    background: var(--themec);
+}
+
+.forgot_pass {
+    color: var(--themec);
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+.login_modal_wrap>.member_loginSignup,
+.signup_modal_wrap>.member_loginSignup {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 350px;
+    transform: translate(-50%, 0%);
+}
+
+.member_loginSignup>span {
+    font-weight: 600;
+    cursor: pointer;
+}

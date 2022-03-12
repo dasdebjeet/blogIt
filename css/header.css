@@ -1,0 +1,89 @@
+.header {
+    user-select: none;
+    justify-content: flex-start;
+    background: #000000;
+    color: #ffffff;
+    height: 400px;
+}
+
+.header>.header_Social_link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 60px 20px;
+    width: 90px;
+    height: 100%;
+    font-size: 0.8em;
+}
+
+.follow_tag {
+    position: relative;
+    top: -108px;
+    left: 50px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.follow_tag:before {
+    position: absolute;
+    content: "";
+    background: #ffffff;
+    width: 1px;
+    height: 50px;
+    transform: translateY(200%);
+}
+
+.socialM_icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+.socialM_icon:hover {
+    color: var(--themec);
+}
+
+.header>.websiteTitle {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: calc(100% - 450px);
+    height: 100%;
+    padding: 30px 60px;
+    color: var(--themec);
+    font-family: 'Oswald', sans-serif;
+}
+
+.header>.websiteTitle>img {
+    width: 80%;
+}
+
+.lastestBlog_feed {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background: url('../assests/lastest_feed.jpg') no-repeat center, #000000aa;
+    background-blend-mode: multiply;
+    background-size: cover;
+    width: 380px;
+    height: 100%;
+    padding: 80px 20px;
+    line-height: 18px;
+    /* border: 1px solid #ff3b1d; */
+
+}
+
+.lastestBlog_feed>p {
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 12.5px;
+}
