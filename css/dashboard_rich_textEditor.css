@@ -208,6 +208,7 @@
     display: none;
     background: #00060a;
     /* width: 35px; */
+    min-height: 250px;
     padding: 15px 10px;
     /* font-size: 15px; */
     text-align: right;

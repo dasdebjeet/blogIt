@@ -1,0 +1,150 @@
+// --------------------------------------
+    // create blog catagories and tags
+
+    var arr_catagories = [];
+    var arr_tags = [];
+
+    var blog_create_tags_con = document.querySelectorAll('.create_blog_tags_con')
+    for (const blog_ctag_con of blog_create_tags_con) {
+        blog_ctag_con.addEventListener("click", (e) => {
+            $(blog_ctag_con).children().focus()
+        })
+    }
+    // $(".create_blog_tags_con").click(() => { //fn to focus on the tags input elements
+    //     $(".create_blog_tags_inp").focus();
+    // });
+
+    var createTags = (el, tag_name) => { // prepend tags in frontend
+        $(el).parent().prepend("<div class='tags_format'><span style='padding: 0 5px;' >#" + tag_name + "</span><i id='tag_remove_btn' class='fal fa-times' data_item=" + tag_name + "></i></div>");
+    }
+
+    var resetTags = (el) => { //  reset tags are not working
+        el.parentNode.querySelectorAll(".tags_format").forEach((tag) => {
+            tag.parentElement.removeChild(tag);
+        });
+    }
+    var addTags = (el, arr) => { //function declaration to add tags
+        // console.log(el)
+        resetTags(el)
+        arr.slice().reverse().forEach((tag) => {
+            createTags(el, tag);
+        });
+    }
+
+    // var backpress = 0;
+    // var temp = 0;
+
+    var backpress_key = 0
+
+    var update_tags_limit = (el, len, limit) => {
+        $(el).next().text(len)
+        $(el).next().addClass("active_blog_inp_charCount")
+        $(el).prev().children(".label_icon").addClass("active_label_icon")
+        if (len >= limit) {
+            $(el).prev().children(".label_icon").children(".fa-check").addClass("fa-exclamation-circle").css("color", "#ff9c9c")
+        } else if (len == 0) {
+            $(el).next().removeClass("active_blog_inp_charCount")
+            $(el).prev().children(".label_icon").removeClass("active_label_icon")
+            $(el).prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
+        } else {
+            $(el).prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
+        }
+    }
+
+    var blog_create_tags_inp = document.querySelectorAll('.create_blog_tags_inp')
+    for (const blog_ctags_inp of blog_create_tags_inp) {
+        blog_ctags_inp.addEventListener("keydown", (e) => {
+            var data_content = ($(blog_ctags_inp).attr("data_content"))
+            var inp_tag_val = $(blog_ctags_inp).val();
+            var max_len = ($(blog_ctags_inp).parent().next().attr("data_tag_len"))
+
+            var arr = (data_content == "blog_catagories") ? arr_catagories : arr_tags
+
+
+            if (arr.length < max_len) {
+                if (e.key == "Enter" && inp_tag_val != "") {
+                    arr.push(inp_tag_val);
+                    addTags(blog_ctags_inp, arr);
+                    $(blog_ctags_inp).val("")
+                    // update_tags_limit(blog_ctags_inp, arr.length, max_len)
+                }
+            } else {
+                // update_tags_limit(".create_blog_tags_con", arr.length, max_len)
+            }
+
+            if (e.keyCode == 8 && inp_tag_val == 0) {
+                // console.log(backpress_key)
+                if (backpress_key == 2) {
+                    arr.pop(); // method 1 to delete element from arr of tags(arr_tags)
+                    addTags(blog_ctags_inp, arr)
+                    // update_tags_limit(".create_blog_tags_con", arr_tags.length, max_len)
+                    backpress_key = 0
+                }
+                backpress_key += 1;
+            }
+        })
+    }
+
+    // $(".create_blog_tags_inp").on('keydown', (e) => { // main function of tags by key events
+    //     var inp_tag_val = $(".create_blog_tags_inp").val();
+    //     var max_len = ($(".create_blog_tags_con").next().attr("data_tag_len"))
+
+    //     // update_tags_limit(".create_blog_tags_con", arr_tags.length, max_len)
+    //     if (arr_tags.length < max_len) {
+    //         if (e.key == "Enter" && inp_tag_val != "") {
+    //             arr_tags.push(inp_tag_val);
+    //             addTags();
+    //             $(".create_blog_tags_inp").val("")
+    //             update_tags_limit(".create_blog_tags_con", arr_tags.length, max_len)
+    //         }
+    //     } else {
+    //         update_tags_limit(".create_blog_tags_con", arr_tags.length, max_len)
+    //     }
+
+    //     if (e.keyCode == 8 && inp_tag_val == 0) {
+    //         console.log(backpress_key)
+    //         if (backpress_key == 2) {
+    //             arr_tags.pop(); // method 1 to delete element from arr of tags(arr_tags)
+    //             // arr_tags = [...arr_tags.slice(0, index), ...arr_tags.slice(index + 1)];  method 2 to delete element from arr of tags(arr_tags)
+    //             addTags()
+    //             update_tags_limit(".create_blog_tags_con", arr_tags.length, max_len)
+    //             backpress_key = 0
+    //         }
+    //         backpress_key += 1;
+    //     }
+    // })
+
+    var delete_tags = (el) => { // fn to delete tags
+        var data_content = $(el).parent().parent().children(".create_blog_tags_inp").attr("data_content")
+        var data_item = $(el).attr("data_item")
+        var arr = (data_content == "blog_catagories") ? arr_catagories : arr_tags
+
+        var arr_index = arr.indexOf(data_item)
+        arr.splice(arr_index, 1) // method 1 to delete element from arr
+        // addTags($(el).parent().parent().children(".create_blog_tags_inp"), arr)
+
+        console.log(el.parentNode.parentNode.childNodes)
+        var nodeList_len = el.parentNode.parentNode.childNodes.length
+        // addTags(el.parentNode.parentNode.childNodes[nodeList_len - 2], arr)
+        // console.log(el.parentNode.parentNode.childNodes[nodeList_len - 2])
+
+        // var value = e.target.getAttribute('data-item');
+        // var index = arr_tags.indexOf(value);
+        // arr_tags.splice(index, 1); // method 1 to delete element from arr of tags(arr_tags)
+        // addTags();
+        // update_tags_limit(".create_blog_tags_con", arr_tags.length, max_len)
+    }
+
+    document.addEventListener('click', (e) => { //delete tags on click eventlistener
+        // alert()
+        if (e.target.id == "tag_remove_btn") {
+            var data_item = e.target.getAttribute('data_item')
+            var tags_remove_btn = document.querySelectorAll('#tag_remove_btn[data_item="' + data_item + '"]')
+            for (const tag_rBtn of tags_remove_btn) {
+                tag_rBtn.addEventListener("click", (e) => {
+                delete_tags(tag_rBtn)
+                })
+            }
+            // delete_tags(e);
+        }
+    })
