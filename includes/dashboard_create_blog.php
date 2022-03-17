@@ -78,11 +78,11 @@
             <div class="dashboard_create_blog_sec_title">Add Thumbnail</div>
 
             <div class="dashboard_create_blog_image_upload_con">
-                <!-- <img src="./assests/lastest_feed.jpg" style="width:100%; height:150px; object-fit:cover"> -->
 
 
                 <div class="dashboard_create_blog_image_dropzone flexc">
-                    <form class="dashboard_create_blog_image_dropzone_content mainImg_upload_form">
+                    <div class="dashboard_create_blog_image_dropzone_overlay flexc"></div>
+                    <form class="dashboard_create_blog_image_dropzone_content mainImg_upload_form flexc">
                         <input class="dashboard_create_blog_mainImage_inp" type="file" name="mainImg_file" hidden>
                         <div class="blog_image_dropzone_icon flexc"><i class="fal fa-cloud-upload"></i></div>
                         <div class="blog_image_dropzone_text">Drag files here or <span>browse</span></div>
@@ -90,18 +90,7 @@
                 </div>
 
                 <div class="blog_image_progress_preveiw_con flexc">
-                    <div class="blog_image_progress_preveiw flexc">
-                        <div class="blog_image_progress_preveiw_imgIcon flexc"><i class="fal fa-file-image"></i></div>
-                        <div class="blog_image_progress_preveiw_img_detail">
-                            <div class="blog_image_progress_preveiw_img_detail_title flexc">
-                                <div class="flexc"><span class="preveiw_img_name">image.jpg</span><span class="dot">•</span>Uploading</div>
-                                <div class="upload_percent flexc">70%</div>
-                            </div>
-                            <div class="blog_image_progress_bar_con">
-                                <div class="blog_image_progress_bar"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="blog_image_progress_preveiw flexc"></div>
                 </div>
 
             </div>

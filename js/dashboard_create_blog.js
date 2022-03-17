@@ -191,4 +191,174 @@ $(document).ready(() => {
     })
 
 
+    // ======================================================================++++++++++++++++++++++++++++++
+    // blog main image uploader
+
+
+    document.querySelectorAll(".dashboard_create_blog_mainImage_inp").forEach(inputElement => {
+        const dropZoneElement = inputElement.closest(".dashboard_create_blog_image_dropzone")
+
+        dropZoneElement.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            $(".dashboard_create_blog_image_dropzone").addClass("dropzone_active")
+            $(".blog_image_dropzone_icon").html("<i class='far fa-check' aria-hidden='true'></i>").css("color", '#4affbc')
+            $(".blog_image_dropzone_text").html("Selected")
+        })
+
+        var remove_dropzone_active = () => {
+            $(".dashboard_create_blog_image_dropzone").removeClass("dropzone_active")
+            $(".blog_image_dropzone_icon").html("<i class='fal fa-cloud-upload' aria-hidden='true'></i>").css("color", '#ff7863')
+            $(".blog_image_dropzone_text").html("Drag files here or <span>browse</span>")
+        };
+
+        ["dragleave", "dragend"].forEach(type => {
+            dropZoneElement.addEventListener(type, (e) => {
+                remove_dropzone_active()
+            })
+        })
+
+        dropZoneElement.addEventListener("drop", (e) => {
+            e.preventDefault();
+            // console.log(e.dataTransfer.files.length);
+            if (e.dataTransfer.files.length) {
+                var image = e.dataTransfer.files[0]
+                var formData = new FormData()
+                formData.append('mainImg_file', image)
+
+                updateThumnail(dropZoneElement, image, formData);
+            }
+            remove_dropzone_active()
+        });
+
+
+        //upload btn
+        $(".dashboard_create_blog_image_dropzone_overlay").click(() => {
+            $(".dashboard_create_blog_mainImage_inp").trigger('click');
+
+        });
+
+        //main blog image upload input
+        $(".dashboard_create_blog_mainImage_inp").on('change', (e) => {
+            var files = e.target.files;
+
+            var form = $('.mainImg_upload_form')[0]; // You need to use standard javascript object here
+            var formData = new FormData(form)
+            if (files.length) {
+                inputElement = files
+                updateThumnail(dropZoneElement, files[0], formData)
+            };
+        });
+
+
+        // thumbnail
+        const updateThumnail = (dropZoneElement, file, formData) => {
+            // let thumbnailElement = dropZoneElement.querySelector(".main_blog_thumbnail");
+            // let dropZone = dropZoneElement.querySelector(".main_img_dropZone");
+            // if (dropZone) {
+            //     dropZone.remove();
+            // }
+
+            // document.querySelectorAll(".main_blog_thumbnail").forEach((thumbnail) => { // the already existing thumbnail
+            //     thumbnail.parentElement.removeChild(thumbnail);
+            // })
+
+
+            // display the filename
+            // if (file.type.startsWith("image/")) {
+            //     console.log("image")
+            // } else {
+            //     console.log("Not image")
+            // }
+
+
+            //show the thumbnail img
+            if (file.type.startsWith("image/")) {
+                const reader = new FileReader();
+
+                let file_name = file.name; //getting file name
+                if (file_name.length >= 10) { //if file name length is greater than 12 then split it and add ...
+                    let split_name = file_name.split('.');
+                    file_name = split_name[0].substring(0, 10) + "..." + split_name[1];
+                }
+
+                reader.readAsDataURL(file);
+                reader.onload = () => {
+                    $(".dashboard_create_blog_image_dropzone_overlay").css({
+                        "background-image": `url(${reader.result})`,
+                        "background-color": '#fff1ef'
+                    });
+                };
+
+                // console.log(formData)
+                $.ajax({
+                    xhr: function () {
+                        var xhr = new window.XMLHttpRequest()
+
+                        xhr.addEventListener("progress", (e) => {
+                                if (e.lengthComputable) {
+                                    // console.log(evt);
+                                    var fileLoaded = Math.floor((e.loaded / e.total) * 100); //getting percentage of loaded file size
+                                    var fileTotal = Math.floor(e.total / 1000); //gettting total file size in KB from bytes
+                                    var file_size = (fileTotal < 1024) ? fileTotal + " KB" : (e.loaded / (1024 * 1024)).toFixed(2) + " MB" // if file size is less than 1024 then add only KB else convert this KB into MB
+                                    var percentComplete = (e.loaded / e.total) * 100
+
+                                    $('.blog_image_progress_preveiw').html(`
+                                    <div class="blog_image_progress_preveiw_mainImgIcon flexc"><i class="fal fa-file-image"></i></div>
+                                    <div class="blog_image_progress_preveiw_mainImg_content flexc">
+                                        <div class="blog_image_progress_preveiw_mainImg_details flexc">
+                                            <div class="preveiw_img_name">` + file_name + ` • Uploading</div>
+                                            <div class="upload_percent">` + percentComplete + `%</div>
+                                        </div>
+                                        <div class="blog_image_progress_bar_con">
+                                            <div class="blog_image_progress_bar" style="width: ` + percentComplete + `%"></div>
+                                        </div>
+                                    </div>      
+                                    `)
+
+                                    if (e.loaded == e.total) {
+                                        $('.blog_image_progress_preveiw').html(`
+                                        <div class="blog_image_progress_preveiw_mainImgIcon flexc"><i class="fal fa-file-image"></i></div>
+                                        <div class="blog_image_progress_preveiw_mainImg_content flexc" style="width: calc(100% - 100px)">
+                                            <div class="blog_image_progress_preveiw_mainImg_details">
+                                                <div class="preveiw_img_name">` + file_name + ` • Uploaded</div>
+                                                <div class="preveiw_img_size">` + file_size + `</div>
+                                            </div>
+                                        </div>
+                                        <div class="blog_image_upload_completed flexc"><i class="fal fa-times"></i></div>
+                                        `)
+
+                                        $(".blog_image_upload_completed").on("click", () => {
+                                            $(".dashboard_create_blog_image_dropzone_overlay").css({
+                                                "background-image": `none`,
+                                                "background-color": 'transparent'
+                                            })
+                                            $(".blog_image_progress_preveiw").html("")
+                                        })
+                                    }
+                                }
+                            },
+                            false);
+
+                        return xhr;
+                    },
+                    // type: "POST",
+                    // url: "./js/demo.php",
+                    // data: formData,
+                    // cache: false,
+                    // contentType: false,
+                    // processData: false,
+                    // success: function (result) {
+                    //     console.log(result);
+                    // }
+                })
+
+            };
+
+
+
+
+        };
+
+
+    });
 })

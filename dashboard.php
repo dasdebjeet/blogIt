@@ -38,17 +38,6 @@
     </head>
 
     <body>
-
-        <div class="dashboard_create_blog_image_dropzone_main_wrapper">
-            <div class="dashboard_create_blog_image_dropzone_main_container flexc">
-                <div class="dashboard_create_blog_image_dropzone_main_container_content flexc">
-                    <div class="dropzone_main_container_icon">
-                        <i class="fal fa-plus"></i>
-                    </div>
-                    <div class="dropzone_main_container_text">Drop your files here</div>
-                </div>
-            </div>
-        </div>
         <div class="dashboard_wrapper flexc">
             <div class="dashboard_sidebar">
                 <a href="index.php" class="siteLogo flexc"><img src="./assests/siteLogo_W.svg"></a>
