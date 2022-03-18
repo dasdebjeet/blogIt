@@ -294,7 +294,7 @@ $(document).ready(() => {
                     xhr: function () {
                         var xhr = new window.XMLHttpRequest()
 
-                        xhr.upload.addEventListener("progress", (e) => {
+                        xhr.addEventListener("progress", (e) => {
                                 if (e.lengthComputable) {
                                     // console.log(evt);
                                     var fileLoaded = Math.floor((e.loaded / e.total) * 100); //getting percentage of loaded file size
