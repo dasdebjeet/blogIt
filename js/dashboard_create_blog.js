@@ -301,7 +301,7 @@ $(document).ready(() => {
                                     var fileTotal = Math.floor(e.total / 1000); //gettting total file size in KB from bytes
                                     // console.log(file.size, file.size * 1024)
                                     var file_size = ((file.size / 1024) < 1024) ? Math.floor(file.size / 1024) + " KB" : Math.floor(file.size / (1024 * 1024)) + " MB" // if file size is less than 1024 then add only KB else convert this KB into MB
-                                    var percentComplete = (e.loaded / e.total) * 100
+                                    var percentComplete = Math.floor((e.loaded / e.total) * 100)
 
                                     $('.blog_image_progress_preveiw').html(`
                                     <div class="blog_image_progress_preveiw_mainImgIcon flexc"><i class="fal fa-file-image"></i></div>
