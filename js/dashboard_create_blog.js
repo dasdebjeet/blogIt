@@ -342,12 +342,14 @@ $(document).ready(() => {
                         return xhr;
                     },
                     type: "POST",
-                    url: "./js/demo.php",
-                    data: formData,
+                    // url: "./js/demo.php",
+                    url: "",
+                    // data: formData,
+                    data: "",
                     cache: false,
                     contentType: false,
                     processData: false,
-                    success: function (result) {
+                    success: (result) => {
                         console.log(result);
                     }
                 })
