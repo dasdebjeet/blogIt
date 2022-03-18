@@ -276,9 +276,9 @@ $(document).ready(() => {
                 const reader = new FileReader();
 
                 let file_name = file.name; //getting file name
-                if (file_name.length >= 10) { //if file name length is greater than 12 then split it and add ...
+                if (file_name.length >= 14) { //if file name length is greater than 14 then split it and add ...
                     let split_name = file_name.split('.');
-                    file_name = split_name[0].substring(0, 10) + "..." + split_name[1];
+                    file_name = split_name[0].substring(0, 8) + "..." + split_name[1]
                 }
 
                 reader.readAsDataURL(file);
@@ -294,12 +294,13 @@ $(document).ready(() => {
                     xhr: function () {
                         var xhr = new window.XMLHttpRequest()
 
-                        xhr.addEventListener("progress", (e) => {
+                        xhr.upload.addEventListener("progress", (e) => {
                                 if (e.lengthComputable) {
                                     // console.log(evt);
                                     var fileLoaded = Math.floor((e.loaded / e.total) * 100); //getting percentage of loaded file size
                                     var fileTotal = Math.floor(e.total / 1000); //gettting total file size in KB from bytes
-                                    var file_size = (fileTotal < 1024) ? fileTotal + " KB" : (e.loaded / (1024 * 1024)).toFixed(2) + " MB" // if file size is less than 1024 then add only KB else convert this KB into MB
+                                    // console.log(file.size, file.size * 1024)
+                                    var file_size = ((file.size / 1024) < 1024) ? Math.floor(file.size / 1024) + " KB" : Math.floor(file.size / (1024 * 1024)) + " MB" // if file size is less than 1024 then add only KB else convert this KB into MB
                                     var percentComplete = (e.loaded / e.total) * 100
 
                                     $('.blog_image_progress_preveiw').html(`
@@ -342,10 +343,8 @@ $(document).ready(() => {
                         return xhr;
                     },
                     type: "POST",
-                    // url: "./js/demo.php",
-                    url: "",
-                    // data: formData,
-                    data: "",
+                    url: "./includes/main_blog_imgUploader.php",
+                    data: formData,
                     cache: false,
                     contentType: false,
                     processData: false,

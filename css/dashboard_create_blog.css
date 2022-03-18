@@ -297,10 +297,13 @@
 }
 
 .blog_image_upload_completed {
-    width: 50px;
-    height: 50px;
+    background: #ffffff;
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
     color: #ff7863;
-    font-size: 20px;
+    font-size: 18px;
+    border-radius: 50px;
     cursor: pointer;
 }
 
