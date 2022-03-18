@@ -294,7 +294,7 @@ $(document).ready(() => {
                     xhr: function () {
                         var xhr = new window.XMLHttpRequest()
 
-                        xhr.addEventListener("progress", (e) => {
+                        xhr.upload.addEventListener("progress", (e) => {
                                 if (e.lengthComputable) {
                                     // console.log(evt);
                                     var fileLoaded = Math.floor((e.loaded / e.total) * 100); //getting percentage of loaded file size
@@ -341,15 +341,15 @@ $(document).ready(() => {
 
                         return xhr;
                     },
-                    // type: "POST",
-                    // url: "./js/demo.php",
-                    // data: formData,
-                    // cache: false,
-                    // contentType: false,
-                    // processData: false,
-                    // success: function (result) {
-                    //     console.log(result);
-                    // }
+                    type: "POST",
+                    url: "./js/demo.php",
+                    data: formData,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (result) {
+                        console.log(result);
+                    }
                 })
 
             };
