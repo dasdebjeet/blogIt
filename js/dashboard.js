@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    $(".dashboard_con_content").load("./includes/dashboard_create_blog.php ")
+    $(".dashboard_con_content").load("./includes/dashboard_main.php ")
 
     // $(".search_inp").focus(() => {
     //     $(".dashboard_searchbar").css("border", '2px solid #000000')

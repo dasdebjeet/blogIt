@@ -39,8 +39,6 @@
     padding: 5px;
     /* border-top: 3px solid var(--themec); */
     border-radius: 5px 5px 0 0;
-    box-shadow: 0px 0px 3.5px #b7b7b7;
-
 }
 
 .toolbar_btn_wrap {
@@ -122,7 +120,6 @@
 .editor_container {
     align-items: flex-start;
     /* border-bottom: 3px solid var(--themec); */
-    box-shadow: 0px 0px 3.5px #b7b7b7;
     border-radius: 0 0 5px 5px;
 }
 
@@ -197,8 +194,9 @@
     min-height: 260px;
     padding: 15px 10px;
     font-size: 15px;
-    box-shadow: inset 9px 9px 40px #dcdcdc,
-        inset -9px -9px 35px #e5e5e5;
+    border-radius: 0 0 5px 5px;
+    box-shadow: inset 9px 9px 15px #dcdcdc,
+        inset -9px -9px 15px #e5e5e5;
     outline: 0;
     line-height: 20px
 }
@@ -208,7 +206,7 @@
     display: none;
     background: #00060a;
     /* width: 35px; */
-    min-height: 250px;
+    min-height: 260px;
     padding: 15px 10px;
     /* font-size: 15px; */
     text-align: right;

@@ -126,7 +126,7 @@
 .dashboard_searchbar {
     background: #e5e5e5;
     margin-left: 10px;
-    min-width: 250px;
+    width: 250px;
     height: 40px;
     font-size: 22px;
     border: 2px solid transparent;

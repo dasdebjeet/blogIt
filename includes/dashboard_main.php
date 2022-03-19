@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div class=" dashboard_content2 flexc">
+    <div class="dashboard_content2 flexc">
         <div class="dashboard_blog_post_overveiw">
             <div class="dashboard_blog_post_overveiw_title">Recent Article</div>
             <div class="dashboard_blog_post_overveiw_table_con">
