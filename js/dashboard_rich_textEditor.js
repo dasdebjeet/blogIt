@@ -57,28 +57,46 @@ $(document).ready(function () {
                         var btn_stat = $(".toolbar_btn[data-cmd='insertImage']").attr('status')
                         if (btn_stat == "off") {
                             $(".insertImg_btn_dropdown").css("display", 'block')
-                            $(".imgUrl").click(() => {
-                                $(".insertImg_btn_dropdown").css("display", 'none')
-                                $(".editor_dataModal").css("display", 'flex')
-                                $(".imgUrl_dataModal_content").css("display", 'block')
-                            })
-                            $(".img_insertBtn").click(() => {
-                                var val = $(".img_url_inp").val()
-                                // console.log(cur_p)
-                                if (val && restoreSelection(cur_p)) {
-                                    // restoreSelection(cur_p)
-                                    document.execCommand(cmd, false, val);
-                                    $(".img_url_inp").val("")
-                                    $(".editor_dataModal").css("display", 'none')
-                                    $(".imgUrl_dataModal_content").css("display", 'none')
-                                }
-                            })
-                            $(".toolbar_btn[data-cmd='insertImage']").attr('status', 'on')
-                        } else {
-                            $(".insertImg_btn_dropdown").css("display", 'none')
-                            $(".toolbar_btn[data-cmd='insertImage']").attr('status', 'off')
-                        }
 
+
+                            // text editor img upload
+                            $(".blog_textEditor_imgFile_upload").click((e) => {
+                                $(".blog_textEditor_img_inp").triggerHandler('click')
+                                e.preventDefault();
+                            })
+
+
+                            // $(".imgUrl").click(() => {
+                            //     $(".insertImg_btn_dropdown").css("display", 'none')
+                            //     $(".editor_dataModal").css("display", 'flex')
+                            //     $(".imgUrl_dataModal_content").css("display", 'block')
+                            // })
+                            // $(".img_insertBtn").click(() => {
+                            //     var val = $(".img_url_inp").val()
+                            //     console.log(restoreSelection(cur_p))
+                            //     if (val) {
+                            //         if (restoreSelection(cur_p)) {
+                            //             document.execCommand(cmd, false, val);
+                            //             $(".img_url_inp").val("")
+                            //             $(".editor_dataModal").css("display", 'none')
+                            //             $(".imgUrl_dataModal_content").css("display", 'none')
+                            //         } else {
+                            //             $(".editor_body").append("<img src=" + val + ">")
+                            //             $(".img_url_inp").val("")
+                            //             $(".editor_dataModal").css("display", 'none')
+                            //             $(".imgUrl_dataModal_content").css("display", 'none')
+                            //         }
+
+                            //     }
+                            // })
+                            $(".toolbar_btn[data-cmd='insertImage']").attr('status', 'off')
+
+                        }
+                        // else {
+                        //     $(".insertImg_btn_dropdown").css("display", 'none')
+                        //     $(".toolbar_btn[data-cmd='insertImage']").attr('status', 'off')
+                        //     console.log(btn_stat)
+                        // }
 
                         $(".img_cancleBtn").click(() => {
                             $(".editor_dataModal").css("display", 'none')
@@ -87,18 +105,26 @@ $(document).ready(function () {
                         })
                     } else if (cmd == 'createLink') {
                         $(".editor_dataModal").css("display", 'flex')
+
                         $(".createUrl_dataModal_content").css("display", 'block')
                         $(".createUrl_insertBtn").click(() => {
                             var val = $(".createUrl_inp").val()
-                            // console.log(cur_p)
-                            if (val && restoreSelection(cur_p)) {
-                                // restoreSelection(cur_p)
-                                document.execCommand(cmd, false, val);
-                                $(".createUrl_inp").val("")
-                                $(".editor_dataModal").css("display", 'none')
-                                $(".imgUrl_dataModal_content").css("display", 'none')
+                            if (val) {
+                                if (restoreSelection(cur_p)) {
+                                    document.execCommand(cmd, false, val);
+                                    $(".createUrl_inp").val("")
+                                    $(".editor_dataModal").css("display", 'none')
+                                    $(".createUrl_dataModal_content").css("display", 'none')
+                                } else {
+                                    $(".editor_body").append("<a href=" + val + ">" + val + "</a>")
+                                    $(".createUrl_inp").val("")
+                                    $(".editor_dataModal").css("display", 'none')
+                                    $(".createUrl_dataModal_content").css("display", 'none')
+                                }
+
                             }
                         })
+
                         $(".createUrl_cancleBtn").click(() => {
                             $(".editor_dataModal").css("display", 'none')
                             $(".createUrl_dataModal_content").css("display", 'none')

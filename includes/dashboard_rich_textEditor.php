@@ -2,7 +2,30 @@
 <div class="blog_textEditorWrapper">
     <div class="blog_textEditorWrapper_title">Content</div>
 
-    <div>
+    <div class="blog_textEditorWrapper_inp_con">
+        <div class="editor_dataModal flexc">
+            <div class="imgUrl_dataModal_content">
+                <div style="margin-bottom:40px;">Insert image url</div>
+                <input class="img_url_inp" type="url">
+                <p>Only select images that you have confirmed that you have the license to use.</p>
+                <div class="insert_btns flexc">
+                    <button class="img_cancleBtn" style="margin-right:20px">Cancel</button>
+                    <button class="img_insertBtn">Insert</button>
+                </div>
+            </div>
+
+            <div class="createUrl_dataModal_content">
+                <div style="margin-bottom:40px;">Insert url</div>
+                <input class="createUrl_inp" type="url">
+                <p>Please put a valid url</p>
+                <div class="createUrl_btns flexc">
+                    <button class="createUrl_cancleBtn" style="margin-right:20px">Cancel</button>
+                    <button class="createUrl_insertBtn">Create</button>
+                </div>
+            </div>
+
+        </div>
+
         <div class="blog_textEditor_toolbar">
             <div class="toolbar_btn_wrap flexc">
                 <button class="toolbar_btn flexc" data-cmd="bold" tooltip="Bold"><i class='bx bx-bold'></i></button>
@@ -44,7 +67,8 @@
 
 
                 <div class="insertImg_btn_dropdown">
-                    <div class="img_dropdown_menu imgFile flexc" style="border-bottom: 2px solid #b378ff;">
+                    <div class="img_dropdown_menu blog_textEditor_imgFile_upload flexc" style="border-bottom: 1px solid #505050;">
+                        <input class="blog_textEditor_img_inp" type="file" name="blog_textEditor_img" hidden>
                         <div class="menu_text">Upload from PC</div>
                         <div class="menu_icon"><i class="fal fa-arrow-to-top"></i></div>
                     </div>
@@ -53,6 +77,7 @@
                         <div class="menu_icon"><i class='bx bx-link-alt'></i></div>
                     </div>
                 </div>
+
             </div>
 
             <div class="toolbar_btn flexc" data-cmd="veiwCode" status="off" tooltip="HTML Code" style="font-size:18px"><i class='bx bx-code-alt'></i></div>

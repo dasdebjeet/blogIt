@@ -256,7 +256,11 @@ screen and (max-width: 600px) {
         font-size: 17px;
     }
 
-
+    /* dashboard page -- create blog (text editor image insert modal)*/
+    .imgUrl_dataModal_content,
+    .createUrl_dataModal_content {
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 600px) {}
