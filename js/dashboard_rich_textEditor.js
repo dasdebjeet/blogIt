@@ -59,38 +59,38 @@ $(document).ready(function () {
                             $(".insertImg_btn_dropdown").css("display", 'block')
 
 
-                            // text editor img upload
-                            $(".blog_textEditor_imgFile_upload").click((e) => {
-                                $(".blog_textEditor_img_inp").triggerHandler('click')
-                                e.preventDefault();
+                            // // text editor img upload
+                            // $(".img_dropdown_menu").click(() => {
+                            //     $(".blog_textEditor_img_inp").click;
+                            // })
+
+
+                            $(".imgUrl").click(() => {
+                                $(".insertImg_btn_dropdown").css("display", 'none')
+                                $(".editor_dataModal").css("display", 'flex')
+                                $(".imgUrl_dataModal_content").css("display", 'block')
                             })
+                            $(".img_insertBtn").click(() => {
+                                var val = $(".img_url_inp").val()
+                                console.log(restoreSelection(cur_p))
+                                if (val) {
+                                    if (restoreSelection(cur_p)) {
+                                        document.execCommand(cmd, false, val);
+                                        $(".img_url_inp").val("")
+                                        $(".editor_dataModal").css("display", 'none')
+                                        $(".imgUrl_dataModal_content").css("display", 'none')
+                                    } else {
+                                        $(".editor_body").append("<img src=" + val + ">")
+                                        $(".img_url_inp").val("")
+                                        $(".editor_dataModal").css("display", 'none')
+                                        $(".imgUrl_dataModal_content").css("display", 'none')
+                                    }
 
-
-                            // $(".imgUrl").click(() => {
-                            //     $(".insertImg_btn_dropdown").css("display", 'none')
-                            //     $(".editor_dataModal").css("display", 'flex')
-                            //     $(".imgUrl_dataModal_content").css("display", 'block')
-                            // })
-                            // $(".img_insertBtn").click(() => {
-                            //     var val = $(".img_url_inp").val()
-                            //     console.log(restoreSelection(cur_p))
-                            //     if (val) {
-                            //         if (restoreSelection(cur_p)) {
-                            //             document.execCommand(cmd, false, val);
-                            //             $(".img_url_inp").val("")
-                            //             $(".editor_dataModal").css("display", 'none')
-                            //             $(".imgUrl_dataModal_content").css("display", 'none')
-                            //         } else {
-                            //             $(".editor_body").append("<img src=" + val + ">")
-                            //             $(".img_url_inp").val("")
-                            //             $(".editor_dataModal").css("display", 'none')
-                            //             $(".imgUrl_dataModal_content").css("display", 'none')
-                            //         }
-
-                            //     }
-                            // })
+                                }
+                            })
                             $(".toolbar_btn[data-cmd='insertImage']").attr('status', 'off')
 
+                            console.log(btn_stat)
                         }
                         // else {
                         //     $(".insertImg_btn_dropdown").css("display", 'none')
@@ -102,6 +102,7 @@ $(document).ready(function () {
                             $(".editor_dataModal").css("display", 'none')
                             $(".imgUrl_dataModal_content").css("display", 'none')
                             $(".toolbar_btn[data-cmd='insertImage']").attr('status', 'off')
+                            console.log(btn_stat)
                         })
                     } else if (cmd == 'createLink') {
                         $(".editor_dataModal").css("display", 'flex')
