@@ -4,6 +4,12 @@ $(document).ready(function () {
         cur_p = saveSelection()
     })
 
+    $(".editor_body").on('input', (e) => {
+        if ($(".editor_body").html().length) {
+            $(".blog_textEditorWrapper_inp_con").prev().text("")
+        }
+    })
+
     var saveSelection = () => {
         if (window.getSelection) {
             var sel = window.getSelection();
@@ -67,22 +73,31 @@ $(document).ready(function () {
 
                             $(".imgUrl").click(() => {
                                 $(".insertImg_btn_dropdown").css("display", 'none')
-                                $(".editor_dataModal").css("display", 'flex')
+                                $(".editor_dataModal").css({
+                                    "visibility": 'visible',
+                                    "opacity": '1'
+                                })
                                 $(".imgUrl_dataModal_content").css("display", 'block')
                             })
                             $(".img_insertBtn").click(() => {
                                 var val = $(".img_url_inp").val()
-                                console.log(restoreSelection(cur_p))
+                                // console.log(restoreSelection(cur_p))
                                 if (val) {
                                     if (restoreSelection(cur_p)) {
                                         document.execCommand(cmd, false, val);
                                         $(".img_url_inp").val("")
-                                        $(".editor_dataModal").css("display", 'none')
+                                        $(".editor_dataModal").css({
+                                            "visibility": 'hidden',
+                                            "opacity": '0'
+                                        })
                                         $(".imgUrl_dataModal_content").css("display", 'none')
                                     } else {
                                         $(".editor_body").append("<img src=" + val + ">")
                                         $(".img_url_inp").val("")
-                                        $(".editor_dataModal").css("display", 'none')
+                                        $(".editor_dataModal").css({
+                                            "visibility": 'hidden',
+                                            "opacity": '0'
+                                        })
                                         $(".imgUrl_dataModal_content").css("display", 'none')
                                     }
 
@@ -99,13 +114,19 @@ $(document).ready(function () {
                         // }
 
                         $(".img_cancleBtn").click(() => {
-                            $(".editor_dataModal").css("display", 'none')
+                            $(".editor_dataModal").css({
+                                "visibility": 'hidden',
+                                "opacity": '0'
+                            })
                             $(".imgUrl_dataModal_content").css("display", 'none')
                             $(".toolbar_btn[data-cmd='insertImage']").attr('status', 'off')
                             console.log(btn_stat)
                         })
                     } else if (cmd == 'createLink') {
-                        $(".editor_dataModal").css("display", 'flex')
+                        $(".editor_dataModal").css({
+                            "visibility": 'visible',
+                            "opacity": '1'
+                        })
 
                         $(".createUrl_dataModal_content").css("display", 'block')
                         $(".createUrl_insertBtn").click(() => {
@@ -114,12 +135,18 @@ $(document).ready(function () {
                                 if (restoreSelection(cur_p)) {
                                     document.execCommand(cmd, false, val);
                                     $(".createUrl_inp").val("")
-                                    $(".editor_dataModal").css("display", 'none')
+                                    $(".editor_dataModal").css({
+                                        "visibility": 'hidden',
+                                        "opacity": '0'
+                                    })
                                     $(".createUrl_dataModal_content").css("display", 'none')
                                 } else {
                                     $(".editor_body").append("<a href=" + val + ">" + val + "</a>")
                                     $(".createUrl_inp").val("")
-                                    $(".editor_dataModal").css("display", 'none')
+                                    $(".editor_dataModal").css({
+                                        "visibility": 'hidden',
+                                        "opacity": '0'
+                                    })
                                     $(".createUrl_dataModal_content").css("display", 'none')
                                 }
 
@@ -127,7 +154,10 @@ $(document).ready(function () {
                         })
 
                         $(".createUrl_cancleBtn").click(() => {
-                            $(".editor_dataModal").css("display", 'none')
+                            $(".editor_dataModal").css({
+                                "visibility": 'hidden',
+                                "opacity": '0'
+                            })
                             $(".createUrl_dataModal_content").css("display", 'none')
                         })
                     } else {

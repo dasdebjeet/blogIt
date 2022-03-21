@@ -1,6 +1,7 @@
 <script src="./js/dashboard_rich_textEditor.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 <div class="blog_textEditorWrapper">
     <div class="blog_textEditorWrapper_title">Content</div>
+    <div class="create_blog_inp_error_msg">Enter some content for your blog</div>
 
     <div class="blog_textEditorWrapper_inp_con">
         <div class="editor_dataModal flexc">

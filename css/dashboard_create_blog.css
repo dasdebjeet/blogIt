@@ -59,7 +59,7 @@
 
 .blog_inp_label {
     justify-content: space-between;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .label_icon {
@@ -110,12 +110,22 @@
     border-top: 8px solid #e5e5e5;
 }
 
+.create_blog_inp_error_msg {
+    display: none;
+    margin-top: 2px;
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+    font-style: italic;
+
+}
 
 .blog_inp_con>.blog_inp,
 .create_blog_cata_con,
 .create_blog_tags_con {
     /* position: relative; */
     background: #ffffff;
+    margin-top: 15px;
     padding: 8px;
     width: 100%;
     min-height: 40px;
@@ -347,9 +357,13 @@
     padding: 10px 20px;
     width: 100%;
     color: #ffffff;
-    border-radius: 10px;
+    border-radius: 30px;
     cursor: pointer;
     transition: all .2s ease-in-out;
+}
+
+.blog_create_mainBtn:hover {
+    opacity: 0.8;
 }
 
 .blog_create_mainBtn:hover {

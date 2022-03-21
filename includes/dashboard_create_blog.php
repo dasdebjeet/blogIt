@@ -7,6 +7,7 @@
             <div class="dashboard_create_blog_sec_title">
                 Create blog
             </div>
+
             <div class="blog_inp_con blog_inp_title">
                 <div class="blog_inp_label flexc">
                     <div class="label_text">Title</div>
@@ -16,9 +17,11 @@
                         </i>
                     </div>
                 </div>
-                <input class="blog_inp" maxlength="50">
+                <div class="create_blog_inp_error_msg">Enter a title for your blog</div>
+                <input class="blog_inp create_blog_title_inp" maxlength="50">
                 <div class="blog_inp_charCount flexc" data_char_len="50">0</div>
             </div>
+
             <div class="blog_inp_con">
                 <div class="blog_inp_label flexc">
                     <div class="label_text">Subtitle</div>
@@ -28,7 +31,8 @@
                         </i>
                     </div>
                 </div>
-                <input class="blog_inp" maxlength="100">
+                <div class="create_blog_inp_error_msg">Enter a Subtitle for your blog</div>
+                <input class="blog_inp create_blog_subtitle_inp" maxlength="100">
                 <div class="blog_inp_charCount flexc" data_char_len="100">0</div>
             </div>
 
@@ -50,6 +54,7 @@
                             </i>
                         </div>
                     </div>
+                    <div class="create_blog_inp_error_msg">Enter a catagory for your blog</div>
                     <div class="create_blog_cata_con flexc" style="flex-wrap:wrap">
                         <input class="create_blog_cata_inp" data_content="blog_catagories" type="text">
                     </div>
@@ -65,6 +70,7 @@
                             </i>
                         </div>
                     </div>
+                    <div class="create_blog_inp_error_msg">Enter tags for your blog</div>
                     <div class="create_blog_tags_con flexc" style="flex-wrap:wrap">
                         <input class="create_blog_tags_inp" data_content="blog_tags" type="text">
                     </div>

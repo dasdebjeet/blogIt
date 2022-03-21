@@ -38,6 +38,42 @@
     </head>
 
     <body>
+        <div class="dashboard_modal">
+
+            <div class="dashboard_modal_main_blog_preveiw_wrap">
+                <div class="dashboard_modal_main_blog_preveiw_wrap_title">Blog Preveiw</div>
+
+                <div class="dashboard_modal_main_blog_preveiw_con">
+                    <div class="dashboard_modal_main_blog_preveiw_con_closeBtn flexc"><i class="fal fa-times" aria-hidden="true"></i></div>
+                    <div class="dashboard_modal_main_blog_preveiw_img_con" style="background-image:url('./assests/lastest_feed.jpg')">
+                        <div class="dashboard_modal_main_blog_preveiw_catagory_tags">
+                            <span class="blog_preveiw_catagory_format">#Technology</span>
+                            <span class="blog_preveiw_tags_format">#Tech</span>
+                            <span class="blog_preveiw_tags_format">#Data Center</span>
+                            <span class="blog_preveiw_tags_format">#Big Tech</span>
+                            <span class="blog_preveiw_tags_format">#Giants</span>
+                        </div>
+                    </div>
+                    <div class="dashboard_modal_main_blog_preveiw_text_con">
+                        <div class="dashboard_modal_main_blog_preveiw_title">Lorem Ipsum is simply dummy text of the printing</div>
+                        <div class="dashboard_modal_main_blog_preveiw_subtitle">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown print</div>
+
+                        <div class="dashboard_modal_main_blog_preveiw_content">Morbi mattis tristique odio eget placerat. Donec placerat sed orci sit amet accumsan. Morbi vel dignissim nunc. Praesent sit amet efficitur eros. Phasellus eu est nec mauris varius ultricies. Quisque laoreet sagittis felis, id luctus nulla placerat in. Ut placerat eu diam in egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque efficitur metus et nisi gravida, sit amet auctor velit vestibulum. Quisque tellus metus, venenatis sit amet ullamcorper et, auctor eu nisl. Pellentesque consectetur sapien vel libero hendrerit pharetra. Vivamus accumsan id diam in rutrum.</div>
+
+                        <div class="dashboard_modal_main_blog_preveiw_author">by Debjeet Das</div>
+                        <div class="dashboard_modal_main_blog_preveiw_pubDate">published on 8th Feb 2022</div>
+                    </div>
+                </div>
+
+                <div class="dashboard_modal_main_blog_preveiw_btn_con">
+                    <button class="dashboard_modal_main_blog_preveiw_btn blog_preveiw_cancelbBtn">Cancel</button>
+                    <button class="dashboard_modal_main_blog_preveiw_btn blog_preveiw_publishBtn">Publish & Exit</button>
+                </div>
+
+            </div>
+
+        </div>
+
         <div class="dashboard_wrapper flexc">
             <div class="dashboard_sidebar">
                 <a href="index.php" class="siteLogo flexc"><img src="./assests/siteLogo_W.svg"></a>
@@ -82,11 +118,8 @@
                 <div class="dashboard_con_content">
                 </div>
 
-
-
             </div>
 
-        </div>
         </div>
     </body>
 

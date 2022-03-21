@@ -1,5 +1,4 @@
 .blog_textEditorWrapper_title {
-    margin-bottom: 15px;
     font-size: 18px;
     width: 100%;
 }
@@ -28,6 +27,7 @@
 }
 
 .blog_textEditorWrapper_inp_con {
+    margin-top: 15px;
     position: relative;
 }
 
@@ -134,15 +134,21 @@
 /* editor modal */
 
 .editor_dataModal {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+
     position: absolute;
     top: 0px;
     left: 0px;
-    background: #3838387a;
+    background: #000000bf;
     width: 100%;
     height: 100%;
     border-radius: 5px;
     z-index: 1000;
+
+    transition: 0.2s;
+    animation-name: zoom;
+    animation-duration: 0.2s;
 }
 
 .imgUrl_dataModal_content,

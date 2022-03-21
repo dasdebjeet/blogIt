@@ -5,18 +5,19 @@ $(document).ready(() => {
     var max_len_checker = (el, len, limit, e) => {
         $(el).next().text(len)
         $(el).next().addClass("active_blog_inp_charCount")
-        $(el).prev().children(".label_icon").addClass("active_label_icon")
+        $(el).prev().prev().children(".label_icon").addClass("active_label_icon")
         if (len >= limit && !(e.keyCode == 8)) {
-            $(el).prev().children(".label_icon").children(".fa-check").addClass("fa-exclamation-circle").css("color", "#ff9c9c")
-            $(el).prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text("character limit reached")
+            $(el).prev().prev().children(".label_icon").children(".fa-check").addClass("fa-exclamation-circle").css("color", "#ff9c9c")
+            $(el).prev().prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text("character limit reached")
         } else if (len == 0) {
             $(el).next().removeClass("active_blog_inp_charCount")
-            $(el).prev().children(".label_icon").removeClass("active_label_icon")
-            $(el).prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
-            $(el).prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text("character limit " + limit)
+            $(el).prev().prev().children(".label_icon").removeClass("active_label_icon")
+            $(el).prev().prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
+            $(el).prev().prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text("character limit " + limit)
         } else {
-            $(el).prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
-            $(el).prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text("character limit " + limit)
+            $(el).prev().prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
+            $(el).prev().prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text("character limit " + limit)
+            $(el).prev().text("")
         }
     }
 
@@ -37,18 +38,20 @@ $(document).ready(() => {
     var update_tags_limit = (el, tag_name, len, limit) => {
         $(el).next().text(len)
         $(el).next().addClass("active_blog_inp_charCount")
-        $(el).prev().children(".label_icon").addClass("active_label_icon")
+        $(el).prev().prev().children(".label_icon").addClass("active_label_icon")
         if (len >= limit) {
-            $(el).prev().children(".label_icon").children(".fa-check").addClass("fa-exclamation-circle").css("color", "#ff9c9c")
-            $(el).prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text(tag_name + " limit reached")
+            $(el).prev().prev().children(".label_icon").children(".fa-check").addClass("fa-exclamation-circle").css("color", "#ff9c9c")
+            $(el).prev().prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text(tag_name + " limit reached")
+            $(el).prev().text("")
         } else if (len == 0) {
             $(el).next().removeClass("active_blog_inp_charCount")
-            $(el).prev().children(".label_icon").removeClass("active_label_icon")
-            $(el).prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
-            $(el).prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text(tag_name + " limit " + limit)
+            $(el).prev().prev().children(".label_icon").removeClass("active_label_icon")
+            $(el).prev().prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
+            $(el).prev().prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text(tag_name + " limit " + limit)
         } else {
-            $(el).prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
-            $(el).prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text(tag_name + " limit " + limit)
+            $(el).prev().prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
+            $(el).prev().prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text(tag_name + " limit " + limit)
+            $(el).prev().text("")
         }
     }
 
@@ -191,10 +194,10 @@ $(document).ready(() => {
     })
 
 
-    // ======================================================================++++++++++++++++++++++++++++++
+    // --------------------------------------------------------------------------------------------
     // blog main image uploader
 
-
+    var blog_thumbnail_url
     document.querySelectorAll(".dashboard_create_blog_mainImage_inp").forEach(inputElement => {
         const dropZoneElement = inputElement.closest(".dashboard_create_blog_image_dropzone")
 
@@ -283,6 +286,7 @@ $(document).ready(() => {
 
                 reader.readAsDataURL(file);
                 reader.onload = () => {
+                    blog_thumbnail_url = (reader.result)
                     $(".dashboard_create_blog_image_dropzone_overlay").css({
                         "background-image": `url(${reader.result})`,
                         "background-color": '#fff1ef'
@@ -362,4 +366,45 @@ $(document).ready(() => {
 
 
     });
+
+    // --------------------------------------------------------------------------------------------
+    // blog create draft and publish btn
+
+    $(".blog_create_publishBtn").click(() => {
+        $("html, body").addClass("noscroll");
+        $(".dashboard_modal").css({
+            "visibility": 'visible',
+            "opacity": '1'
+        })
+
+        console.log($(".create_blog_title_inp").val())
+        console.log($(".create_blog_subtitle_inp").val())
+        console.log($(".editor_body").html())
+        console.log(arr_cata)
+        console.log(arr_tags)
+        console.log(blog_thumbnail_url)
+    })
+
+    var dashboard_modal_close = () => {
+        $("html, body").removeClass("noscroll");
+        $(".dashboard_modal").css({
+            "visibility": 'hidden',
+            "opacity": '0'
+        })
+    }
+
+    $(".dashboard_modal").on("click", (e) => {
+        if (e.target.classList.contains("dashboard_modal")) {
+            dashboard_modal_close()
+        }
+    })
+
+    $(".blog_preveiw_cancelbBtn").click(() => {
+        dashboard_modal_close()
+    })
+
+    $(".dashboard_modal_main_blog_preveiw_con_closeBtn").click(() => {
+        dashboard_modal_close()
+    })
+
 })
