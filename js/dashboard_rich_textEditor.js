@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     $(".editor_body").on('input', (e) => {
         if ($(".editor_body").html().length) {
-            $(".blog_textEditorWrapper_inp_con").prev().text("")
+            $(".blog_textEditorWrapper_inp_con").prev().css("display", 'none')
         }
     })
 

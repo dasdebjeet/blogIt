@@ -117,7 +117,6 @@
     font-size: 12px;
     font-weight: 600;
     font-style: italic;
-
 }
 
 .blog_inp_con>.blog_inp,
@@ -214,6 +213,7 @@
 }
 
 .dashboard_create_blog_image_upload_con {
+    margin-top: 20px;
     background: #fff1ef;
     border-radius: 0 0 10px 10px;
 }

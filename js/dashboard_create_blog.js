@@ -17,7 +17,7 @@ $(document).ready(() => {
         } else {
             $(el).prev().prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
             $(el).prev().prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text("character limit " + limit)
-            $(el).prev().text("")
+            $(el).prev().css("display", 'none')
         }
     }
 
@@ -42,7 +42,7 @@ $(document).ready(() => {
         if (len >= limit) {
             $(el).prev().prev().children(".label_icon").children(".fa-check").addClass("fa-exclamation-circle").css("color", "#ff9c9c")
             $(el).prev().prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text(tag_name + " limit reached")
-            $(el).prev().text("")
+            $(el).prev().css("display", 'none')
         } else if (len == 0) {
             $(el).next().removeClass("active_blog_inp_charCount")
             $(el).prev().prev().children(".label_icon").removeClass("active_label_icon")
@@ -51,7 +51,7 @@ $(document).ready(() => {
         } else {
             $(el).prev().prev().children(".label_icon").children(".fa-check").removeClass("fa-exclamation-circle").css("color", "#4affbc")
             $(el).prev().prev().children(".label_icon").children(".fa-check").children(".label_tooltip").text(tag_name + " limit " + limit)
-            $(el).prev().text("")
+            $(el).prev().css("display", 'none')
         }
     }
 
@@ -222,7 +222,8 @@ $(document).ready(() => {
 
         dropZoneElement.addEventListener("drop", (e) => {
             e.preventDefault();
-            // console.log(e.dataTransfer.files.length);
+            $(".thumbnail_error_msg").css("display", 'none')
+
             if (e.dataTransfer.files.length) {
                 var image = e.dataTransfer.files[0]
                 var formData = new FormData()
@@ -237,11 +238,11 @@ $(document).ready(() => {
         //upload btn
         $(".dashboard_create_blog_image_dropzone_overlay").click(() => {
             $(".dashboard_create_blog_mainImage_inp").trigger('click');
-
         });
 
         //main blog image upload input
         $(".dashboard_create_blog_mainImage_inp").on('change', (e) => {
+            $(".thumbnail_error_msg").css("display", 'none')
             var files = e.target.files;
 
             var form = $('.mainImg_upload_form')[0]; // You need to use standard javascript object here
@@ -338,6 +339,7 @@ $(document).ready(() => {
                                                 "background-color": 'transparent'
                                             })
                                             $(".blog_image_progress_preveiw").html("")
+                                            blog_thumbnail_url = ""
                                         })
                                     }
                                 }
@@ -371,18 +373,72 @@ $(document).ready(() => {
     // blog create draft and publish btn
 
     $(".blog_create_publishBtn").click(() => {
-        $("html, body").addClass("noscroll");
-        $(".dashboard_modal").css({
-            "visibility": 'visible',
-            "opacity": '1'
-        })
 
-        console.log($(".create_blog_title_inp").val())
-        console.log($(".create_blog_subtitle_inp").val())
-        console.log($(".editor_body").html())
-        console.log(arr_cata)
-        console.log(arr_tags)
-        console.log(blog_thumbnail_url)
+        // console.log($(".create_blog_title_inp").val())
+        // console.log($(".create_blog_subtitle_inp").val())
+        // console.log($(".editor_body").html())
+        // console.log(arr_cata)
+        // console.log(arr_tags)
+        // console.log(blog_thumbnail_url)
+
+        var error_det = 0
+        var blog_title = $(".create_blog_title_inp").val()
+        var blog_subtitle = $(".create_blog_subtitle_inp").val()
+        var blog_content = $(".editor_body").html()
+
+        var blog_catagory = arr_cata
+        var blog_tags = arr_tags
+
+        var blog_cata_len = blog_catagory.length
+        var blog_tags_len = blog_tags.length
+
+
+        var displayError = (el) => {
+            $(el).css("display", 'block')
+        }
+
+        if (blog_title == undefined || blog_title == "") {
+            displayError(".title_error_msg")
+            error_det = 1
+        }
+        if (blog_subtitle == undefined || blog_subtitle == "") {
+            displayError(".subtitle_error_msg")
+            error_det = 1
+        }
+
+        if (blog_content == undefined || blog_content == "") {
+            displayError(".content_error_msg")
+            error_det = 1
+        }
+
+        if (blog_cata_len == 0) {
+            displayError(".catagory_error_msg")
+            error_det = 1
+        }
+
+        if (blog_tags_len == 0) {
+            displayError(".tags_error_msg")
+            error_det = 1
+        }
+
+        if (blog_thumbnail_url == undefined || blog_thumbnail_url == "") {
+            displayError(".thumbnail_error_msg")
+            error_det = 1
+        }
+
+        if (error_det == 0) {
+            $(".dashboard_modal_main_blog_preveiw_img_con").css("background-image", 'url(' + blog_thumbnail_url + ')')
+            $(".dashboard_modal_main_blog_preveiw_title").text(blog_title)
+            $(".dashboard_modal_main_blog_preveiw_subtitle").text(blog_subtitle)
+            $(".dashboard_modal_main_blog_preveiw_content").html(blog_content)
+
+
+            $("html, body").addClass("noscroll");
+            $(".dashboard_modal").css({
+                "visibility": 'visible',
+                "opacity": '1'
+            })
+        }
     })
 
     var dashboard_modal_close = () => {

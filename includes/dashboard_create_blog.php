@@ -17,7 +17,7 @@
                         </i>
                     </div>
                 </div>
-                <div class="create_blog_inp_error_msg">Enter a title for your blog</div>
+                <div class="create_blog_inp_error_msg title_error_msg">Enter a title for your blog</div>
                 <input class="blog_inp create_blog_title_inp" maxlength="50">
                 <div class="blog_inp_charCount flexc" data_char_len="50">0</div>
             </div>
@@ -31,7 +31,7 @@
                         </i>
                     </div>
                 </div>
-                <div class="create_blog_inp_error_msg">Enter a Subtitle for your blog</div>
+                <div class="create_blog_inp_error_msg subtitle_error_msg">Enter a Subtitle for your blog</div>
                 <input class="blog_inp create_blog_subtitle_inp" maxlength="100">
                 <div class="blog_inp_charCount flexc" data_char_len="100">0</div>
             </div>
@@ -41,9 +41,7 @@
 
         <div class="dashboard_create_blog_sec2">
             <div class="dashboard_create_blog_sec2_sub_section1">
-                <div class="dashboard_create_blog_sec_title">
-                    Add Info
-                </div>
+                <div class="dashboard_create_blog_sec_title">Add Info</div>
 
                 <div class="blog_inp_con">
                     <div class="blog_inp_label flexc">
@@ -54,7 +52,7 @@
                             </i>
                         </div>
                     </div>
-                    <div class="create_blog_inp_error_msg">Enter a catagory for your blog</div>
+                    <div class="create_blog_inp_error_msg catagory_error_msg">Enter a catagory for your blog</div>
                     <div class="create_blog_cata_con flexc" style="flex-wrap:wrap">
                         <input class="create_blog_cata_inp" data_content="blog_catagories" type="text">
                     </div>
@@ -70,7 +68,7 @@
                             </i>
                         </div>
                     </div>
-                    <div class="create_blog_inp_error_msg">Enter tags for your blog</div>
+                    <div class="create_blog_inp_error_msg tags_error_msg">Enter tags for your blog</div>
                     <div class="create_blog_tags_con flexc" style="flex-wrap:wrap">
                         <input class="create_blog_tags_inp" data_content="blog_tags" type="text">
                     </div>
@@ -79,11 +77,10 @@
             </div>
 
             <div class="dashboard_create_blog_sec2_sub_section2">
-                <div class="dashboard_create_blog_sec_title">Add Thumbnail</div>
+                <div class="dashboard_create_blog_sec_title" style="padding-bottom: 0">Add Thumbnail</div>
+                <div class="create_blog_inp_error_msg tags_error_msg thumbnail_error_msg" style="padding: 0px 20px">Enter a thumbnail for your blog</div>
 
                 <div class="dashboard_create_blog_image_upload_con">
-
-
                     <div class="dashboard_create_blog_image_dropzone flexc">
                         <div class="dashboard_create_blog_image_dropzone_overlay flexc"></div>
                         <form class="dashboard_create_blog_image_dropzone_content mainImg_upload_form flexc">
