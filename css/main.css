@@ -1,5 +1,11 @@
+/* common font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/*blog site logo font*/
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+/*create blog preveiw title font*/
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
 
 :root {
     --themec: #ff3b1d;

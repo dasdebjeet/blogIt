@@ -187,7 +187,7 @@ $(document).ready(function () {
                             "background": '#ffffff',
                             "width": '100%',
                             "color": '#000000',
-                            "box-shadow": 'inset 9px 9px 35px #e9e9e9, inset -9px -9px 35px #e5e5e500'
+                            "box-shadow": 'inset 9px 9px 35px #e9e9e9, inset -9px -9px 35px #e5e5e5'
 
                         })
                         $(".lineNumber").css("display", 'none')

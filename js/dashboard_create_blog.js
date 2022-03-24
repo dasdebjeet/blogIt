@@ -203,13 +203,13 @@ $(document).ready(() => {
 
         dropZoneElement.addEventListener("dragover", (e) => {
             e.preventDefault();
-            $(".dashboard_create_blog_image_dropzone").addClass("dropzone_active")
+            $(".dashboard_create_blog_image_dropzone").addClass("mainImg_dropzone_active")
             $(".blog_image_dropzone_icon").html("<i class='far fa-check' aria-hidden='true'></i>").css("color", '#4affbc')
             $(".blog_image_dropzone_text").html("Selected")
         })
 
         var remove_dropzone_active = () => {
-            $(".dashboard_create_blog_image_dropzone").removeClass("dropzone_active")
+            $(".dashboard_create_blog_image_dropzone").removeClass("mainImg_dropzone_active")
             $(".blog_image_dropzone_icon").html("<i class='fal fa-cloud-upload' aria-hidden='true'></i>").css("color", '#ff7863')
             $(".blog_image_dropzone_text").html("Drag files here or <span>browse</span>")
         };
@@ -221,7 +221,7 @@ $(document).ready(() => {
         })
 
         dropZoneElement.addEventListener("drop", (e) => {
-            e.preventDefault();
+            e.preventDefault(); // prevent the image from opening in a new tab
             $(".thumbnail_error_msg").css("display", 'none')
 
             if (e.dataTransfer.files.length) {
@@ -251,7 +251,7 @@ $(document).ready(() => {
                 inputElement = files
                 updateThumnail(dropZoneElement, files[0], formData)
             };
-        });
+        })
 
 
         // thumbnail
@@ -362,8 +362,6 @@ $(document).ready(() => {
             };
 
 
-
-
         };
 
 
@@ -432,6 +430,15 @@ $(document).ready(() => {
             $(".dashboard_modal_main_blog_preveiw_subtitle").text(blog_subtitle)
             $(".dashboard_modal_main_blog_preveiw_content").html(blog_content)
 
+            $(".dashboard_modal_main_blog_preveiw_catagory_tags").html("")
+
+            arr_cata.forEach((cata) => {
+                $(".dashboard_modal_main_blog_preveiw_catagory_tags").prepend(`<span class="blog_preveiw_catagory_format">#${cata}</span>`)
+            })
+
+            arr_tags.forEach((tag) => {
+                $(".dashboard_modal_main_blog_preveiw_catagory_tags").append(`<span class="blog_preveiw_tags_format">#${tag}</span>`)
+            })
 
             $("html, body").addClass("noscroll");
             $(".dashboard_modal").css({

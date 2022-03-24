@@ -5,6 +5,8 @@
 
     <div class="blog_textEditorWrapper_inp_con">
         <div class="editor_dataModal flexc">
+
+
             <div class="imgUrl_dataModal_content">
                 <div style="margin-bottom:40px;">Insert image url</div>
                 <input class="img_url_inp" type="url">

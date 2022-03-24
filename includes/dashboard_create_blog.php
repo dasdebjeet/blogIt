@@ -86,7 +86,7 @@
                         <form class="dashboard_create_blog_image_dropzone_content mainImg_upload_form flexc">
                             <input class="dashboard_create_blog_mainImage_inp" type="file" name="mainImg_file" hidden>
                             <div class="blog_image_dropzone_icon flexc"><i class="fal fa-cloud-upload"></i></div>
-                            <div class="blog_image_dropzone_text">Drag files here or <span>browse</span></div>
+                            <div class="blog_image_dropzone_text">Drag file here or <span>browse</span></div>
                         </form>
                     </div>
 

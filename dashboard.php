@@ -38,7 +38,44 @@
     </head>
 
     <body>
-        <div class="dashboard_modal">
+        <div class="dashboard_modal flexc">
+
+            <div class="blog_mini_image_upload_wrap flexc">
+                <div class="blog_mini_image_upload_title">Add Images</div>
+
+                <div class="blog_mini_image_upload_con">
+
+                    <div class="blog_mini_image_upload_dropzone_overlay flexc"></div>
+                    <form class="blog_mini_image_upload_dropzone flexc">
+                        <input class="blog_mini_images_inp" type="file" name="blog_content_img_file" multiple hidden>
+                        <div class="blog_mini_image_dropzone_icon flexc"><i class="fal fa-cloud-upload"></i></div>
+                        <div class="blog_mini_image_dropzone_text">Drag files here or <span>browse</span></div>
+                    </form>
+
+
+                    <div class="blog_mini_image_preveiw_wrap">
+                        <!-- <div class="blog_mini_image_preveiw flexc">
+                            <div class="blog_mini_image_preveiw_img_con">
+                                <div class="blog_mini_image_preveiw_closebtn_con flexc"><i class="fal fa-times"></i></div>
+                                <img class="blog_mini_image_preveiw_img" src="./assests/lastest_feed.jpg">
+                            </div>
+                            <div class="blog_mini_image_preveiw_content flexc">
+                                <div class="blog_mini_image_preveiw_text flexc">image.png</div>
+                                <div class="blog_mini_image_preveiw_icon flexc"><i class="fal fa-pencil"></i></div>
+                            </div>
+                        </div> -->
+
+
+                    </div>
+                </div>
+
+                <div class="blog_mini_image_upload_btn_con">
+                    <button class="blog_mini_image_upload_btn">Cancel</button>
+                    <button class="blog_mini_image_upload_btn">Upload image</button>
+                    <button class="blog_mini_image_upload_btn">Insert images</button>
+                </div>
+
+            </div>
 
             <div class="dashboard_modal_main_blog_preveiw_wrap">
                 <div class="dashboard_modal_main_blog_preveiw_wrap_title">Blog Preveiw</div>
@@ -46,12 +83,10 @@
                 <div class="dashboard_modal_main_blog_preveiw_con">
                     <div class="dashboard_modal_main_blog_preveiw_con_closeBtn flexc"><i class="fal fa-times" aria-hidden="true"></i></div>
                     <div class="dashboard_modal_main_blog_preveiw_img_con" style="background-image:url('./assests/lastest_feed.jpg')">
-                        <div class="dashboard_modal_main_blog_preveiw_catagory_tags">
-                            <span class="blog_preveiw_catagory_format">#Technology</span>
+                        <div class="dashboard_modal_main_blog_preveiw_catagory_tags flexc">
+                            <!-- <span class="blog_preveiw_catagory_format">#Technology</span>
                             <span class="blog_preveiw_tags_format">#Tech</span>
-                            <span class="blog_preveiw_tags_format">#Data Center</span>
-                            <span class="blog_preveiw_tags_format">#Big Tech</span>
-                            <span class="blog_preveiw_tags_format">#Giants</span>
+                            <span class="blog_preveiw_tags_format">#Data Center</span> -->
                         </div>
                     </div>
                     <div class="dashboard_modal_main_blog_preveiw_text_con">

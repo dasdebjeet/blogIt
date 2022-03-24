@@ -200,6 +200,12 @@ screen and (max-width: 600px) {
         width: 180px;
     }
 
+    /* dashboard page -- create blog prev modal*/
+    .dashboard_modal_main_blog_preveiw_wrap {
+        width: 90%;
+    }
+
+
     /* dashboard page -- main */
     .dashboard_analytics_overveiw_con {
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
