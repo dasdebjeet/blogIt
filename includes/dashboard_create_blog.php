@@ -78,7 +78,7 @@
 
             <div class="dashboard_create_blog_sec2_sub_section2">
                 <div class="dashboard_create_blog_sec_title" style="padding-bottom: 0">Add Thumbnail</div>
-                <div class="create_blog_inp_error_msg tags_error_msg thumbnail_error_msg" style="padding: 0px 20px">Enter a thumbnail for your blog</div>
+                <div class="create_blog_inp_error_msg tags_error_msg thumbnail_error_msg" style="padding: 0px 20px">Upload a thumbnail for your blog</div>
 
                 <div class="dashboard_create_blog_image_upload_con">
                     <div class="dashboard_create_blog_image_dropzone flexc">
@@ -104,11 +104,4 @@
             </div>
         </div>
     </div>
-    <!-- <div class="dashboard_create_blog_MainSec2">
-        <div class="dashboard_create_blog_sec1">
-            <button class="blog_create_mainBtn">Preveiw</button>
-            <button class="blog_create_mainBtn">Draft</button>
-            <button class="blog_create_mainBtn">Save</button>
-        </div>
-    </div> -->
 </div>

@@ -205,6 +205,17 @@ screen and (max-width: 600px) {
         width: 90%;
     }
 
+    .blog_mini_image_upload_wrap {
+        width: 90%;
+    }
+
+    .blog_mini_image_dropzone_icon {
+        font-size: 30vw;
+    }
+
+    .blog_mini_image_dropzone_text {
+        font-size: 25px;
+    }
 
     /* dashboard page -- main */
     .dashboard_analytics_overveiw_con {

@@ -42,37 +42,24 @@
 
             <div class="blog_mini_image_upload_wrap flexc">
                 <div class="blog_mini_image_upload_title">Add Images</div>
+                <div class="blog_mini_image_upload_err_msg">Upload a image to be inserted in your blog</div>
 
                 <div class="blog_mini_image_upload_con">
 
                     <div class="blog_mini_image_upload_dropzone_overlay flexc"></div>
                     <form class="blog_mini_image_upload_dropzone flexc">
-                        <input class="blog_mini_images_inp" type="file" name="blog_content_img_file" multiple hidden>
+                        <input class="blog_mini_images_inp" type="file" name="blog_content_mini_img_file" multiple hidden>
                         <div class="blog_mini_image_dropzone_icon flexc"><i class="fal fa-cloud-upload"></i></div>
                         <div class="blog_mini_image_dropzone_text">Drag files here or <span>browse</span></div>
                     </form>
 
-
-                    <div class="blog_mini_image_preveiw_wrap">
-                        <!-- <div class="blog_mini_image_preveiw flexc">
-                            <div class="blog_mini_image_preveiw_img_con">
-                                <div class="blog_mini_image_preveiw_closebtn_con flexc"><i class="fal fa-times"></i></div>
-                                <img class="blog_mini_image_preveiw_img" src="./assests/lastest_feed.jpg">
-                            </div>
-                            <div class="blog_mini_image_preveiw_content flexc">
-                                <div class="blog_mini_image_preveiw_text flexc">image.png</div>
-                                <div class="blog_mini_image_preveiw_icon flexc"><i class="fal fa-pencil"></i></div>
-                            </div>
-                        </div> -->
-
-
-                    </div>
+                    <div class="blog_mini_image_preveiw_wrap"></div>
                 </div>
 
                 <div class="blog_mini_image_upload_btn_con">
-                    <button class="blog_mini_image_upload_btn">Cancel</button>
-                    <button class="blog_mini_image_upload_btn">Upload image</button>
-                    <button class="blog_mini_image_upload_btn">Insert images</button>
+                    <button class="blog_mini_image_upload_btn miniImg_cancelBtn">Cancel</button>
+                    <button class="blog_mini_image_upload_btn miniImg_uplBtn">Upload images</button>
+                    <button class="blog_mini_image_upload_btn miniImg_intBtn">Insert images</button>
                 </div>
 
             </div>

@@ -233,6 +233,8 @@
 
 .editor_body img {
     width: 50%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .editor_body h1,
@@ -240,6 +242,8 @@
 .editor_body h3 {
     margin: 0;
     margin-bottom: 10px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 15px;
 }
 
 .editor_body ul,

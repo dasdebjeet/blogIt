@@ -5,8 +5,7 @@
 
     <div class="blog_textEditorWrapper_inp_con">
         <div class="editor_dataModal flexc">
-
-
+            <!-- 
             <div class="imgUrl_dataModal_content">
                 <div style="margin-bottom:40px;">Insert image url</div>
                 <input class="img_url_inp" type="url">
@@ -15,7 +14,7 @@
                     <button class="img_cancleBtn" style="margin-right:20px">Cancel</button>
                     <button class="img_insertBtn">Insert</button>
                 </div>
-            </div>
+            </div> -->
 
             <div class="createUrl_dataModal_content">
                 <div style="margin-bottom:40px;">Insert url</div>
@@ -42,12 +41,12 @@
             </div>
 
             <div class="toolbar_btn_wrap flexc">
-                <button class="toolbar_btn flexc" data-cmd="H1" tooltip="Heading 1"><i class='bx bx-heading'></i><span style="font-weight:600">1</span></button>
+                <!-- <button class="toolbar_btn flexc" data-cmd="H1" tooltip="Heading 1"><i class='bx bx-heading'></i><span style="font-weight:600">1</span></button>
                 <div class="toolbar_btn_wrapSpace"></div>
                 <button class="toolbar_btn flexc" data-cmd="H2" tooltip="Heading 2"><i class='bx bx-heading'></i><span style="font-weight:600">2</span></button>
-                <div class="toolbar_btn_wrapSpace"></div>
-                <button class="toolbar_btn flexc" data-cmd="H3" tooltip="Heading 3"><i class='bx bx-heading'></i><span style="font-weight:600">3</span></button>
-                <div class="toolbar_btn_wrapSpace"></div>
+                <div class="toolbar_btn_wrapSpace"></div> -->
+                <button class="toolbar_btn flexc" data-cmd="H3" tooltip="Heading"><i class='bx bx-heading'></i></button>
+                <!-- <div class="toolbar_btn_wrapSpace"></div> -->
             </div>
 
 
@@ -65,22 +64,8 @@
             </div>
 
             <div class="toolbar_btn_wrap flexc">
-                <button class="toolbar_btn flexc" data-cmd="insertImage" tooltip="Insert Image" status="off" style="font-size:18px"><i class='bx bx-image'></i></button>
+                <button class="toolbar_btn flexc" data-cmd="insertImage" tooltip="Insert Image" style="font-size:18px"><i class='bx bx-image'></i></button>
                 <button class="toolbar_btn flexc" data-cmd="createLink" tooltip="Create Link" style="font-size:18px"><i class='bx bx-link'></i></button>
-
-
-                <div class="insertImg_btn_dropdown">
-                    <div class="img_dropdown_menu blog_textEditor_imgFile_upload flexc" style="border-bottom: 1px solid #505050;">
-                        <input class="blog_textEditor_img_inp" type="file" name="blog_textEditor_img" hidden>
-                        <div class="menu_text">Upload from PC</div>
-                        <div class="menu_icon"><i class="fal fa-arrow-to-top"></i></div>
-                    </div>
-                    <div class="img_dropdown_menu imgUrl flexc">
-                        <div class="menu_text">Insert by url</div>
-                        <div class="menu_icon"><i class='bx bx-link-alt'></i></div>
-                    </div>
-                </div>
-
             </div>
 
             <div class="toolbar_btn flexc" data-cmd="veiwCode" status="off" tooltip="HTML Code" style="font-size:18px"><i class='bx bx-code-alt'></i></div>

@@ -73,6 +73,7 @@ $(document).ready(() => {
             cata.parentElement.removeChild(cata)
         })
     }
+
     var addCata = () => { //function declaration to add tags
         resetCata();
         arr_cata.slice().reverse().forEach((cata) => {
@@ -197,7 +198,7 @@ $(document).ready(() => {
     // --------------------------------------------------------------------------------------------
     // blog main image uploader
 
-    var blog_thumbnail_url
+    var blog_thumbnail_name, blog_thumbnail_url
     document.querySelectorAll(".dashboard_create_blog_mainImage_inp").forEach(inputElement => {
         const dropZoneElement = inputElement.closest(".dashboard_create_blog_image_dropzone")
 
@@ -225,6 +226,7 @@ $(document).ready(() => {
             $(".thumbnail_error_msg").css("display", 'none')
 
             if (e.dataTransfer.files.length) {
+
                 var image = e.dataTransfer.files[0]
                 var formData = new FormData()
                 formData.append('mainImg_file', image)
@@ -235,7 +237,7 @@ $(document).ready(() => {
         });
 
 
-        //upload btn
+        //upload btn trigger
         $(".dashboard_create_blog_image_dropzone_overlay").click(() => {
             $(".dashboard_create_blog_mainImage_inp").trigger('click');
         });
@@ -277,6 +279,7 @@ $(document).ready(() => {
 
             //show the thumbnail img
             if (file.type.startsWith("image/")) {
+                blog_thumbnail_name = file.name
                 const reader = new FileReader();
 
                 let file_name = file.name; //getting file name
@@ -334,6 +337,18 @@ $(document).ready(() => {
                                         `)
 
                                         $(".blog_image_upload_completed").on("click", () => {
+                                            // console.log(blog_thumbnail_name)
+
+                                            var form_data = '&blog_thumbnail_name_delete=yes' + '&blog_thumbnail_name=' + blog_thumbnail_name
+                                            $.ajax({
+                                                type: "POST",
+                                                url: "./includes/blog_imgUploader.php",
+                                                data: form_data,
+                                            }).done((response) => {
+                                                // console.log(response)
+                                                blog_thumbnail_name = ""
+                                            })
+
                                             $(".dashboard_create_blog_image_dropzone_overlay").css({
                                                 "background-image": `none`,
                                                 "background-color": 'transparent'
@@ -349,13 +364,13 @@ $(document).ready(() => {
                         return xhr;
                     },
                     type: "POST",
-                    url: "./includes/main_blog_imgUploader.php",
+                    url: "./includes/blog_imgUploader.php",
                     data: formData,
                     cache: false,
                     contentType: false,
                     processData: false,
                     success: (result) => {
-                        console.log(result);
+                        // console.log(result);
                     }
                 })
 
@@ -371,14 +386,6 @@ $(document).ready(() => {
     // blog create draft and publish btn
 
     $(".blog_create_publishBtn").click(() => {
-
-        // console.log($(".create_blog_title_inp").val())
-        // console.log($(".create_blog_subtitle_inp").val())
-        // console.log($(".editor_body").html())
-        // console.log(arr_cata)
-        // console.log(arr_tags)
-        // console.log(blog_thumbnail_url)
-
         var error_det = 0
         var blog_title = $(".create_blog_title_inp").val()
         var blog_subtitle = $(".create_blog_subtitle_inp").val()
@@ -445,6 +452,8 @@ $(document).ready(() => {
                 "visibility": 'visible',
                 "opacity": '1'
             })
+            $(".dashboard_modal_main_blog_preveiw_wrap").css("display", 'block')
+            $(".blog_mini_image_upload_wrap").css("display", 'none')
         }
     })
 
