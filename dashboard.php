@@ -97,6 +97,36 @@
         </div>
 
         <div class="dashboard_wrapper flexc">
+            <div class="dashboard_mobile_bottom_navbar flexc">
+                <ul class="dashboard_mobile_bottom_navbar_menu_con flexc">
+                    <div class="dashboard_mobile_bottom_navbar_menu flexc" dashborad_id="">
+                        <div class="dashboard_mobile_bottom_navbar_menu_icon flexc"><i class='bx bx-line-chart'></i></div>
+                        <div class="dashboard_mobile_bottom_navbar_menu_name flexc">Analytics</div>
+                    </div>
+
+                    <div class="dashboard_mobile_bottom_navbar_menu flexc" dashborad_id="">
+                        <div class="dashboard_mobile_bottom_navbar_menu_icon flexc"><i class='bx bx-file flexc'></i></div>
+                        <div class="dashboard_mobile_bottom_navbar_menu_name flexc">Blog</div>
+                    </div>
+
+                    <div class="dashboard_mobile_bottom_navbar_menu  mobile_bottom_navbar_menu_active flexc" dashborad_id="main">
+                        <div class="dashboard_mobile_bottom_navbar_menu_icon flexc"><i class='bx bx-grid-alt flexc'></i></div>
+                        <div class="dashboard_mobile_bottom_navbar_menu_name flexc">Dashboard</div>
+                    </div>
+
+                    <div class="dashboard_mobile_bottom_navbar_menu flexc" dashborad_id="create_blog">
+                        <div class="dashboard_mobile_bottom_navbar_menu_icon flexc"><i class='bx bx-edit-alt'></i></div>
+                        <div class="dashboard_mobile_bottom_navbar_menu_name flexc">Create</div>
+                    </div>
+                    <div class="dashboard_mobile_bottom_navbar_menu flexc" dashborad_id="">
+                        <div class="dashboard_mobile_bottom_navbar_menu_icon flexc"><i class='bx bx-cog'></i></div>
+                        <div class="dashboard_mobile_bottom_navbar_menu_name flexc">Settings</div>
+                    </div>
+                </ul>
+            </div>
+
+
+
             <div class="dashboard_sidebar">
                 <a href="index.php" class="siteLogo flexc"><img src="./assests/siteLogo_W.svg"></a>
                 <div class="dashboard_menu_con">
@@ -140,6 +170,7 @@
                 <div class="dashboard_con_content">
                 </div>
 
+                <div class="dashboard_contentSpace_forBottom_navbar"></div>
             </div>
 
         </div>

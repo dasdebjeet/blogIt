@@ -179,6 +179,9 @@ screen and (max-width: 600px) {
         transform: translate(-50%, 0%);
     }
 
+    .dashboard_mobile_bottom_navbar {
+        display: flex;
+    }
 
     /* dashboard page */
     .dashboard_sidebar {
@@ -198,6 +201,11 @@ screen and (max-width: 600px) {
     /* dashboard -- navbar */
     .dashboard_searchbar {
         width: 180px;
+    }
+
+
+    .dashboard_contentSpace_forBottom_navbar {
+        display: block;
     }
 
     /* dashboard page -- create blog prev modal*/

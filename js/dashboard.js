@@ -1,5 +1,6 @@
 $(document).ready(() => {
-    $(".dashboard_con_content").load("./includes/dashboard_create_blog.php ")
+    // $(".dashboard_con_content").load("./includes/dashboard_create_blog.php ")
+    $(".dashboard_con_content").load("./includes/dashboard_main.php ")
 
     // $(".search_inp").focus(() => {
     //     $(".dashboard_searchbar").css("border", '2px solid #000000')
@@ -28,13 +29,36 @@ $(document).ready(() => {
         menu.addEventListener('click', (e) => {
             e.stopImmediatePropagation();
             var dash_side_val = $(menu).attr("dashborad_id")
-            console.log(dash_side_val)
             $(".dashboard_con_content").load("./includes/dashboard_" + dash_side_val + ".php")
         })
     }
 
 
 
+    // dashboard -- mobile bottom navbar
+    var lastScrollTop = 0;
+    $(window).scroll(function (event) {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            $(".dashboard_mobile_bottom_navbar").css("transform", 'translateY(0px)')
+        } else {
+            $(".dashboard_mobile_bottom_navbar").css("transform", 'translateY(100px)')
+        }
+        lastScrollTop = st;
+    })
+
+
+    var dash_mobile_menus = document.querySelectorAll('.dashboard_mobile_bottom_navbar_menu')
+    for (const menu of dash_mobile_menus) {
+        menu.addEventListener('click', (e) => {
+            e.stopImmediatePropagation();
+            $(".dashboard_mobile_bottom_navbar_menu").removeClass("mobile_bottom_navbar_menu_active")
+            $(menu).addClass("mobile_bottom_navbar_menu_active")
+
+            var dash_side_val = $(menu).attr("dashborad_id")
+            $(".dashboard_con_content").load("./includes/dashboard_" + dash_side_val + ".php")
+        })
+    }
 
 
 

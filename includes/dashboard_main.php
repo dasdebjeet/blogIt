@@ -190,7 +190,7 @@
         }],
         chart: {
             type: 'area',
-            height: 258,
+            height: 238,
             fontFamily: 'Montserrat, sans-serif;',
             sparkline: {
                 enabled: true

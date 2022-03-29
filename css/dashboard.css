@@ -221,7 +221,7 @@
     background: var(--themec);
 }
 
-/* create blog mini-image uploader */
+/* create blog -- mini-image uploader */
 
 
 /*create blog -- preveiw wrap */
@@ -364,10 +364,10 @@
     background: var(--themec);
 }
 
-/*  */
+/* dashboard_wrapper */
 
 .dashboard_wrapper {
-    overflow: none;
+    position: relative;
     background: #f2f2f2;
     justify-content: flex-start;
     align-items: flex-start;
@@ -375,6 +375,71 @@
     min-height: 100vh;
     padding: 30px;
 }
+
+/* dsahboard -- mobile navbar */
+.dashboard_mobile_bottom_navbar {
+    display: none;
+    background: var(--lightgrey);
+    background: #242424;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+    width: calc(100% - 20px);
+    color: #ffffff;
+    border-radius: 10px;
+    user-select: none;
+    box-shadow: 10px 10px 60px #353535;
+    transform: translateY(100px);
+    transition: all .5s ease-in-out;
+    z-index: 9999999;
+}
+
+.dashboard_mobile_bottom_navbar_menu_con {
+    width: 100%;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.dashboard_mobile_bottom_navbar_menu {
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.dashboard_mobile_bottom_navbar_menu_icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 75px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all .2s ease-in-out;
+}
+
+.dashboard_mobile_bottom_navbar_menu_name {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .2s ease-in-out;
+}
+
+.mobile_bottom_navbar_menu_active .dashboard_mobile_bottom_navbar_menu_icon {
+    background: #242424;
+    border: 5px solid var(--themec);
+    border-width: 5px 15px 15px 5px;
+    box-shadow: 0 -5px 5px 0px #35353533;
+    transform: translateY(-30px);
+}
+
+.mobile_bottom_navbar_menu_active .dashboard_mobile_bottom_navbar_menu_name {
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+/* dashboard -- desktop sidebar */
 
 .dashboard_sidebar {
     position: relative;
@@ -538,4 +603,11 @@
 
 .dashboard_con_content {
     transition: all .2s ease-in-out;
+}
+
+.dashboard_contentSpace_forBottom_navbar {
+    display: none;
+    width: 100%;
+    height: 90px;
+    transition: all .5s ease-in-out;
 }
