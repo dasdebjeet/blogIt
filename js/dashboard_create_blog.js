@@ -210,6 +210,8 @@ $(document).ready(() => {
         })
 
         var remove_dropzone_active = () => {
+            $(".editor_body").css("min-height", '305px')
+
             $(".dashboard_create_blog_image_dropzone").removeClass("mainImg_dropzone_active")
             $(".blog_image_dropzone_icon").html("<i class='fal fa-cloud-upload' aria-hidden='true'></i>").css("color", '#ff7863')
             $(".blog_image_dropzone_text").html("Drag files here or <span>browse</span>")
@@ -226,6 +228,7 @@ $(document).ready(() => {
             $(".thumbnail_error_msg").css("display", 'none')
 
             if (e.dataTransfer.files.length) {
+                $(".editor_body").css("min-height", '355px')
 
                 var image = e.dataTransfer.files[0]
                 var formData = new FormData()
@@ -250,6 +253,8 @@ $(document).ready(() => {
             var form = $('.mainImg_upload_form')[0]; // You need to use standard javascript object here
             var formData = new FormData(form)
             if (files.length) {
+                $(".editor_body").css("min-height", '355px')
+
                 inputElement = files
                 updateThumnail(dropZoneElement, files[0], formData)
             };

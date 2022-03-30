@@ -13,6 +13,7 @@ $(document).ready(() => {
 
     $(".menu_btn").click(() => {
         $(".menu_btn>i").toggleClass("bx-x")
+        $(".dashboard_dummy_sidebar").toggleClass("active_dashboard_sidebar")
         $(".dashboard_sidebar").toggleClass("active_dashboard_sidebar")
         $(".dashboard_con").toggleClass("active_dashboard_con")
     });

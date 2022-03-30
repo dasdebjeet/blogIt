@@ -11,12 +11,12 @@
     height: 100vh;
 
     overflow-y: auto;
-    z-index: 9999999;
 
     transition: 0.2s;
     animation-name: zoom;
     animation-duration: 0.2s;
     /* backdrop-filter: blur(5px); */
+    z-index: 9999999;
 }
 
 @keyframes zoom {
@@ -380,7 +380,7 @@
 .dashboard_mobile_bottom_navbar {
     display: none;
     background: var(--lightgrey);
-    background: #242424;
+    background: #000000;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -392,7 +392,7 @@
     box-shadow: 10px 10px 60px #353535;
     transform: translateY(100px);
     transition: all .5s ease-in-out;
-    z-index: 9999999;
+    z-index: 99999;
 }
 
 .dashboard_mobile_bottom_navbar_menu_con {
@@ -416,7 +416,7 @@
     line-height: 75px;
     text-align: center;
     border-radius: 50%;
-    transition: all .2s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .dashboard_mobile_bottom_navbar_menu_name {
@@ -427,7 +427,7 @@
 }
 
 .mobile_bottom_navbar_menu_active .dashboard_mobile_bottom_navbar_menu_icon {
-    background: #242424;
+    background: #000000;
     border: 5px solid var(--themec);
     border-width: 5px 15px 15px 5px;
     box-shadow: 0 -5px 5px 0px #35353533;
@@ -440,9 +440,16 @@
 }
 
 /* dashboard -- desktop sidebar */
+.dashboard_dummy_sidebar {
+    width: 220px;
+    height: 100%;
+    overflow-x: hidden;
+    transition: all .3s ease-in-out;
+    user-select: none;
+}
 
 .dashboard_sidebar {
-    position: relative;
+    position: fixed;
     background: var(--lightgrey);
     flex-direction: column;
     justify-content: flex-start;
@@ -539,12 +546,16 @@
     background: #ffffff;
     /* justify-content: flex-start; */
     justify-content: space-between;
-    padding: 10px;
+    /* padding: 10px; */
     min-height: 50px;
     /* border: 1px solid red; */
 
     border-radius: 10px;
     box-shadow: 20px 20px 60px #cecece
+}
+
+.dashboard_navbar div>div {
+    margin: 10px 0;
 }
 
 .dashboard_navbar_menu {
@@ -557,9 +568,28 @@
     cursor: pointer;
 }
 
+.dashboard_navbar .siteLogo {
+    display: none;
+    background: #000000;
+    padding: 0 5px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px 0 0 10px;
+}
+
+.dashboard_navbar .siteLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.menu_btn {
+    margin-left: 10px !important;
+}
+
 .dashboard_searchbar {
     background: #e5e5e5;
-    margin-left: 10px;
+    margin-left: 10px !important;
     width: 250px;
     height: 40px;
     font-size: 22px;
@@ -587,10 +617,11 @@
 
 .nofication_con {
     background: transparent;
-    margin-right: 10px;
+    margin-right: 10px !important;
 }
 
 .user_profile {
+    margin-right: 10px !important;
     width: 40px;
     height: 40px;
 }

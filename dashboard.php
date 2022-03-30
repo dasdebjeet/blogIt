@@ -126,7 +126,7 @@
             </div>
 
 
-
+            <div class="dashboard_dummy_sidebar"></div>
             <div class="dashboard_sidebar">
                 <a href="index.php" class="siteLogo flexc"><img src="./assests/siteLogo_W.svg"></a>
                 <div class="dashboard_menu_con">
@@ -144,6 +144,10 @@
             <div class="dashboard_con">
                 <div class="dashboard_navbar flexc">
                     <div class="flexc">
+                        <a href="index.php" class="dashboard_navbar_menu siteLogo flexc">
+                            <img src="./assests/siteLogo_W.svg">
+                        </a>
+
                         <div class="dashboard_navbar_menu menu_btn flexc">
                             <i class='bx bx-menu-alt-left'></i>
                         </div>

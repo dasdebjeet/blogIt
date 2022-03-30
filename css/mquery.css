@@ -184,12 +184,13 @@ screen and (max-width: 600px) {
     }
 
     /* dashboard page */
+    .dashboard_dummy_sidebar,
     .dashboard_sidebar {
         display: none;
     }
 
     .dashboard_wrapper {
-        padding: 30px 20px;
+        padding: 30px 15px;
     }
 
     .dashboard_con {
@@ -199,6 +200,14 @@ screen and (max-width: 600px) {
 
 
     /* dashboard -- navbar */
+    .dashboard_navbar .siteLogo {
+        display: flex;
+    }
+
+    .menu_btn {
+        display: none;
+    }
+
     .dashboard_searchbar {
         width: 180px;
     }
@@ -210,11 +219,15 @@ screen and (max-width: 600px) {
 
     /* dashboard page -- create blog prev modal*/
     .dashboard_modal_main_blog_preveiw_wrap {
-        width: 90%;
+        width: 95%;
     }
 
     .blog_mini_image_upload_wrap {
-        width: 90%;
+        width: 95%;
+    }
+
+    .blog_mini_image_upload_con {
+        height: 300px;
     }
 
     .blog_mini_image_dropzone_icon {
