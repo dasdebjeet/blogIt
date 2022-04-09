@@ -437,6 +437,16 @@ $(document).ready(() => {
         }
 
         if (error_det == 0) {
+
+            $.ajax({
+                type: 'POST',
+                url: './includes/cookie_header.php',
+                // data: ""
+            }).done((response) => {
+                console.log(response)
+            })
+
+
             $(".dashboard_modal_main_blog_preveiw_img_con").css("background-image", 'url(' + blog_thumbnail_url + ')')
             $(".dashboard_modal_main_blog_preveiw_title").text(blog_title)
             $(".dashboard_modal_main_blog_preveiw_subtitle").text(blog_subtitle)

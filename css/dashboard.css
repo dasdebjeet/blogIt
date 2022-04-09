@@ -620,13 +620,15 @@
     margin-right: 10px !important;
 }
 
-.user_profile {
+.dashboard_user_profile {
+    background-color: var(--themec);
     margin-right: 10px !important;
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 }
 
-.user_profile>.user_img {
+.dashboard_user_profile>.user_img {
     width: 100%;
     height: 100%;
     border-radius: 50%;

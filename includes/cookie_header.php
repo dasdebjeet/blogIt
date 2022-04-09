@@ -1,10 +1,10 @@
 <?php
     // logout
-
     function reset_cookie(){
         unset($_COOKIE['oreo_blogW']);
         setcookie('oreo_blogW', '', time() - 3600, '/');
     }
+
     if(isset($_COOKIE['oreo_blogW'])){
         require_once "../sdk/getLogin_signup.php";
         $obj = new login_signup;

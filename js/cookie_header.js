@@ -12,7 +12,10 @@ $(document).ready(() => {
         $(".nav_userProfile>img").remove()
         $(".navLogin_btn").remove()
         $(navUser_img).appendTo(".nav_userProfile")
+
+        $(".dashboard_user_profile").html('<img src="./assests/users_img/' + img_add + '" class="user_img">')
     }
+
     setInterval(() => {
         $.ajax({
             type: 'POST',
@@ -21,10 +24,10 @@ $(document).ready(() => {
         }).done((response) => {
             // console.log(response)
             if (response != "New user") {
-                if (response == "You logged in from a new device! Please login") {
+                if (response == "You logged in from a new device! Please login") { // logined from a new device 
                     log_newStat = 0
                     // console.log(log_oldStat, log_newStat)
-                    if (log_newStat != log_oldStat) { // not logedin
+                    if (log_newStat != log_oldStat) { // not logined
                         // console.log(response)
                         $(".navLogin_btn").remove()
                         $(".nav_userProfile>img").remove()
@@ -55,7 +58,7 @@ $(document).ready(() => {
                     }
                 }
             } else {
-                console.log(response)
+                console.log(response) // new user logedin
             }
         })
     }, 1000)

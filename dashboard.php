@@ -29,6 +29,7 @@
 
         <!--Jquery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="./js/cookie_header.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
         <script src="./js/dashboard.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 
         <meta name="theme-color" content="#ff3b1d">
@@ -164,7 +165,7 @@
                         <div class="dashboard_navbar_menu nofication_con flexc">
                             <i class='bx bx-bell'></i>
                         </div>
-                        <div class="user_profile">
+                        <div class="dashboard_user_profile">
                             <img src="./assests/author_photo.jpg" class="user_img">
                         </div>
                     </div>
