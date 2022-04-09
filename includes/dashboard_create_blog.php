@@ -100,7 +100,7 @@
             <div class="dashboard_create_blog_sec2_sub_section3 flexc">
                 <button class="blog_create_mainBtn">Draft</button>
                 <div class="blog_create_mainBtn_partition flexc">or</div>
-                <button class="blog_create_mainBtn blog_create_publishBtn">Submit</button>
+                <button class="blog_create_mainBtn blog_create_submitBtn">Submit</button>
             </div>
         </div>
     </div>

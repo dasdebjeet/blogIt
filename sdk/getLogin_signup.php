@@ -3,7 +3,7 @@
 
     class login_signup extends database{
         public function emailChecker($email){
-            $stmt = $this->connect()->prepare("SELECT email FROM `users` WHERE email=?");
+            $stmt = $this->connect()->prepare("SELECT email FROM `users` WHERE email=? LIMIT 1");
             $stmt->execute([$email]);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             if($result){
@@ -14,7 +14,7 @@
         }
 
         public function usernameChecker($username){
-            $stmt = $this->connect()->prepare("SELECT user_name FROM `users` WHERE user_name=?");
+            $stmt = $this->connect()->prepare("SELECT user_name FROM `users` WHERE user_name=? LIMIT 1");
             $stmt->execute([$username]);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             if($result){

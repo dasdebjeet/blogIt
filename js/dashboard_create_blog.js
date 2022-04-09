@@ -390,7 +390,7 @@ $(document).ready(() => {
     // --------------------------------------------------------------------------------------------
     // blog create draft and publish btn
 
-    $(".blog_create_publishBtn").click(() => {
+    $(".blog_create_submitBtn").click(() => {
         var error_det = 0
         var blog_title = $(".create_blog_title_inp").val()
         var blog_subtitle = $(".create_blog_subtitle_inp").val()
@@ -436,17 +436,45 @@ $(document).ready(() => {
             error_det = 1
         }
 
+        $.ajax({
+            type: 'POST',
+            url: './includes/cookie_header.php',
+            // data: ""
+        }).done((response) => {
+            // console.log(response)
+            if (response != "New user") {
+                if (response == "You logged in from a new device! Please login") { // logined from a new device 
+
+                } else {
+                    // [$title, $subtitle, $catagories, $tags, $thumbnail_url, $content, $username, $blog_status]
+                    var blog_stat = "submit"
+
+                    var form_data = "&title=" + blog_title + "&subtitle=" + blog_subtitle + "&catagories=" + arr_cata + "&tags=" + arr_tags + "&thumbnail_url=" + blog_thumbnail_name + "&content=" + blog_content + "&username=" + response[0].user_name + "&blog_status=" + blog_stat
+                    console.log(form_data)
+                    $.ajax({
+                        type: 'POST',
+                        url: './sdk/setblog_handler.php',
+                        data: form_data
+                    }).done((response) => {
+                        console.log(response)
+                    })
+
+
+                    console.log(response[0].user_name)
+
+                    // $(".sideBar_loginBtn").css("display", 'none')
+                    // $(".sideBar_userProfile").css("display", 'flex')
+                    // $(".navlogin_dropdown_user>.user_name").text(response[0].user_name)
+                    // $(".navlogin_dropdown_user>.user_role").text(response[0].role)
+                    // $(".sideBar_userProfile_name").text(response[0].user_name)
+                    // $(".sideBar_userProfile_role").text(response[0].role)
+
+                }
+            }
+        })
+
+
         if (error_det == 0) {
-
-            $.ajax({
-                type: 'POST',
-                url: './includes/cookie_header.php',
-                // data: ""
-            }).done((response) => {
-                console.log(response)
-            })
-
-
             $(".dashboard_modal_main_blog_preveiw_img_con").css("background-image", 'url(' + blog_thumbnail_url + ')')
             $(".dashboard_modal_main_blog_preveiw_title").text(blog_title)
             $(".dashboard_modal_main_blog_preveiw_subtitle").text(blog_subtitle)
