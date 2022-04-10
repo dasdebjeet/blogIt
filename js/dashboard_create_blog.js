@@ -390,14 +390,16 @@ $(document).ready(() => {
     // --------------------------------------------------------------------------------------------
     // blog create draft and publish btn
 
-    $(".blog_create_submitBtn").click(() => {
-        var error_det = 0
-        var blog_title = $(".create_blog_title_inp").val()
-        var blog_subtitle = $(".create_blog_subtitle_inp").val()
-        var blog_content = $(".editor_body").html()
 
-        var blog_catagory = arr_cata
-        var blog_tags = arr_tags
+    var blog_title, blog_subtitle, blog_content, blog_catagory, blog_tags
+    $(".blog_create_submitBtn").click(() => {
+        error_det = 0
+        blog_title = $(".create_blog_title_inp").val()
+        blog_subtitle = $(".create_blog_subtitle_inp").val()
+        blog_content = $(".editor_body").html()
+
+        blog_catagory = arr_cata
+        blog_tags = arr_tags
 
         var blog_cata_len = blog_catagory.length
         var blog_tags_len = blog_tags.length
@@ -436,42 +438,7 @@ $(document).ready(() => {
             error_det = 1
         }
 
-        $.ajax({
-            type: 'POST',
-            url: './includes/cookie_header.php',
-            // data: ""
-        }).done((response) => {
-            // console.log(response)
-            if (response != "New user") {
-                if (response == "You logged in from a new device! Please login") { // logined from a new device 
 
-                } else {
-                    // [$title, $subtitle, $catagories, $tags, $thumbnail_url, $content, $username, $blog_status]
-                    var blog_stat = "submit"
-
-                    var form_data = "&title=" + blog_title + "&subtitle=" + blog_subtitle + "&catagories=" + arr_cata + "&tags=" + arr_tags + "&thumbnail_url=" + blog_thumbnail_name + "&content=" + blog_content + "&username=" + response[0].user_name + "&blog_status=" + blog_stat
-                    console.log(form_data)
-                    $.ajax({
-                        type: 'POST',
-                        url: './sdk/setblog_handler.php',
-                        data: form_data
-                    }).done((response) => {
-                        console.log(response)
-                    })
-
-
-                    console.log(response[0].user_name)
-
-                    // $(".sideBar_loginBtn").css("display", 'none')
-                    // $(".sideBar_userProfile").css("display", 'flex')
-                    // $(".navlogin_dropdown_user>.user_name").text(response[0].user_name)
-                    // $(".navlogin_dropdown_user>.user_role").text(response[0].role)
-                    // $(".sideBar_userProfile_name").text(response[0].user_name)
-                    // $(".sideBar_userProfile_role").text(response[0].role)
-
-                }
-            }
-        })
 
 
         if (error_det == 0) {
@@ -498,6 +465,46 @@ $(document).ready(() => {
             $(".dashboard_modal_main_blog_preveiw_wrap").css("display", 'block')
             $(".blog_mini_image_upload_wrap").css("display", 'none')
         }
+    })
+
+    $(".blog_create_submitBtn").click(() => {
+        $.ajax({
+            type: 'POST',
+            url: './includes/cookie_header.php',
+            // data: ""
+        }).done((response) => {
+            // console.log(response)
+            if (response != "New user") {
+                if (response == "You logged in from a new device! Please login") { // logined from a new device 
+
+                } else {
+                    // [$title, $subtitle, $catagories, $tags, $thumbnail_url, $content, $username, $blog_status]
+                    var blog_stat = "submit"
+
+
+                    var form_data = "&title=" + blog_title + "&subtitle=" + blog_subtitle + "&catagories=" + blog_catagory + "&tags=" + blog_tags + "&thumbnail_url=" + blog_thumbnail_name + "&content=" + blog_content + "&username=" + response[0].user_name + "&blog_status=" + blog_stat
+                    console.log(form_data)
+                    $.ajax({
+                        type: 'POST',
+                        url: './sdk/setblog_handler.php',
+                        data: form_data
+                    }).done((response) => {
+                        console.log(response)
+                    })
+
+
+                    console.log(response[0].user_name)
+
+                    // $(".sideBar_loginBtn").css("display", 'none')
+                    // $(".sideBar_userProfile").css("display", 'flex')
+                    // $(".navlogin_dropdown_user>.user_name").text(response[0].user_name)
+                    // $(".navlogin_dropdown_user>.user_role").text(response[0].role)
+                    // $(".sideBar_userProfile_name").text(response[0].user_name)
+                    // $(".sideBar_userProfile_role").text(response[0].role)
+
+                }
+            }
+        })
     })
 
     var dashboard_modal_close = () => {
