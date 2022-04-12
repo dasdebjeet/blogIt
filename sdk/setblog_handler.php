@@ -1,7 +1,7 @@
 <?php
     require_once "getblog_handler.php";
 
-    if(isset($_POST["blog_status"]) == "submit"){
+    if(isset($_POST["create_blog"]) == "yes"){
         
         $title = $_POST["title"];
         $subtitle = $_POST["subtitle"];
@@ -10,10 +10,13 @@
         $thumbnail_url = $_POST["thumbnail_url"];
         $content = $_POST["content"];
         $username = $_POST["username"];
-        $blog_status = $_POST["blog_status"];
 
 
-        // echo $_POST["thumbnail_url"];
+        if($_POST["user_priority"] == "0"){
+            $blog_status = "verify";
+        }else{
+            $blog_status = "publish";
+        }
 
 
         $obj = new blog;

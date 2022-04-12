@@ -1,5 +1,6 @@
 $(document).ready(() => {
-    $(".dashboard_con_content").load("./includes/dashboard_create_blog.php")
+    $(".dashboard_con_content").load("./includes/dashboard_blog.php")
+    // $(".dashboard_con_content").load("./includes/dashboard_create_blog.php")
     // $(".dashboard_con_content").load("./includes/dashboard_main.php ")
 
     // $(".search_inp").focus(() => {

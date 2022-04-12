@@ -21,6 +21,7 @@
         <link href="./css/main.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet">
         <link href="./css/dashboard.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet">
         <link href="./css/dashboard_main.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet">
+        <link href="./css/dashboard_blog.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet">
         <link href="./css/dashboard_create_blog.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet">
         <link href="./css/dashboard_rich_textEditor.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet">
 
@@ -90,7 +91,7 @@
 
                 <div class="dashboard_modal_main_blog_preveiw_btn_con">
                     <button class="dashboard_modal_main_blog_preveiw_btn blog_preveiw_cancelbBtn">Cancel</button>
-                    <button class="dashboard_modal_main_blog_preveiw_btn blog_preveiw_publishBtn">Final Submit & Exit</button>
+                    <button class="dashboard_modal_main_blog_preveiw_btn blog_preveiw_submitBtn">Final Submit & Exit</button>
                 </div>
 
             </div>
@@ -133,7 +134,7 @@
                 <div class="dashboard_menu_con">
                     <div class="dashboard_sidebar_menu flexc" dashborad_id="main"><i class='bx bx-grid-alt flexc'></i>Dashboard</div>
                     <div class="dashboard_sidebar_menu flexc" dashborad_id=""><i class='bx bx-line-chart'></i>Analytics</div>
-                    <div class="dashboard_sidebar_menu flexc"><i class='bx bx-file flexc'></i>Blog</div>
+                    <div class="dashboard_sidebar_menu flexc" dashborad_id="blog"><i class='bx bx-file flexc'></i>Blog</div>
                     <div class="dashboard_sidebar_menu flexc" dashborad_id="create_blog"><i class='bx bx-edit-alt'></i>Create</div>
                 </div>
                 <div class="dashboard_sidebar_bottom_menu_con">
@@ -166,7 +167,7 @@
                             <i class='bx bx-bell'></i>
                         </div>
                         <div class="dashboard_user_profile">
-                            <img src="./assests/author_photo.jpg" class="user_img">
+                            <img src="./assests/users_img/default_profile_img.png" class="user_img">
                         </div>
                     </div>
 

@@ -172,8 +172,6 @@
 </div>
 
 
-
-
 <script>
     $(".selectAll_article_check").click(() => {
         var checkedStatus = $(".article_selectAll_inp")[0].checked;

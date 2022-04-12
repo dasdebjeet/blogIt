@@ -227,7 +227,7 @@ $(document).ready(function () {
 
         //main blog image upload input
         $(".blog_mini_images_inp").on('change', (e) => {
-            console.log(mini_images_arr)
+            // console.log(mini_images_arr)
             var files = e.target.files;
             if (files.length) {
                 $(".blog_mini_image_upload_dropzone_overlay").css("display", 'none')

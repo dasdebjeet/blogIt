@@ -1,5 +1,4 @@
 $(document).ready(() => {
-
     // create blog title and subtitle input limit function
 
     var max_len_checker = (el, len, limit, e) => {
@@ -467,7 +466,16 @@ $(document).ready(() => {
         }
     })
 
-    $(".blog_create_submitBtn").click(() => {
+    var dashboard_modal_close = () => {
+        $("html, body").removeClass("noscroll");
+        $(".dashboard_modal").css({
+            "visibility": 'hidden',
+            "opacity": '0'
+        })
+    }
+
+
+    $(".blog_preveiw_submitBtn").click(() => {
         $.ajax({
             type: 'POST',
             url: './includes/cookie_header.php',
@@ -478,22 +486,22 @@ $(document).ready(() => {
                 if (response == "You logged in from a new device! Please login") { // logined from a new device 
 
                 } else {
-                    // [$title, $subtitle, $catagories, $tags, $thumbnail_url, $content, $username, $blog_status]
-                    var blog_stat = "submit"
-
-
-                    var form_data = "&title=" + blog_title + "&subtitle=" + blog_subtitle + "&catagories=" + blog_catagory + "&tags=" + blog_tags + "&thumbnail_url=" + blog_thumbnail_name + "&content=" + blog_content + "&username=" + response[0].user_name + "&blog_status=" + blog_stat
-                    console.log(form_data)
+                    var create_blog = "yes"
+                    var form_data = "&create_blog=" + create_blog + "&title=" + blog_title + "&subtitle=" + blog_subtitle + "&catagories=" + blog_catagory + "&tags=" + blog_tags + "&thumbnail_url=" + blog_thumbnail_name + "&content=" + blog_content + "&username=" + response[0].user_name + "&user_priority=" + response[0].priority
+                    // console.log(form_data)
                     $.ajax({
                         type: 'POST',
                         url: './sdk/setblog_handler.php',
                         data: form_data
                     }).done((response) => {
                         console.log(response)
+                        if (response == 1) {
+                            dashboard_modal_close()
+                        }
                     })
 
 
-                    console.log(response[0].user_name)
+                    // console.log(response[0].user_name)
 
                     // $(".sideBar_loginBtn").css("display", 'none')
                     // $(".sideBar_userProfile").css("display", 'flex')
@@ -506,14 +514,6 @@ $(document).ready(() => {
             }
         })
     })
-
-    var dashboard_modal_close = () => {
-        $("html, body").removeClass("noscroll");
-        $(".dashboard_modal").css({
-            "visibility": 'hidden',
-            "opacity": '0'
-        })
-    }
 
     $(".dashboard_modal").on("click", (e) => {
         if (e.target.classList.contains("dashboard_modal")) {

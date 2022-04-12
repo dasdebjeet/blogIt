@@ -50,7 +50,7 @@
         }
 
         public function cookieChecker($cookie_set){
-            $stmt = $this->connect()->prepare("SELECT name, user_name, user_img, role FROM `users` WHERE cookie_set=? LIMIT 1");
+            $stmt = $this->connect()->prepare("SELECT name, user_name, user_img, role, priority FROM `users` WHERE cookie_set=? LIMIT 1");
             $stmt->execute([$cookie_set]);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             if($result){
