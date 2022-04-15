@@ -59,6 +59,11 @@ $(document).ready(() => {
 
             var dash_side_val = $(menu).attr("dashborad_id")
             $(".dashboard_con_content").load("./includes/dashboard_" + dash_side_val + ".php")
+            // var loaded = $(".dashboard_con_content").load("./includes/dashboard_" + dash_side_val + ".php")
+            // console.log(loaded)
+            // if (loaded) {
+            //     console.log(loaded)
+            // }
         })
     }
 
