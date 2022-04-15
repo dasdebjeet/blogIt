@@ -1,6 +1,3 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"> -->
-
 <div class="dashboard_blog_wrapper">
     <div class="dashboard_blog_container flexc">
 
@@ -211,7 +208,7 @@
             <div class="dashboard_blog_con dashboard_blog_draft">
                 <div class="dashboard_blog_title">Draft</div>
 
-                <div class="dashboard_blog_draft_blog_prev_con flexc">
+                <div class="dashboard_blog_draft_blog_prev_con">
                     <div class="dashboard_blog_draft_blog_prev flexc">
                         <div class="dashboard_blog_draft_blog_prev_wrap flexc">
                             <div class="dashboard_blog_draft_blog_prev_thumbnail_con flexc">
@@ -255,6 +252,51 @@
                             <div class="draft_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
                         </div>
                     </div>
+
+
+                    <div class="dashboard_blog_draft_blog_prev flexc">
+                        <div class="dashboard_blog_draft_blog_prev_wrap flexc">
+                            <div class="dashboard_blog_draft_blog_prev_thumbnail_con flexc">
+                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="draft_blog_prev_thumbnail_img">
+                            </div>
+                            <div class="draft_blog_prev_content">
+
+                                <div class="draft_blog_prev_title">Bonuses for New Hao's Special Works Race Series</div>
+                                <div class="draft_blog_prev_content_date"> 19 March 2021 </div>
+                                <div class="draft_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever ... </div>
+                                <div class="dashboard_blog_draft_blog_prev_status">Status : Pending</div>
+                            </div>
+                        </div>
+
+
+                        <div class="draft_blog_prev_toolbar flexc">
+                            <div class="draft_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
+                            <div class="draft_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                            <div class="draft_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                        </div>
+                    </div>
+                    <div class="dashboard_blog_draft_blog_prev flexc">
+                        <div class="dashboard_blog_draft_blog_prev_wrap flexc">
+                            <div class="dashboard_blog_draft_blog_prev_thumbnail_con flexc">
+                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="draft_blog_prev_thumbnail_img">
+                            </div>
+                            <div class="draft_blog_prev_content">
+
+                                <div class="draft_blog_prev_title">Bonuses for New Hao's Special Works Race Series</div>
+                                <div class="draft_blog_prev_content_date"> 19 March 2021 </div>
+                                <div class="draft_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever ... </div>
+                                <div class="dashboard_blog_draft_blog_prev_status">Status : Pending</div>
+                            </div>
+                        </div>
+
+
+                        <div class="draft_blog_prev_toolbar flexc">
+                            <div class="draft_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
+                            <div class="draft_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                            <div class="draft_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -268,24 +310,23 @@
 </div>
 
 <script>
-    // $(document).ready(() => {
-    $('.dashboard_blog_draft_blog_prev_con').owlCarousel({
-        loop: true,
-        autoplay: true,
-        nav: true,
-        dots: true,
-        margin: 10,
-        autoplayTimeout: 2500, //2000ms = 2s;
-        autoplayHoverPause: true,
-        responsive: {
-            678: {
-                mergeFit: true
-            },
-            1000: {
-                mergeFit: false
+    $(document).ready(() => {
+        $('.dashboard_blog_draft_blog_prev_con').owlCarousel({
+            // loop: true,
+            margin: 360,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
             }
-        }
+        })
     });
-    // });
 
 </script>

@@ -156,14 +156,14 @@
 .dashboard_blog_draft_blog_prev_con {
     justify-content: flex-start;
     height: calc(100% - 50px);
-    /* overflow-x: auto; */
+    overflow-x: hidden;
 }
 
 .dashboard_blog_draft_blog_prev {
     position: relative;
     background: #e5e5e5;
     padding: 10px;
-    min-width: 350px;
+    width: 350px;
     height: 100%;
     border-radius: 5px;
 }
@@ -241,3 +241,8 @@
     background: var(--themec);
     transform: scale(1.1);
 }
+
+/* .owl-stage {
+    display: flex;
+    width: 100%;
+} */
