@@ -315,4 +315,24 @@ screen and (max-width: 600px) {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
 
+@media only screen and (min-width: 1337px) and (max-width: 1980px) {
+
+    .dashboard_blog_published_blog_prev .published_blog_prev_image_con {
+        height: 120px !important;
+    }
+
+    .dashboard_blog_draft_blog_prev {
+        width: 450px !important;
+        height: 200px !important;
+    }
+
+    .dashboard_blog_draft_blog_prev .draft_blog_prev_thumbnail_img {
+        width: 170px !important;
+    }
+
+    .dashboard_blog_draft_blog_prev .draft_blog_prev_content {
+        width: calc(100% - 170px);
+    }
+}
+
 /* Media Query */

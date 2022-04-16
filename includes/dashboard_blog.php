@@ -1,7 +1,6 @@
 <div class="dashboard_blog_wrapper">
     <div class="dashboard_blog_container flexc">
 
-
         <div class="dashboard_blog_sec1">
             <div class="dashboard_blog_con dashboard_blog_published">
                 <div class="dashboard_blog_title">Published</div>
@@ -113,9 +112,8 @@
                             <div class="published_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
                             <div class="published_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
                         </div>
-
-
                     </div>
+
                     <div class="dashboard_blog_published_blog_prev">
                         <div class="published_blog_prev_image_con flexc">
                             <div class="published_blog_prev_thumbnail_con">
@@ -199,7 +197,6 @@
                     </div>
 
                 </div>
-
             </div>
         </div>
 
@@ -288,6 +285,156 @@
         </div>
 
 
+        <div class="dashboard_blog_sec3 flexc">
+            <div class="dashboard_blog_con dashboard_blog_subFreveiw">
+                <div class="dashboard_blog_title">Submited for reveiw</div>
+
+
+                <div class="dashboard_blog_subFreveiw_blog_prev_con">
+
+                    <div class="dashboard_blog_subFreveiw_blog_prev">
+                        <div class="subFreveiw_blog_prev_image_con flexc">
+                            <div class="subFreveiw_blog_prev_thumbnail_con">
+                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="subFreveiw_blog_prev_thumbnail_img">
+                            </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_content">
+                            <div class="subFreveiw_blog_prev_content_title"> Bonuses for New Hao's Special Works Race Series </div>
+                            <div class="subFreveiw_blog_prev_content_date"> 19 March 2021 </div>
+                            <div class="subFreveiw_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever with the game's arrival on PlayStation ... </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_toolbar flexc">
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="dashboard_blog_subFreveiw_blog_prev">
+                        <div class="subFreveiw_blog_prev_image_con flexc">
+                            <div class="subFreveiw_blog_prev_thumbnail_con">
+                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="subFreveiw_blog_prev_thumbnail_img">
+                            </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_content">
+                            <div class="subFreveiw_blog_prev_content_title"> Bonuses for New Hao's Special Works Race Series </div>
+                            <div class="subFreveiw_blog_prev_content_date"> 19 March 2021 </div>
+                            <div class="subFreveiw_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever with the game's arrival on PlayStation ... </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_toolbar flexc">
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
+                        </div>
+
+
+                    </div>
+                    <div class="dashboard_blog_subFreveiw_blog_prev">
+                        <div class="subFreveiw_blog_prev_image_con flexc">
+                            <div class="subFreveiw_blog_prev_thumbnail_con">
+                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="subFreveiw_blog_prev_thumbnail_img">
+                            </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_content">
+                            <div class="subFreveiw_blog_prev_content_title"> Bonuses for New Hao's Special Works Race Series </div>
+                            <div class="subFreveiw_blog_prev_content_date"> 19 March 2021 </div>
+                            <div class="subFreveiw_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever with the game's arrival on PlayStation ... </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_toolbar flexc">
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
+                        </div>
+
+
+                    </div>
+                    <div class="dashboard_blog_subFreveiw_blog_prev">
+                        <div class="subFreveiw_blog_prev_image_con flexc">
+                            <div class="subFreveiw_blog_prev_thumbnail_con">
+                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="subFreveiw_blog_prev_thumbnail_img">
+                            </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_content">
+                            <div class="subFreveiw_blog_prev_content_title"> Bonuses for New Hao's Special Works Race Series </div>
+                            <div class="subFreveiw_blog_prev_content_date"> 19 March 2021 </div>
+                            <div class="subFreveiw_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever with the game's arrival on PlayStation ... </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_toolbar flexc">
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
+                        </div>
+
+
+                    </div>
+                    <div class="dashboard_blog_subFreveiw_blog_prev">
+                        <div class="subFreveiw_blog_prev_image_con flexc">
+                            <div class="subFreveiw_blog_prev_thumbnail_con">
+                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="subFreveiw_blog_prev_thumbnail_img">
+                            </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_content">
+                            <div class="subFreveiw_blog_prev_content_title"> Bonuses for New Hao's Special Works Race Series </div>
+                            <div class="subFreveiw_blog_prev_content_date"> 19 March 2021 </div>
+                            <div class="subFreveiw_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever with the game's arrival on PlayStation ... </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_toolbar flexc">
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
+                        </div>
+
+
+                    </div>
+                    <div class="dashboard_blog_subFreveiw_blog_prev">
+                        <div class="subFreveiw_blog_prev_image_con flexc">
+                            <div class="subFreveiw_blog_prev_thumbnail_con">
+                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="subFreveiw_blog_prev_thumbnail_img">
+                            </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_content">
+                            <div class="subFreveiw_blog_prev_content_title"> Bonuses for New Hao's Special Works Race Series </div>
+                            <div class="subFreveiw_blog_prev_content_date"> 19 March 2021 </div>
+                            <div class="subFreveiw_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever with the game's arrival on PlayStation ... </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_toolbar flexc">
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

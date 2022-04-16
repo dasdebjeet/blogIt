@@ -141,6 +141,7 @@
                     <div class="dashboard_sidebar_menu flexc" dashborad_id=""><i class='bx bx-line-chart'></i>Analytics</div>
                     <div class="dashboard_sidebar_menu flexc" dashborad_id="blog"><i class='bx bx-file flexc'></i>Blog</div>
                     <div class="dashboard_sidebar_menu flexc" dashborad_id="create_blog"><i class='bx bx-edit-alt'></i>Create</div>
+                    <div class="dashboard_sidebar_menu flexc" dashborad_id=""><i class='bx bx-server'></i>Management</div>
                 </div>
                 <div class="dashboard_sidebar_bottom_menu_con">
                     <div class="dashboard_sidebar_bottom_menu flexc"><i class='bx bx-cog'></i>Settings</div>
