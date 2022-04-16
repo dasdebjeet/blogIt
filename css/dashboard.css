@@ -421,6 +421,7 @@
 
 .dashboard_mobile_bottom_navbar_menu_name {
     position: absolute;
+    font-size: 12px;
     opacity: 0;
     transform: translateY(20px);
     transition: all .2s ease-in-out;
@@ -621,7 +622,7 @@
 }
 
 .dashboard_user_profile {
-    background-color: var(--themec);
+    background-color: #e5e5e5;
     margin-right: 10px !important;
     width: 40px;
     height: 40px;
