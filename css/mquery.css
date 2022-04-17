@@ -332,7 +332,7 @@ screen and (max-width: 600px) {
 
     .dashboard_blog_draft_blog_prev,
     .dashboard_blog_trash_blog_prev {
-        width: 355px !important;
+        width: 350px !important;
         height: 150px !important;
     }
 
