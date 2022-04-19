@@ -15,7 +15,7 @@
 
                 // echo $author_id;
                 $stmt = $this->connect()->prepare("INSERT INTO `blog`(`blog_id`, `title`, `subtitle`, `catagories`, `tags`, `thumbnail_url`, `content`, `author_id`, `likes`, `dislikes`, `comment`, `veiws`, `shares`, `written_on`, `published_on`, `edited_on`, `blog_status`) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, 0, 0, 0, 0, 0, CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP(), ?)");
-                $flag = $stmt->execute([$title, $subtitle, $catagories, $tags, $thumbnail_url, $content, $author_id,  $blog_status]);
+                $flag = $stmt->execute([$title, $subtitle, $catagories, $tags, "mainBlog_Img_".$thumbnail_url, $content, $author_id,  $blog_status]);
                 if($flag){
                     return TRUE;
                 }
