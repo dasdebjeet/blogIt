@@ -427,12 +427,74 @@
             type: "POST",
             url: "./sdk/blog_fetcher_set.php"
         }).done((response) => {
+
+            var time_ago = (time) => {
+
+                switch (typeof time) {
+                    case 'number':
+                        break;
+                    case 'string':
+                        time = +new Date(time);
+                        break;
+                    case 'object':
+                        if (time.constructor === Date) time = time.getTime();
+                        break;
+                    default:
+                        time = +new Date();
+                }
+                var time_formats = [
+                    [60, 'seconds', 1], // 60
+                    [120, '1 minute ago', '1 minute from now'], // 60*2
+                    [3600, 'minutes', 60], // 60*60, 60
+                    [7200, '1 hour ago', '1 hour from now'], // 60*60*2
+                    [86400, 'hours', 3600], // 60*60*24, 60*60
+                    [172800, 'Yesterday', 'Tomorrow'], // 60*60*24*2
+                    [604800, 'days', 86400], // 60*60*24*7, 60*60*24
+                    [1209600, 'Last week', 'Next week'], // 60*60*24*7*4*2
+                    [2419200, 'weeks', 604800], // 60*60*24*7*4, 60*60*24*7
+                    [4838400, 'Last month', 'Next month'], // 60*60*24*7*4*2
+                    [29030400, 'months ago', 2419200], // 60*60*24*7*4*12, 60*60*24*7*4
+                    [58060800, 'Last year', 'Next year'], // 60*60*24*7*4*12*2
+                    [2903040000, 'years', 29030400], // 60*60*24*7*4*12*100, 60*60*24*7*4*12
+                    [5806080000, 'Last century', 'Next century'], // 60*60*24*7*4*12*100*2
+                    [58060800000, 'centuries', 2903040000] // 60*60*24*7*4*12*100*20, 60*60*24*7*4*12*100
+                ];
+                var seconds = (+new Date() - time) / 1000,
+                    token = 'ago',
+                    list_choice = 1;
+
+                if (seconds == 0) {
+                    return 'Just now'
+                }
+                if (seconds < 0) {
+                    seconds = Math.abs(seconds);
+                    token = 'from now';
+                    list_choice = 2;
+                }
+                var i = 0,
+                    format;
+                while (format = time_formats[i++])
+                    if (seconds < format[0]) {
+                        if (typeof format[2] == 'string')
+                            return format[list_choice];
+                        else
+                            return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
+                    }
+                return time;
+            }
+
             var dateToYMD = (date) => {
                 var strArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-                var d = date.getDate();
-                var m = strArray[date.getMonth()];
-                var y = date.getFullYear();
-                return (d <= 9 ? '0' + d : d) + ' ' + m + ' ' + y;
+                var blog_day = date.getDate();
+                var blog_mon = strArray[parseInt(date.getMonth())];
+                var blog_yr = date.getFullYear();
+
+                var blog_hr = date.getHours() % 12;
+                var blog_ampm = blog_hr >= 12 ? 'pm' : 'am';
+                var blog_min = date.getMinutes();
+                var blog_sec = date.getSeconds();
+
+                return (blog_day <= 9 ? '0' + blog_day : blog_day) + ' ' + blog_mon + ' ' + blog_yr + " &#9679; " + time_ago(date.getTime())
             }
 
 
@@ -454,6 +516,8 @@
             }
 
             for (var i = 0; i < response.length; i++) {
+                // console.log(response[i].blog_status)
+
                 var blog_thumb_img = response[i].thumbnail_url
 
                 var blog_mini_img = get_mini_img(response[i].content)
@@ -478,6 +542,12 @@
                     var blog_miniImg_html = '<img src="' + blog_mini_img[0] + '" class="published_blog_prev_mini_img" style="height: 100%">'
                 } else {
                     var blog_miniImg_html = '<img src="' + blog_mini_img[0] + '" class="published_blog_prev_mini_img"><img src="' + blog_mini_img[1] + '" class="published_blog_prev_mini_img">'
+
+                    if ((blog_mini_img.length - 2) > 0) {
+                        var more_mini_img = ("<div class='more_blog_prev_mini_img flexc'>+" + (blog_mini_img.length - 2) + "</div>")
+                    } else {
+                        var more_mini_img = ""
+                    }
                 }
 
 
@@ -486,7 +556,7 @@
                             <div class="published_blog_prev_thumbnail_con" ` + blog_thumb_img_css + `>
                                 <img src="./assests/blog_main_img/` + blog_thumb_img + `" class="published_blog_prev_thumbnail_img">
                             </div>
-                            <div class="published_blog_prev_miniImg_con flexc" ` + blog_mini_img_css + `>` + blog_miniImg_html + `</div>
+                            <div class="published_blog_prev_miniImg_con flexc" ` + blog_mini_img_css + `>` + blog_miniImg_html + more_mini_img + `</div>
                         </div>
 
                         <div class="published_blog_prev_content">

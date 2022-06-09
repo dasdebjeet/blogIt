@@ -107,6 +107,7 @@
 
 .dashboard_blog_published_blog_prev .published_blog_prev_miniImg_con,
 .dashboard_blog_subFreveiw_blog_prev .subFreveiw_blog_prev_miniImg_con {
+    position: relative;
     flex-direction: column;
     justify-content: space-between;
     margin-left: 10px;
@@ -120,6 +121,17 @@
     height: calc(50% - 5px);
     object-fit: cover;
     border-radius: 5px;
+}
+
+.dashboard_blog_published_blog_prev .more_blog_prev_mini_img {
+    position: absolute;
+    bottom: 0px;
+    background: #00000099;
+    width: 100%;
+    height: calc(50% - 5px);
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: default;
 }
 
 .dashboard_blog_published_blog_prev .published_blog_prev_content,
