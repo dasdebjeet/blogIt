@@ -46,7 +46,7 @@
                 <div class="dashboard_blog_draft_blog_prev_conWrap">
                     <div class="dashboard_blog_draft_blog_prev_con owl-carousel flexc">
 
-                        <div class="dashboard_blog_draft_blog_prev flexc">
+                        <!-- <div class="dashboard_blog_draft_blog_prev flexc">
                             <div class="dashboard_blog_draft_blog_prev_wrap flexc">
                                 <div class="dashboard_blog_draft_blog_prev_thumbnail_con flexc">
                                     <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="draft_blog_prev_thumbnail_img">
@@ -65,70 +65,7 @@
                                 <div class="draft_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
                                 <div class="draft_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
                             </div>
-                        </div>
-
-                        <div class="dashboard_blog_draft_blog_prev flexc">
-                            <div class="dashboard_blog_draft_blog_prev_wrap flexc">
-                                <div class="dashboard_blog_draft_blog_prev_thumbnail_con flexc">
-                                    <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="draft_blog_prev_thumbnail_img">
-                                </div>
-                                <div class="draft_blog_prev_content">
-
-                                    <div class="draft_blog_prev_title">Bonuses for New Hao's Special Works Race Series</div>
-                                    <div class="draft_blog_prev_content_date"> 19 March 2021 </div>
-                                    <div class="draft_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever ... </div>
-                                </div>
-                            </div>
-
-
-                            <div class="draft_blog_prev_toolbar flexc">
-                                <div class="draft_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
-                                <div class="draft_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                                <div class="draft_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
-                            </div>
-                        </div>
-
-                        <div class="dashboard_blog_draft_blog_prev flexc">
-                            <div class="dashboard_blog_draft_blog_prev_wrap flexc">
-                                <div class="dashboard_blog_draft_blog_prev_thumbnail_con flexc">
-                                    <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="draft_blog_prev_thumbnail_img">
-                                </div>
-                                <div class="draft_blog_prev_content">
-
-                                    <div class="draft_blog_prev_title">Bonuses for New Hao's Special Works Race Series</div>
-                                    <div class="draft_blog_prev_content_date"> 19 March 2021 </div>
-                                    <div class="draft_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever ... </div>
-                                </div>
-                            </div>
-
-
-                            <div class="draft_blog_prev_toolbar flexc">
-                                <div class="draft_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
-                                <div class="draft_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                                <div class="draft_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
-                            </div>
-                        </div>
-
-                        <div class="dashboard_blog_draft_blog_prev flexc">
-                            <div class="dashboard_blog_draft_blog_prev_wrap flexc">
-                                <div class="dashboard_blog_draft_blog_prev_thumbnail_con flexc">
-                                    <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="draft_blog_prev_thumbnail_img">
-                                </div>
-                                <div class="draft_blog_prev_content">
-
-                                    <div class="draft_blog_prev_title">Bonuses for New Hao's Special Works Race Series</div>
-                                    <div class="draft_blog_prev_content_date"> 19 March 2021 </div>
-                                    <div class="draft_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever ... </div>
-                                </div>
-                            </div>
-
-
-                            <div class="draft_blog_prev_toolbar flexc">
-                                <div class="draft_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
-                                <div class="draft_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                                <div class="draft_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
-                            </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -142,7 +79,7 @@
                 <div class="dashboard_blog_trash_blog_prev_conWrap">
                     <div class="dashboard_blog_trash_blog_prev_con owl-carousel flexc">
 
-                        <div class="dashboard_blog_trash_blog_prev flexc">
+                        <!-- <div class="dashboard_blog_trash_blog_prev flexc">
                             <div class="dashboard_blog_trash_blog_prev_wrap flexc">
                                 <div class="dashboard_blog_trash_blog_prev_thumbnail_con flexc">
                                     <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="trash_blog_prev_thumbnail_img">
@@ -160,68 +97,7 @@
                                 <div class="trash_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
                                 <div class="trash_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
                             </div>
-                        </div>
-
-                        <div class="dashboard_blog_trash_blog_prev flexc">
-                            <div class="dashboard_blog_trash_blog_prev_wrap flexc">
-                                <div class="dashboard_blog_trash_blog_prev_thumbnail_con flexc">
-                                    <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="trash_blog_prev_thumbnail_img">
-                                </div>
-                                <div class="trash_blog_prev_content">
-                                    <div class="trash_blog_prev_title">Bonuses for New Hao's Special Works Race Series</div>
-                                    <div class="trash_blog_prev_content_date"> 19 March 2021 </div>
-                                    <div class="trash_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever ... </div>
-                                </div>
-                            </div>
-
-
-                            <div class="trash_blog_prev_toolbar flexc">
-                                <div class="trash_blog_prev_tool flexc"><i class='bx bx-revision'></i></div>
-                                <div class="trash_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                                <div class="trash_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
-                            </div>
-                        </div>
-
-                        <div class="dashboard_blog_trash_blog_prev flexc">
-                            <div class="dashboard_blog_trash_blog_prev_wrap flexc">
-                                <div class="dashboard_blog_trash_blog_prev_thumbnail_con flexc">
-                                    <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="trash_blog_prev_thumbnail_img">
-                                </div>
-                                <div class="trash_blog_prev_content">
-                                    <div class="trash_blog_prev_title">Bonuses for New Hao's Special Works Race Series</div>
-                                    <div class="trash_blog_prev_content_date"> 19 March 2021 </div>
-                                    <div class="trash_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever ... </div>
-                                </div>
-                            </div>
-
-
-                            <div class="trash_blog_prev_toolbar flexc">
-                                <div class="trash_blog_prev_tool flexc"><i class='bx bx-revision'></i></div>
-                                <div class="trash_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                                <div class="trash_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
-                            </div>
-                        </div>
-
-
-                        <div class="dashboard_blog_trash_blog_prev flexc">
-                            <div class="dashboard_blog_trash_blog_prev_wrap flexc">
-                                <div class="dashboard_blog_trash_blog_prev_thumbnail_con flexc">
-                                    <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="trash_blog_prev_thumbnail_img">
-                                </div>
-                                <div class="trash_blog_prev_content">
-                                    <div class="trash_blog_prev_title">Bonuses for New Hao's Special Works Race Series</div>
-                                    <div class="trash_blog_prev_content_date"> 19 March 2021 </div>
-                                    <div class="trash_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever ... </div>
-                                </div>
-                            </div>
-
-
-                            <div class="trash_blog_prev_toolbar flexc">
-                                <div class="trash_blog_prev_tool flexc"><i class='bx bx-revision'></i></div>
-                                <div class="trash_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                                <div class="trash_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
-                            </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
@@ -238,7 +114,7 @@
 
                 <div class="dashboard_blog_subFreveiw_blog_prev_con">
 
-                    <div class="dashboard_blog_subFreveiw_blog_prev">
+                    <!-- <div class="dashboard_blog_subFreveiw_blog_prev">
                         <div class="subFreveiw_blog_prev_image_con flexc">
                             <div class="subFreveiw_blog_prev_thumbnail_con">
                                 <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="subFreveiw_blog_prev_thumbnail_img">
@@ -260,123 +136,7 @@
                         </div>
 
 
-                    </div>
-
-                    <div class="dashboard_blog_subFreveiw_blog_prev">
-                        <div class="subFreveiw_blog_prev_image_con flexc">
-                            <div class="subFreveiw_blog_prev_thumbnail_con">
-                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="subFreveiw_blog_prev_thumbnail_img">
-                            </div>
-                        </div>
-
-                        <div class="subFreveiw_blog_prev_content">
-                            <div class="subFreveiw_blog_prev_content_title"> Bonuses for New Hao's Special Works Race Series </div>
-                            <div class="subFreveiw_blog_prev_content_date"> 19 March 2021 </div>
-                            <div class="subFreveiw_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever with the game's arrival on PlayStation ... </div>
-                        </div>
-
-                        <div class="subFreveiw_blog_prev_toolbar flexc">
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
-                        </div>
-
-
-                    </div>
-                    <div class="dashboard_blog_subFreveiw_blog_prev">
-                        <div class="subFreveiw_blog_prev_image_con flexc">
-                            <div class="subFreveiw_blog_prev_thumbnail_con">
-                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="subFreveiw_blog_prev_thumbnail_img">
-                            </div>
-                        </div>
-
-                        <div class="subFreveiw_blog_prev_content">
-                            <div class="subFreveiw_blog_prev_content_title"> Bonuses for New Hao's Special Works Race Series </div>
-                            <div class="subFreveiw_blog_prev_content_date"> 19 March 2021 </div>
-                            <div class="subFreveiw_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever with the game's arrival on PlayStation ... </div>
-                        </div>
-
-                        <div class="subFreveiw_blog_prev_toolbar flexc">
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
-                        </div>
-
-
-                    </div>
-                    <div class="dashboard_blog_subFreveiw_blog_prev">
-                        <div class="subFreveiw_blog_prev_image_con flexc">
-                            <div class="subFreveiw_blog_prev_thumbnail_con">
-                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="subFreveiw_blog_prev_thumbnail_img">
-                            </div>
-                        </div>
-
-                        <div class="subFreveiw_blog_prev_content">
-                            <div class="subFreveiw_blog_prev_content_title"> Bonuses for New Hao's Special Works Race Series </div>
-                            <div class="subFreveiw_blog_prev_content_date"> 19 March 2021 </div>
-                            <div class="subFreveiw_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever with the game's arrival on PlayStation ... </div>
-                        </div>
-
-                        <div class="subFreveiw_blog_prev_toolbar flexc">
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
-                        </div>
-
-
-                    </div>
-                    <div class="dashboard_blog_subFreveiw_blog_prev">
-                        <div class="subFreveiw_blog_prev_image_con flexc">
-                            <div class="subFreveiw_blog_prev_thumbnail_con">
-                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="subFreveiw_blog_prev_thumbnail_img">
-                            </div>
-                        </div>
-
-                        <div class="subFreveiw_blog_prev_content">
-                            <div class="subFreveiw_blog_prev_content_title"> Bonuses for New Hao's Special Works Race Series </div>
-                            <div class="subFreveiw_blog_prev_content_date"> 19 March 2021 </div>
-                            <div class="subFreveiw_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever with the game's arrival on PlayStation ... </div>
-                        </div>
-
-                        <div class="subFreveiw_blog_prev_toolbar flexc">
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
-                        </div>
-
-
-                    </div>
-                    <div class="dashboard_blog_subFreveiw_blog_prev">
-                        <div class="subFreveiw_blog_prev_image_con flexc">
-                            <div class="subFreveiw_blog_prev_thumbnail_con">
-                                <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="subFreveiw_blog_prev_thumbnail_img">
-                            </div>
-                        </div>
-
-                        <div class="subFreveiw_blog_prev_content">
-                            <div class="subFreveiw_blog_prev_content_title"> Bonuses for New Hao's Special Works Race Series </div>
-                            <div class="subFreveiw_blog_prev_content_date"> 19 March 2021 </div>
-                            <div class="subFreveiw_blog_prev_content_text"> Grand Theft Auto Online weekly events are bigger than ever with the game's arrival on PlayStation ... </div>
-                        </div>
-
-                        <div class="subFreveiw_blog_prev_toolbar flexc">
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
-                        </div>
-
-
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -386,42 +146,7 @@
 
 <script>
     $(document).ready(() => {
-        $('.dashboard_blog_draft_blog_prev_con').owlCarousel({
-            // items: 3,
-            // center: true,
-            // loop: true,
-            margin: 10,
-            nav: true,
-            navContainer: '.dashboard_blog_draft_blog_prev_conWrap',
-            navText: ['<div class="blog_prev_con_previous_btn owl-left flexc"><i class="fal fa-chevron-left"></i></div>', '<div class="blog_prev_con_next_btn owl-right flexc"><i class="fal fa-chevron-right"></i></div>'],
-            autoWidth: true,
-            responsive: {
-                600: {
-                    items: 2,
-                },
-                1000: {
-                    items: 2,
-                }
-            }
-        })
-        $('.dashboard_blog_trash_blog_prev_con').owlCarousel({
-            // items: 3,
-            // center: true,
-            // loop: true,
-            margin: 10,
-            nav: true,
-            navContainer: '.dashboard_blog_trash_blog_prev_conWrap',
-            navText: ['<div class="blog_prev_con_previous_btn owl-left flexc"><i class="fal fa-chevron-left"></i></div>', '<div class="blog_prev_con_next_btn owl-right flexc"><i class="fal fa-chevron-right"></i></div>'],
-            autoWidth: true,
-            responsive: {
-                600: {
-                    items: 2,
-                },
-                1000: {
-                    items: 2,
-                }
-            }
-        })
+
 
         $.ajax({
             type: "POST",
@@ -453,7 +178,7 @@
                     [1209600, 'Last week', 'Next week'], // 60*60*24*7*4*2
                     [2419200, 'weeks', 604800], // 60*60*24*7*4, 60*60*24*7
                     [4838400, 'Last month', 'Next month'], // 60*60*24*7*4*2
-                    [29030400, 'months ago', 2419200], // 60*60*24*7*4*12, 60*60*24*7*4
+                    [29030400, 'months', 2419200], // 60*60*24*7*4*12, 60*60*24*7*4
                     [58060800, 'Last year', 'Next year'], // 60*60*24*7*4*12*2
                     [2903040000, 'years', 29030400], // 60*60*24*7*4*12*100, 60*60*24*7*4*12
                     [5806080000, 'Last century', 'Next century'], // 60*60*24*7*4*12*100*2
@@ -489,10 +214,11 @@
                 var blog_mon = strArray[parseInt(date.getMonth())];
                 var blog_yr = date.getFullYear();
 
-                var blog_hr = date.getHours() % 12;
-                var blog_ampm = blog_hr >= 12 ? 'pm' : 'am';
-                var blog_min = date.getMinutes();
-                var blog_sec = date.getSeconds();
+                // var blog_hr = date.getHours() % 12;
+                // var blog_min = date.getMinutes();
+                // var blog_sec = date.getSeconds();
+                // var blog_ampm = blog_hr >= 12 ? 'pm' : 'am';
+
 
                 return (blog_day <= 9 ? '0' + blog_day : blog_day) + ' ' + blog_mon + ' ' + blog_yr + " &#9679; " + time_ago(date.getTime())
             }
@@ -516,10 +242,12 @@
             }
 
             for (var i = 0; i < response.length; i++) {
-                // console.log(response[i].blog_status)
+
+                var blog_stat = response[i].blog_status
+
+                // console.log(blog_stat)
 
                 var blog_thumb_img = response[i].thumbnail_url
-
                 var blog_mini_img = get_mini_img(response[i].content)
 
                 var blog_title = response[i].title
@@ -550,8 +278,8 @@
                     }
                 }
 
-
-                $(".dashboard_blog_published_blog_prev_con").prepend(`<div class="dashboard_blog_published_blog_prev">
+                if (blog_stat == "publish") {
+                    $(".dashboard_blog_published_blog_prev_con").prepend(`<div class="dashboard_blog_published_blog_prev">
                         <div class="published_blog_prev_image_con flexc">
                             <div class="published_blog_prev_thumbnail_con" ` + blog_thumb_img_css + `>
                                 <img src="./assests/blog_main_img/` + blog_thumb_img + `" class="published_blog_prev_thumbnail_img">
@@ -573,7 +301,119 @@
                             <div class="published_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
                         </div>
                     </div>`)
+                }
+
+
+                if (blog_stat == "submit") {
+                    $(".dashboard_blog_draft_blog_prev_con").prepend(`<div class="dashboard_blog_draft_blog_prev flexc">
+                            <div class="dashboard_blog_draft_blog_prev_wrap flexc">
+                                <div class="dashboard_blog_draft_blog_prev_thumbnail_con flexc">
+                                    <img src="./assests/blog_main_img/` + blog_thumb_img + `" class="draft_blog_prev_thumbnail_img">
+                                </div>
+                                <div class="draft_blog_prev_content">
+                                    <div class="draft_blog_prev_title">` + blog_title + `</div>
+                                    <div class="draft_blog_prev_content_date">` + blog_pubDate + `</div>
+                                    <div class="draft_blog_prev_content_text">` + blog_content + ` </div>
+                                </div>
+                            </div>
+
+
+                            <div class="draft_blog_prev_toolbar flexc">
+                                <div class="draft_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
+                                <div class="draft_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                                <div class="draft_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                            </div>
+                        </div>`)
+                }
+
+
+                if (blog_stat == "trash") {
+                    $(".dashboard_blog_trash_blog_prev_con").prepend(`<div class="dashboard_blog_trash_blog_prev flexc">
+                            <div class="dashboard_blog_trash_blog_prev_wrap flexc">
+                                <div class="dashboard_blog_trash_blog_prev_thumbnail_con flexc">
+                                    <img src="./assests/blog_main_img/` + blog_thumb_img + `" class="trash_blog_prev_thumbnail_img">
+                                </div>
+                                <div class="trash_blog_prev_content">
+                                    <div class="trash_blog_prev_title">` + blog_title + `</div>
+                                    <div class="trash_blog_prev_content_date">` + blog_pubDate + `</div>
+                                    <div class="trash_blog_prev_content_text">` + blog_content + `</div>
+                                </div>
+                            </div>
+
+
+                            <div class="trash_blog_prev_toolbar flexc">
+                                <div class="trash_blog_prev_tool flexc"><i class='bx bx-revision'></i></div>
+                                <div class="trash_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                                <div class="trash_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                            </div>
+                        </div>`)
+                }
+
+
+                if (blog_stat == "reveiw") {
+                    $(".dashboard_blog_subFreveiw_blog_prev_con").prepend(`<div class="dashboard_blog_subFreveiw_blog_prev">
+                        <div class="subFreveiw_blog_prev_image_con flexc">
+                            <div class="subFreveiw_blog_prev_thumbnail_con">
+                                <img src="./assests/blog_main_img/` + blog_thumb_img + `" class="subFreveiw_blog_prev_thumbnail_img">
+                            </div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_content">
+                            <div class="subFreveiw_blog_prev_content_title">` + blog_title + `</div>
+                            <div class="subFreveiw_blog_prev_content_date">` + blog_pubDate + `</div>
+                            <div class="subFreveiw_blog_prev_content_text">` + blog_content + `</div>
+                        </div>
+
+                        <div class="subFreveiw_blog_prev_toolbar flexc">
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
+                        </div>
+                    </div>`)
+                }
+
+
             }
+
+            $('.dashboard_blog_draft_blog_prev_con').owlCarousel({
+                // items: 3,
+                // center: true,
+                // loop: true,
+                margin: 10,
+                nav: true,
+                navContainer: '.dashboard_blog_draft_blog_prev_conWrap',
+                navText: ['<div class="blog_prev_con_previous_btn owl-left flexc"><i class="fal fa-chevron-left"></i></div>', '<div class="blog_prev_con_next_btn owl-right flexc"><i class="fal fa-chevron-right"></i></div>'],
+                autoWidth: true,
+                responsive: {
+                    600: {
+                        items: 2,
+                    },
+                    1000: {
+                        items: 2,
+                    }
+                }
+            })
+
+            $('.dashboard_blog_trash_blog_prev_con').owlCarousel({
+                // items: 3,
+                // center: true,
+                // loop: true,
+                margin: 10,
+                nav: true,
+                navContainer: '.dashboard_blog_trash_blog_prev_conWrap',
+                navText: ['<div class="blog_prev_con_previous_btn owl-left flexc"><i class="fal fa-chevron-left"></i></div>', '<div class="blog_prev_con_next_btn owl-right flexc"><i class="fal fa-chevron-right"></i></div>'],
+                autoWidth: true,
+                responsive: {
+                    600: {
+                        items: 2,
+                    },
+                    1000: {
+                        items: 2,
+                    }
+                }
+            })
 
 
 
