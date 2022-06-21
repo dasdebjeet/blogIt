@@ -96,7 +96,7 @@
 
                 <div class="dashboard_modal_main_blog_preveiw_btn_con">
                     <button class="dashboard_modal_main_blog_preveiw_btn blog_preveiw_cancelbBtn">Cancel</button>
-                    <button class="dashboard_modal_main_blog_preveiw_btn blog_preveiw_submitBtn">Final Submit & Exit</button>
+                    <button class="dashboard_modal_main_blog_preveiw_btn blog_preveiw_submitBtn"><span class="blog_preveiw_submitBtn_inText">Final Submit</span> & Exit</button>
                 </div>
 
             </div>

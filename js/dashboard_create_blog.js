@@ -390,80 +390,90 @@ $(document).ready(() => {
     // blog create draft and publish btn
 
 
-    var blog_title, blog_subtitle, blog_content, blog_catagory, blog_tags
-    $(".blog_create_submitBtn").click(() => {
-        error_det = 0
-        blog_title = $(".create_blog_title_inp").val()
-        blog_subtitle = $(".create_blog_subtitle_inp").val()
-        blog_content = $(".editor_body").html()
 
-        blog_catagory = arr_cata
-        blog_tags = arr_tags
+    var create_main_btns = document.querySelectorAll(".blog_create_mainBtn")
+    var blog_title, blog_subtitle, blog_content, blog_catagory, blog_tags, blog_btn_val
 
-        var blog_cata_len = blog_catagory.length
-        var blog_tags_len = blog_tags.length
+    create_main_btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+            blog_btn_val = $(btn).attr('btn_val')
 
 
-        var displayError = (el) => {
-            $(el).css("display", 'block')
-        }
+            error_det = 0
+            blog_title = $(".create_blog_title_inp").val()
+            blog_subtitle = $(".create_blog_subtitle_inp").val()
+            blog_content = $(".editor_body").html()
 
-        if (blog_title == undefined || blog_title == "") {
-            displayError(".title_error_msg")
-            error_det = 1
-        }
-        if (blog_subtitle == undefined || blog_subtitle == "") {
-            displayError(".subtitle_error_msg")
-            error_det = 1
-        }
+            blog_catagory = arr_cata
+            blog_tags = arr_tags
 
-        if (blog_content == undefined || blog_content == "") {
-            displayError(".content_error_msg")
-            error_det = 1
-        }
-
-        if (blog_cata_len == 0) {
-            displayError(".catagory_error_msg")
-            error_det = 1
-        }
-
-        if (blog_tags_len == 0) {
-            displayError(".tags_error_msg")
-            error_det = 1
-        }
-
-        if (blog_thumbnail_url == undefined || blog_thumbnail_url == "") {
-            displayError(".thumbnail_error_msg")
-            error_det = 1
-        }
+            var blog_cata_len = blog_catagory.length
+            var blog_tags_len = blog_tags.length
 
 
+            var displayError = (el) => {
+                $(el).css("display", 'block')
+            }
+
+            if (blog_title == undefined || blog_title == "") {
+                displayError(".title_error_msg")
+                error_det = 1
+            }
+            if (blog_subtitle == undefined || blog_subtitle == "") {
+                displayError(".subtitle_error_msg")
+                error_det = 1
+            }
+
+            if (blog_content == undefined || blog_content == "") {
+                displayError(".content_error_msg")
+                error_det = 1
+            }
+
+            if (blog_cata_len == 0) {
+                displayError(".catagory_error_msg")
+                error_det = 1
+            }
+
+            if (blog_tags_len == 0) {
+                displayError(".tags_error_msg")
+                error_det = 1
+            }
+
+            if (blog_thumbnail_url == undefined || blog_thumbnail_url == "") {
+                displayError(".thumbnail_error_msg")
+                error_det = 1
+            }
 
 
-        if (error_det == 0) {
-            $(".dashboard_modal_main_blog_preveiw_img_con").css("background-image", 'url(' + blog_thumbnail_url + ')')
-            $(".dashboard_modal_main_blog_preveiw_title").text(blog_title)
-            $(".dashboard_modal_main_blog_preveiw_subtitle").text(blog_subtitle)
-            $(".dashboard_modal_main_blog_preveiw_content").html(blog_content)
 
-            $(".dashboard_modal_main_blog_preveiw_catagory_tags").html("")
 
-            arr_cata.forEach((cata) => {
-                $(".dashboard_modal_main_blog_preveiw_catagory_tags").prepend(`<span class="blog_preveiw_catagory_format">#${cata}</span>`)
-            })
+            if (error_det == 0) {
+                $(".dashboard_modal_main_blog_preveiw_img_con").css("background-image", 'url(' + blog_thumbnail_url + ')')
+                $(".dashboard_modal_main_blog_preveiw_title").text(blog_title)
+                $(".dashboard_modal_main_blog_preveiw_subtitle").text(blog_subtitle)
+                $(".dashboard_modal_main_blog_preveiw_content").html(blog_content)
+                $(".blog_preveiw_submitBtn_inText").html(((blog_btn_val == "submit") ? "Final " : "") + blog_btn_val.charAt(0).toUpperCase() + blog_btn_val.slice(1))
 
-            arr_tags.forEach((tag) => {
-                $(".dashboard_modal_main_blog_preveiw_catagory_tags").append(`<span class="blog_preveiw_tags_format">#${tag}</span>`)
-            })
+                $(".dashboard_modal_main_blog_preveiw_catagory_tags").html("")
 
-            $("html, body").addClass("noscroll");
-            $(".dashboard_modal").css({
-                "visibility": 'visible',
-                "opacity": '1'
-            })
-            $(".dashboard_modal_main_blog_preveiw_wrap").css("display", 'block')
-            $(".blog_mini_image_upload_wrap").css("display", 'none')
-        }
+                arr_cata.forEach((cata) => {
+                    $(".dashboard_modal_main_blog_preveiw_catagory_tags").prepend(`<span class="blog_preveiw_catagory_format">#${cata}</span>`)
+                })
+
+                arr_tags.forEach((tag) => {
+                    $(".dashboard_modal_main_blog_preveiw_catagory_tags").append(`<span class="blog_preveiw_tags_format">#${tag}</span>`)
+                })
+
+                $("html, body").addClass("noscroll");
+                $(".dashboard_modal").css({
+                    "visibility": 'visible',
+                    "opacity": '1'
+                })
+                $(".dashboard_modal_main_blog_preveiw_wrap").css("display", 'block')
+                $(".blog_mini_image_upload_wrap").css("display", 'none')
+            }
+        })
+
     })
 
     var dashboard_modal_close = () => {
@@ -487,7 +497,7 @@ $(document).ready(() => {
 
                 } else {
                     var create_blog = "yes"
-                    var form_data = "&create_blog=" + create_blog + "&title=" + blog_title + "&subtitle=" + blog_subtitle + "&catagories=" + blog_catagory + "&tags=" + blog_tags + "&thumbnail_url=" + blog_thumbnail_name + "&content=" + blog_content + "&username=" + response[0].user_name + "&user_priority=" + response[0].priority
+                    var form_data = "&create_blog=" + create_blog + "&title=" + blog_title + "&subtitle=" + blog_subtitle + "&catagories=" + blog_catagory + "&tags=" + blog_tags + "&thumbnail_url=" + blog_thumbnail_name + "&content=" + blog_content + "&username=" + response[0].user_name + "&user_priority=" + response[0].priority + "&blog_stat=" + blog_btn_val
                     // console.log(form_data)
                     $.ajax({
                         type: 'POST',

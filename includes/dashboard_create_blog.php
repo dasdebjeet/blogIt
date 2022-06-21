@@ -98,9 +98,9 @@
             </div>
 
             <div class="dashboard_create_blog_sec2_sub_section3 flexc">
-                <button class="blog_create_mainBtn">Draft</button>
+                <button class="blog_create_mainBtn" btn_val="draft">Draft</button>
                 <div class="blog_create_mainBtn_partition flexc">or</div>
-                <button class="blog_create_mainBtn blog_create_submitBtn">Submit</button>
+                <button class="blog_create_mainBtn blog_create_submitBtn" btn_val="submit">Submit</button>
             </div>
         </div>
     </div>

@@ -131,7 +131,7 @@
                             <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
                             <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
                             <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-check"></i></div>
                             <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
                         </div>
 
@@ -254,7 +254,7 @@
                 var blog_pubDate = dateToYMD(new Date(response[i].published_on))
                 var blog_content = strip_content_html(response[i].content)
 
-                if (blog_content.length >= 98) { //if file name length is greater than 14 then split it and add ...
+                if (blog_content.length >= 98) { //if the content length is greater than 14 then split it and add ...
                     blog_content = blog_content.substring(0, 98) + "..."
                 }
 
@@ -304,7 +304,7 @@
                 }
 
 
-                if (blog_stat == "submit") {
+                if (blog_stat == "draft") {
                     $(".dashboard_blog_draft_blog_prev_con").prepend(`<div class="dashboard_blog_draft_blog_prev flexc">
                             <div class="dashboard_blog_draft_blog_prev_wrap flexc">
                                 <div class="dashboard_blog_draft_blog_prev_thumbnail_con flexc">
@@ -368,7 +368,7 @@
                             <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
                             <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
                             <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-check"></i></div>
                             <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
                         </div>
                     </div>`)
