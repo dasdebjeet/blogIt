@@ -248,6 +248,7 @@
 .dashboard_blog_draft_blog_prev_wrap,
 .dashboard_blog_trash_blog_prev_wrap {
     margin-right: 20px;
+    width: calc(100% - 55px);
     height: 100%;
 }
 
@@ -296,6 +297,7 @@
 .dashboard_blog_trash_blog_prev .trash_blog_prev_toolbar {
     flex-direction: column;
     justify-content: space-between;
+    width: 35px;
     height: 100%;
 }
 

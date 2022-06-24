@@ -14,7 +14,7 @@
         }
         
         public function blog_author($author_id){
-            $stmt = $this->connect()->prepare("SELECT user_name FROM users WHERE user_id=? LIMIT 1");
+            $stmt = $this->connect()->prepare("SELECT user_name, user_id FROM users WHERE user_id=? LIMIT 1");
             $stmt->execute([$author_id]);
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
             if($result){

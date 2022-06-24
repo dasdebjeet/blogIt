@@ -452,6 +452,7 @@ $(document).ready(() => {
                 $(".dashboard_modal_main_blog_preveiw_title").text(blog_title)
                 $(".dashboard_modal_main_blog_preveiw_subtitle").text(blog_subtitle)
                 $(".dashboard_modal_main_blog_preveiw_content").html(blog_content)
+                // $(".dashboard_modal_main_blog_preveiw_author").html(usename)
                 $(".blog_preveiw_submitBtn_inText").html(((blog_btn_val == "submit") ? "Final " : "") + blog_btn_val.charAt(0).toUpperCase() + blog_btn_val.slice(1))
 
                 $(".dashboard_modal_main_blog_preveiw_catagory_tags").html("")

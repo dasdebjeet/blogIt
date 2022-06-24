@@ -89,8 +89,8 @@
 
                         <div class="dashboard_modal_main_blog_preveiw_content">Morbi mattis tristique odio eget placerat. Donec placerat sed orci sit amet accumsan. Morbi vel dignissim nunc. Praesent sit amet efficitur eros. Phasellus eu est nec mauris varius ultricies. Quisque laoreet sagittis felis, id luctus nulla placerat in. Ut placerat eu diam in egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque efficitur metus et nisi gravida, sit amet auctor velit vestibulum. Quisque tellus metus, venenatis sit amet ullamcorper et, auctor eu nisl. Pellentesque consectetur sapien vel libero hendrerit pharetra. Vivamus accumsan id diam in rutrum.</div>
 
-                        <div class="dashboard_modal_main_blog_preveiw_author">by Debjeet Das</div>
-                        <div class="dashboard_modal_main_blog_preveiw_pubDate">published on 8th Feb 2022</div>
+                        <!-- <div class="dashboard_modal_main_blog_preveiw_author">by Debjeet Das</div>
+                        <div class="dashboard_modal_main_blog_preveiw_pubDate">published on 8th Feb 2022</div> -->
                     </div>
                 </div>
 

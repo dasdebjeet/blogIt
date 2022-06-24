@@ -150,7 +150,8 @@
 
         $.ajax({
             type: "POST",
-            url: "./sdk/blog_fetcher_set.php"
+            url: "./sdk/blog_fetcher_set.php",
+            data: "&blog_fetch=blog_data"
         }).done((response) => {
 
             var time_ago = (time) => {
@@ -241,11 +242,10 @@
                 return temporalDivElement.textContent || temporalDivElement.innerText || "" // Retrieve the text property of the element (cross-browser support)
             }
 
+            var author_id
             for (var i = 0; i < response.length; i++) {
-
+                author_id = response[i].author_id
                 var blog_stat = response[i].blog_status
-
-                // console.log(blog_stat)
 
                 var blog_thumb_img = response[i].thumbnail_url
                 var blog_mini_img = get_mini_img(response[i].content)
@@ -257,7 +257,6 @@
                 if (blog_content.length >= 98) { //if the content length is greater than 14 then split it and add ...
                     blog_content = blog_content.substring(0, 98) + "..."
                 }
-
 
 
                 if (blog_mini_img.length == 0) {
@@ -278,34 +277,42 @@
                     }
                 }
 
-                if (blog_stat == "publish") {
-                    $(".dashboard_blog_published_blog_prev_con").prepend(`<div class="dashboard_blog_published_blog_prev">
-                        <div class="published_blog_prev_image_con flexc">
-                            <div class="published_blog_prev_thumbnail_con" ` + blog_thumb_img_css + `>
-                                <img src="./assests/blog_main_img/` + blog_thumb_img + `" class="published_blog_prev_thumbnail_img">
-                            </div>
-                            <div class="published_blog_prev_miniImg_con flexc" ` + blog_mini_img_css + `>` + blog_miniImg_html + more_mini_img + `</div>
-                        </div>
 
-                        <div class="published_blog_prev_content">
-                            <div class="published_blog_prev_content_title"> ` + blog_title + ` </div>
-                            <div class="published_blog_prev_content_date"> ` + blog_pubDate + ` </div>
-                            <div class="published_blog_prev_content_text"> ` + blog_content + ` </div>
-                        </div>
+                $.ajax({
+                    type: 'POST',
+                    url: "./sdk/blog_fetcher_set.php",
+                    data: "&author_id=" + author_id
+                }).done((res) => {
+                    console.log(author_id, res[0].user_id)
+                    if (author_id == res[0].user_id) {
+                        if (blog_stat == "publish") {
+                            $(".dashboard_blog_published_blog_prev_con").prepend(`<div class="dashboard_blog_published_blog_prev">
+                                <div class="published_blog_prev_image_con flexc">
+                                    <div class="published_blog_prev_thumbnail_con" ` + blog_thumb_img_css + `>
+                                        <img src="./assests/blog_main_img/` + blog_thumb_img + `" class="published_blog_prev_thumbnail_img">
+                                    </div>
+                                    <div class="published_blog_prev_miniImg_con flexc" ` + blog_mini_img_css + `>` + blog_miniImg_html + more_mini_img + `</div>
+                                </div>
 
-                        <div class="published_blog_prev_toolbar flexc">
-                            <div class="published_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
-                            <div class="published_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                            <div class="published_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
-                            <div class="published_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
-                            <div class="published_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
-                        </div>
-                    </div>`)
-                }
+                                <div class="published_blog_prev_content">
+                                    <div class="published_blog_prev_content_title"> ` + blog_title + ` </div>
+                                    <div class="published_blog_prev_content_date"> ` + blog_pubDate + ` </div>
+                                    <div class="published_blog_prev_content_text"> ` + blog_content + ` </div>
+                                </div>
+
+                                <div class="published_blog_prev_toolbar flexc">
+                                    <div class="published_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
+                                    <div class="published_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                                    <div class="published_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
+                                    <div class="published_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
+                                    <div class="published_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
+                                </div>
+                            </div>`)
+                        }
 
 
-                if (blog_stat == "draft") {
-                    $(".dashboard_blog_draft_blog_prev_con").prepend(`<div class="dashboard_blog_draft_blog_prev flexc">
+                        if (blog_stat == "draft") {
+                            $(".dashboard_blog_draft_blog_prev_con").prepend(`<div class="dashboard_blog_draft_blog_prev flexc">
                             <div class="dashboard_blog_draft_blog_prev_wrap flexc">
                                 <div class="dashboard_blog_draft_blog_prev_thumbnail_con flexc">
                                     <img src="./assests/blog_main_img/` + blog_thumb_img + `" class="draft_blog_prev_thumbnail_img">
@@ -323,12 +330,12 @@
                                 <div class="draft_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
                                 <div class="draft_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
                             </div>
-                        </div>`)
-                }
+                            </div>`)
+                        }
 
 
-                if (blog_stat == "trash") {
-                    $(".dashboard_blog_trash_blog_prev_con").prepend(`<div class="dashboard_blog_trash_blog_prev flexc">
+                        if (blog_stat == "trash") {
+                            $(".dashboard_blog_trash_blog_prev_con").prepend(`<div class="dashboard_blog_trash_blog_prev flexc">
                             <div class="dashboard_blog_trash_blog_prev_wrap flexc">
                                 <div class="dashboard_blog_trash_blog_prev_thumbnail_con flexc">
                                     <img src="./assests/blog_main_img/` + blog_thumb_img + `" class="trash_blog_prev_thumbnail_img">
@@ -346,33 +353,38 @@
                                 <div class="trash_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
                                 <div class="trash_blog_prev_tool flexc"><i class="fas fa-trash"></i></div>
                             </div>
-                        </div>`)
-                }
+                            </div>`)
+                        }
 
 
-                if (blog_stat == "reveiw") {
-                    $(".dashboard_blog_subFreveiw_blog_prev_con").prepend(`<div class="dashboard_blog_subFreveiw_blog_prev">
-                        <div class="subFreveiw_blog_prev_image_con flexc">
-                            <div class="subFreveiw_blog_prev_thumbnail_con">
-                                <img src="./assests/blog_main_img/` + blog_thumb_img + `" class="subFreveiw_blog_prev_thumbnail_img">
+                        if (blog_stat == "reveiw") {
+                            $(".dashboard_blog_subFreveiw_blog_prev_con").prepend(`<div class="dashboard_blog_subFreveiw_blog_prev">
+                            <div class="subFreveiw_blog_prev_image_con flexc">
+                                <div class="subFreveiw_blog_prev_thumbnail_con">
+                                    <img src="./assests/blog_main_img/` + blog_thumb_img + `" class="subFreveiw_blog_prev_thumbnail_img">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="subFreveiw_blog_prev_content">
-                            <div class="subFreveiw_blog_prev_content_title">` + blog_title + `</div>
-                            <div class="subFreveiw_blog_prev_content_date">` + blog_pubDate + `</div>
-                            <div class="subFreveiw_blog_prev_content_text">` + blog_content + `</div>
-                        </div>
+                            <div class="subFreveiw_blog_prev_content">
+                                <div class="subFreveiw_blog_prev_content_title">` + blog_title + `</div>
+                                <div class="subFreveiw_blog_prev_content_date">` + blog_pubDate + `</div>
+                                <div class="subFreveiw_blog_prev_content_text">` + blog_content + `</div>
+                            </div>
 
-                        <div class="subFreveiw_blog_prev_toolbar flexc">
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-check"></i></div>
-                            <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
-                        </div>
-                    </div>`)
-                }
+                            <div class="subFreveiw_blog_prev_toolbar flexc">
+                                <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-pencil-alt"></i></div>
+                                <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-eye"></i></div>
+                                <div class="subFreveiw_blog_prev_tool flexc"><i class="fas fa-chart-area"></i></div>
+                                <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-check"></i></div>
+                                <div class="subFreveiw_blog_prev_tool flexc"><i class="fal fa-ellipsis-v-alt"></i></div>
+                            </div>
+                            </div>`)
+                        }
+                    }
+                })
+
+
+
 
 
             }
