@@ -134,14 +134,22 @@
 
 
             <div class="dashboard_dummy_sidebar"></div>
+
+
             <div class="dashboard_sidebar">
                 <a href="index.php" class="siteLogo flexc"><img src="./assests/siteLogo_W.svg"></a>
                 <div class="dashboard_menu_con">
                     <div class="dashboard_sidebar_menu flexc" dashborad_id="main"><i class='bx bx-grid-alt flexc'></i>Dashboard</div>
                     <div class="dashboard_sidebar_menu flexc" dashborad_id=""><i class='bx bx-line-chart'></i>Analytics</div>
-                    <div class="dashboard_sidebar_menu flexc" dashborad_id="blog"><i class='bx bx-file flexc'></i>Blog</div>
+                    <div class="dashboard_sidebar_menu flexc" dashborad_id="blog"><i class='bx bx-file'></i>Blog</div>
                     <div class="dashboard_sidebar_menu flexc" dashborad_id="create_blog"><i class='bx bx-edit-alt'></i>Create</div>
-                    <div class="dashboard_sidebar_menu flexc" dashborad_id=""><i class='bx bx-server'></i>Management</div>
+                    <div class="dashboard_sidebar_menu dashboard_sidebar_menu_mangt flexc" dashborad_id="">
+                        <i class='bx bx-server'></i>Management
+                        <div class="dashboard_sidebar_menu_mangtDropMenu">
+                            <div class="dashboard_sidebar_menu_mangtMenu"><i class='bx bx-user'></i>Users</div>
+                            <div class="dashboard_sidebar_menu_mangtMenu"><i class='bx bx-file'></i>Others Blog</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="dashboard_sidebar_bottom_menu_con">
                     <div class="dashboard_sidebar_bottom_menu flexc"><i class='bx bx-cog'></i>Settings</div>
