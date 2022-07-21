@@ -24,6 +24,7 @@
         <link href="./css/dashboard_blog.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet">
         <link href="./css/dashboard_create_blog.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet">
         <link href="./css/dashboard_rich_textEditor.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet">
+        <link href="./css/dashboard_user_management.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet">
 
         <link href="./css/mquery.css?<?php echo date('l jS \of F Y h:i:s A'); ?>" rel="stylesheet">
 
