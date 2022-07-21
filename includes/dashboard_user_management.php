@@ -17,11 +17,13 @@
                         </div>
                     </th>
                     <th>Name</th>
+                    <th>Role</th>
                     <th>Blogs</th>
                     <th>Last seen</th>
                     <th>Status</th>
                     <th>View</th>
-                    <th>Delete</th>
+                    <th>Disable</th>
+                    <th>More</th>
                 </tr>
             </thead>
             <tbody>
@@ -34,20 +36,16 @@
                             </label>
                         </div>
                     </td>
-                    <td class="overveiw_table_article_titlePrev flexc">
-                        <div class="titlePrev_img flexc">
-                            <img src="./assests/lastest_feed.jpg" alt="">
-                        </div>
-                        <div class="overveiw_table_article_titleName">
-                            Top Control Panels For Your ..
-                        </div>
-                    </td>
-                    <td>24 Jun 2021</td>
-                    <td>Technology</td>
-                    <td>25K Veiws</td>
-                    <td>9K Likes</td>
-                    <td>50 Dislikes</td>
+                    <td class="">Debjeet Das</td>
+                    <td>Admin</td>
+                    <td>24</td>
+                    <td>2 days ago</td>
+                    <td>Active</td>
+                    <td><i class="fal fa-eye"></i></td>
+                    <td><i class="fal fa-ban"></i></td>
+                    <td><i class="fal fa-ellipsis-v"></i></td>
                 </tr>
+
             </tbody>
         </table>
 
