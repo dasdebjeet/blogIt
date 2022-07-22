@@ -97,8 +97,6 @@
                         <div class="userTable_cell_btn cell_btn_more flexc"><i class="far fa-angle-down"></i></div>
                     </div>
                 </div>
-
-
                 <div class="userTable_row">
                     <div class="userTable_cell">
                         <div class="checkbox_con selectAll_article_check flexc">
@@ -166,8 +164,138 @@
                         <div class="userTable_cell_btn cell_btn_more flexc"><i class="far fa-angle-down"></i></div>
                     </div>
                 </div>
-
-
+                <div class="userTable_row">
+                    <div class="userTable_cell">
+                        <div class="checkbox_con selectAll_article_check flexc">
+                            <label class="checkbox flexc">
+                                <input class="overveiw_blog_article_sel article_selectAll_inp" type="checkbox" name="article_selectAll" value="select_all_blog">
+                                <div class="checkmark flexc"><i class="far fa-check"></i></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_user_con flexc">
+                            <div class="cell_userImg_wrap">
+                                <img class="cell_userImg" src="./assests/users_img/abhi.jpg">
+                            </div>
+                            <div class="userTable_cell_userName">Abhishek Pandey<br><small class="user_role user_role_newbie">Newbie</small></div>
+                        </div>
+                    </div>
+                    <div class="userTable_cell">43 K</div>
+                    <div class="userTable_cell">0</div>
+                    <div class="userTable_cell">1 days ago</div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_status">Active</div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_btn cell_btn_view flexc"><i class="fal fa-eye"></i></div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_btn cell_btn_disable flexc"><i class="fal fa-ban"></i></div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_btn cell_btn_more flexc"><i class="far fa-angle-down"></i></div>
+                    </div>
+                </div>
+                <div class="userTable_row">
+                    <div class="userTable_cell">
+                        <div class="checkbox_con selectAll_article_check flexc">
+                            <label class="checkbox flexc">
+                                <input class="overveiw_blog_article_sel article_selectAll_inp" type="checkbox" name="article_selectAll" value="select_all_blog">
+                                <div class="checkmark flexc"><i class="far fa-check"></i></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_user_con flexc">
+                            <div class="cell_userImg_wrap">
+                                <img class="cell_userImg" src="./assests/users_img/abhi.jpg">
+                            </div>
+                            <div class="userTable_cell_userName">Abhishek Pandey<br><small class="user_role user_role_newbie">Newbie</small></div>
+                        </div>
+                    </div>
+                    <div class="userTable_cell">43 K</div>
+                    <div class="userTable_cell">0</div>
+                    <div class="userTable_cell">1 days ago</div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_status">Active</div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_btn cell_btn_view flexc"><i class="fal fa-eye"></i></div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_btn cell_btn_disable flexc"><i class="fal fa-ban"></i></div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_btn cell_btn_more flexc"><i class="far fa-angle-down"></i></div>
+                    </div>
+                </div>
+                <div class="userTable_row">
+                    <div class="userTable_cell">
+                        <div class="checkbox_con selectAll_article_check flexc">
+                            <label class="checkbox flexc">
+                                <input class="overveiw_blog_article_sel article_selectAll_inp" type="checkbox" name="article_selectAll" value="select_all_blog">
+                                <div class="checkmark flexc"><i class="far fa-check"></i></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_user_con flexc">
+                            <div class="cell_userImg_wrap">
+                                <img class="cell_userImg" src="./assests/users_img/abhi.jpg">
+                            </div>
+                            <div class="userTable_cell_userName">Abhishek Pandey<br><small class="user_role user_role_newbie">Newbie</small></div>
+                        </div>
+                    </div>
+                    <div class="userTable_cell">43 K</div>
+                    <div class="userTable_cell">0</div>
+                    <div class="userTable_cell">1 days ago</div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_status">Active</div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_btn cell_btn_view flexc"><i class="fal fa-eye"></i></div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_btn cell_btn_disable flexc"><i class="fal fa-ban"></i></div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_btn cell_btn_more flexc"><i class="far fa-angle-down"></i></div>
+                    </div>
+                </div>
+                <div class="userTable_row">
+                    <div class="userTable_cell">
+                        <div class="checkbox_con selectAll_article_check flexc">
+                            <label class="checkbox flexc">
+                                <input class="overveiw_blog_article_sel article_selectAll_inp" type="checkbox" name="article_selectAll" value="select_all_blog">
+                                <div class="checkmark flexc"><i class="far fa-check"></i></div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_user_con flexc">
+                            <div class="cell_userImg_wrap">
+                                <img class="cell_userImg" src="./assests/users_img/abhi.jpg">
+                            </div>
+                            <div class="userTable_cell_userName">Abhishek Pandey<br><small class="user_role user_role_newbie">Newbie</small></div>
+                        </div>
+                    </div>
+                    <div class="userTable_cell">43 K</div>
+                    <div class="userTable_cell">0</div>
+                    <div class="userTable_cell">1 days ago</div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_status">Active</div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_btn cell_btn_view flexc"><i class="fal fa-eye"></i></div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_btn cell_btn_disable flexc"><i class="fal fa-ban"></i></div>
+                    </div>
+                    <div class="userTable_cell">
+                        <div class="userTable_cell_btn cell_btn_more flexc"><i class="far fa-angle-down"></i></div>
+                    </div>
+                </div>
                 <div class="userTable_row">
                     <div class="userTable_cell">
                         <div class="checkbox_con selectAll_article_check flexc">

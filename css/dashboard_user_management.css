@@ -4,7 +4,6 @@
     width: 100%;
     border-radius: 10px;
     box-shadow: 20px 20px 25px #cecece;
-    overflow-y: hidden;
 }
 
 .dashboard_userMgnt_title {
@@ -77,6 +76,7 @@
 }
 
 .cell_userImg_wrap {
+    background: #e5e5e5;
     width: 35px;
     height: 35px;
     margin-right: 10px;
@@ -86,7 +86,7 @@
 .cell_userImg {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 50%;
 }
 
@@ -96,20 +96,24 @@
 }
 
 .user_role {
-    font-size: 11px;
-    color: #9100ff;
+    background: #ff3b1d29;
+    padding: 2px 8px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #000000;
+    border-radius: 15px;
 }
 
 .user_role_admin {
-    color: var(--themec);
+    background: #ff3b1d29;
 }
 
 .user_role_contrib {
-    color: #b655ff;
+    background: #8500ff29;
 }
 
 .user_role_newbie {
-    color: #00d0ff;
+    background: #00adff29;
 }
 
 .userTable_cell_status {
