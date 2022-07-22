@@ -1,7 +1,7 @@
 <script src="./js/dashboard_user_management.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 <div class="dashboard_userMgnt_con">
     <div class="dashboard_userMgnt_wrap">
-        <div class="dashboard_userMgnt_title">Users</div>
+        <!-- <div class="dashboard_userMgnt_title">Users</div> -->
 
 
         <div class="dashboard_userMgnt_userTable">

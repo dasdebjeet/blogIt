@@ -102,6 +102,17 @@
 
             </div>
 
+            <div class="dashboard_userMgnt_userProfile_modal_wrap">
+                <div class="dashboard_userMgnt_userProfile_modal_con">
+                    <div class="userProfile_cover">
+                        <div class="userProfile_img_con">
+                            <img class="userProfile_img" src="./assests/users_img/deb.jpg">
+                        </div>
+                        <div class="userProfile_name">Debjeet Das</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <div class="dashboard_wrapper flexc">

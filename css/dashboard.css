@@ -3,8 +3,8 @@
 .dashboard_modal {
     flex-direction: column;
     position: fixed;
-    visibility: hidden;
-    opacity: 0;
+    /* visibility: hidden;
+    opacity: 0; */
 
     background: #000000bf;
     width: 100%;
@@ -28,6 +28,48 @@
         opacity: 1;
     }
 }
+
+
+/* Dashboard user profile modal  */
+
+.dashboard_userMgnt_userProfile_modal_wrap {
+    background: #ff3b1d29;
+    width: calc(100vw - 60px);
+    height: calc(100vh - 60px);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.userProfile_cover {
+    position: relative;
+    background: var(--themec);
+    height: 200px;
+    padding: 20px;
+    color: #ffffff;
+    border-radius: 10px 10px 0 0;
+}
+
+.userProfile_img_con {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate(50%, 100px);
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    border: 10px solid #ffffff;
+}
+
+.userProfile_img_con>.userProfile_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Dashboard user profile modal */
+
+
 
 
 /* create blog mini-image uploader */

@@ -20,13 +20,15 @@
     display: table;
     width: 100%;
     font-size: 14px;
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .userTable_head {
     background: #9b9b9b14;
     display: table-header-group;
     font-size: 16px;
+    font-weight: 600;
 }
 
 .userTable_body {
@@ -54,6 +56,10 @@
     text-align: left;
 }
 
+.userTable_body>.userTable_row {
+    transition: all 0.2s ease-in-out;
+}
+
 .userTable_head .userTable_row .userTable_cell {
     padding: 20px 10px;
 }
@@ -64,6 +70,10 @@
 
 .userTable_body>.userTable_row:nth-child(even) {
     background: #9b9b9b14;
+}
+
+.userTable_body>.userTable_row:hover {
+    background: #ff3b1d12;
 }
 
 .userTable_body>.userTable_row:nth-last-child {
@@ -137,6 +147,7 @@
     width: 30px;
     height: 30px;
     margin: 0 auto;
+    color: #242424;
     font-size: 16px;
     font-weight: 600;
     border-radius: 50%;
