@@ -47,7 +47,6 @@
 
     <body>
         <div class="dashboard_modal flexc">
-
             <div class="blog_mini_image_upload_wrap flexc">
                 <div class="blog_mini_image_upload_title">Add Images</div>
                 <div class="blog_mini_image_upload_err_msg">Upload a image to be inserted in your blog</div>
@@ -105,10 +104,10 @@
             <div class="dashboard_userMgnt_userProfile_modal_wrap">
                 <div class="dashboard_userMgnt_userProfile_modal_con">
                     <div class="userProfile_cover">
-                        <div class="userProfile_img_con">
+                        <div class="userProfile_img_con flexc">
                             <img class="userProfile_img" src="./assests/users_img/deb.jpg">
                         </div>
-                        <div class="userProfile_name">Debjeet Das</div>
+                        <div class="userProfile_name">Debjeet Das<br><small style="color: var(--themec)">Admin</small></div>
                     </div>
                 </div>
             </div>
