@@ -104,11 +104,42 @@
             <div class="dashboard_userMgnt_userProfile_modal_wrap">
                 <div class="dashboard_userMgnt_userProfile_modal_con">
                     <div class="userProfile_cover">
-                        <div class="userProfile_img_con flexc">
-                            <img class="userProfile_img" src="./assests/users_img/deb.jpg">
+                        <div class="userProfile_details_con flexc">
+                            <div class="userProfile_img_con flexc">
+                                <img class="userProfile_img" src="./assests/users_img/deb.jpg">
+                            </div>
+                            <div class="userProfile_text">
+                                <div class="userProfile_text_name">Debjeet Das</div>
+                                <div class="userProfile_text_role flexc">Admin</div>
+                                <!-- <div class="userProfile_blog_stats">
+                                    Published 15K
+                                </div> -->
+                            </div>
+
                         </div>
-                        <div class="userProfile_name">Debjeet Das<br><small style="color: var(--themec)">Admin</small></div>
+
                     </div>
+
+                    <div class="userProfile_info_con">
+                        <div class="userProfile_info_head flexc">
+                            <div class="userProfile_info_head_title info_head_title_active">About</div>
+                            <div class="userProfile_info_head_title">Details</div>
+                            <div class="userProfile_info_head_title">Contact</div>
+                        </div>
+                        <div class="userProfile_info_wrap flexc">
+                            <div class="userProfile_info info_about">
+                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                            </div>
+                            <div class="userProfile_info info_details">
+                                published 12K
+                            </div>
+                            <div class="userProfile_info info_contact">
+                                debjeet194@gmail.com
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
 
