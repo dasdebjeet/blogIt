@@ -176,7 +176,84 @@
 
                                         </div>
                                     </div>
-                                    <div class="info_details_subSec info_details_sec2">nbn</div>
+
+                                    <div class="info_details_subSec info_details_sec2">
+                                        <div class="info_details_sec2_userMiniBlog_con">
+                                            <div class="info_details_sec2_userMiniBlog_wrap">
+                                                <div class="sec2_userMiniBlog flexc">
+                                                    <div class="sec2_userMiniBlog_thumbnail">
+                                                        <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="sec2_userMiniBlog_thumbnail_img">
+                                                    </div>
+                                                    <div class="sec2_userMiniBlog_content_con">
+                                                        <div class="sec2_userMiniBlog_title">Bonuses for New Hao’s Special Works Race Series</div>
+                                                        <div class="sec2_userMiniBlog_content_date"> 21 Jun 2022 ● Last month </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="sec2_userMiniBlog flexc">
+                                                    <div class="sec2_userMiniBlog_thumbnail">
+                                                        <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="sec2_userMiniBlog_thumbnail_img">
+                                                    </div>
+                                                    <div class="sec2_userMiniBlog_content_con">
+                                                        <div class="sec2_userMiniBlog_title">Bonuses for New Hao’s Special Works Race Series</div>
+                                                        <div class="sec2_userMiniBlog_content_date"> 21 Jun 2022 ● Last month </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="sec2_userMiniBlog flexc">
+                                                    <div class="sec2_userMiniBlog_thumbnail">
+                                                        <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="sec2_userMiniBlog_thumbnail_img">
+                                                    </div>
+                                                    <div class="sec2_userMiniBlog_content_con">
+                                                        <div class="sec2_userMiniBlog_title">Bonuses for New Hao’s Special Works Race Series</div>
+                                                        <div class="sec2_userMiniBlog_content_date"> 21 Jun 2022 ● Last month </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="sec2_userMiniBlog flexc">
+                                                    <div class="sec2_userMiniBlog_thumbnail">
+                                                        <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="sec2_userMiniBlog_thumbnail_img">
+                                                    </div>
+                                                    <div class="sec2_userMiniBlog_content_con">
+                                                        <div class="sec2_userMiniBlog_title">Bonuses for New Hao’s Special Works Race Series</div>
+                                                        <div class="sec2_userMiniBlog_content_date"> 21 Jun 2022 ● Last month </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="sec2_userMiniBlog flexc">
+                                                    <div class="sec2_userMiniBlog_thumbnail">
+                                                        <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="sec2_userMiniBlog_thumbnail_img">
+                                                    </div>
+                                                    <div class="sec2_userMiniBlog_content_con">
+                                                        <div class="sec2_userMiniBlog_title">Bonuses for New Hao’s Special Works Race Series</div>
+                                                        <div class="sec2_userMiniBlog_content_date"> 21 Jun 2022 ● Last month </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="sec2_userMiniBlog flexc">
+                                                    <div class="sec2_userMiniBlog_thumbnail">
+                                                        <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="sec2_userMiniBlog_thumbnail_img">
+                                                    </div>
+                                                    <div class="sec2_userMiniBlog_content_con">
+                                                        <div class="sec2_userMiniBlog_title">Bonuses for New Hao’s Special Works Race Series</div>
+                                                        <div class="sec2_userMiniBlog_content_date"> 21 Jun 2022 ● Last month </div>
+                                                    </div>
+                                                </div>
+                                                <div class="sec2_userMiniBlog flexc">
+                                                    <div class="sec2_userMiniBlog_thumbnail">
+                                                        <img src="./assests/blog_main_img/mainBlog_Img_6bc82dad7a408d9098354590090aa2b001ae341f.jpg" class="sec2_userMiniBlog_thumbnail_img">
+                                                    </div>
+                                                    <div class="sec2_userMiniBlog_content_con">
+                                                        <div class="sec2_userMiniBlog_title">Bonuses for New Hao’s Special Works Race Series</div>
+                                                        <div class="sec2_userMiniBlog_content_date"> 21 Jun 2022 ● Last month </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="userProfile_info info_contact">

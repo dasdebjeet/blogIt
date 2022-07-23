@@ -3,8 +3,8 @@
 .dashboard_modal {
     flex-direction: column;
     position: fixed;
-    /* visibility: hidden;
-    opacity: 0; */
+    visibility: hidden;
+    opacity: 0;
 
     background: #000000bf;
     width: 100%;
@@ -33,7 +33,7 @@
 /* Dashboard user profile modal  */
 
 .dashboard_userMgnt_userProfile_modal_wrap {
-    /* display: none; */
+    display: none;
     position: relative;
     background: #ffffff;
     width: 50%;
@@ -124,7 +124,7 @@
 
 .userProfile_blog_stats {
     background: #ff2200c4;
-    margin-top: 40px;
+    margin-top: 38px;
     padding: 10px 20px;
     color: #ffffff;
     font-size: 15px;
@@ -153,8 +153,6 @@
 
 .info_head_title_active {
     position: relative;
-    /* padding-bottom: 20px; */
-    /* border-bottom: 2px solid var(--themec); */
 }
 
 .info_head_title_active:after {
@@ -174,30 +172,30 @@
 
 .userProfile_info {
     margin-top: 20px;
-    /* width: 100%; */
+    width: 100%;
     font-size: 13px;
 }
 
 .info_about {
-    display: none;
+    /* display: none/; */
     text-align: justify;
 }
 
-.info_details {
-    display: block;
-    width: 100%;
-}
-
+.info_details,
 .info_contact {
     display: none;
 }
 
+.info_details_con {
+    align-items: flex-start;
+}
+
 .info_details_sec1 {
-    width: 60%;
+    width: 50%;
 }
 
 .info_details_sec2 {
-    width: 40%;
+    width: 50%;
     /* border: 1px solid red; */
 }
 
@@ -278,6 +276,57 @@
 }
 
 
+
+.info_details_sec2_userMiniBlog_con {
+    margin-left: 15px;
+    height: 100%;
+    height: 176px;
+    overflow-x: auto;
+    /* border: 1px solid red; */
+}
+
+.info_details_sec2_userMiniBlog_wrap {
+    padding: 0 10px;
+}
+
+.sec2_userMiniBlog {
+    background: #e5e5e5;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #00000026;
+}
+
+.sec2_userMiniBlog_thumbnail {
+    width: 150px;
+    height: 75px;
+    border-radius: inherit;
+}
+
+.sec2_userMiniBlog_thumbnail_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.sec2_userMiniBlog_content_con {
+    margin-left: 10px;
+}
+
+.sec2_userMiniBlog_title {
+    margin-top: 5px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.sec2_userMiniBlog_content_date {
+    margin-top: 15px;
+    font-size: 11px;
+    font-weight: 600;
+}
 
 /* Dashboard user profile modal */
 
