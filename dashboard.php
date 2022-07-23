@@ -103,6 +103,9 @@
 
             <div class="dashboard_userMgnt_userProfile_modal_wrap">
                 <div class="dashboard_userMgnt_userProfile_modal_con">
+
+                    <div class="dashboard_userMgnt_userProfile_modal_closeBtn flexc"><i class="fal fa-times" aria-hidden="true"></i></div>
+
                     <div class="userProfile_cover">
                         <div class="userProfile_details_con flexc">
                             <div class="userProfile_img_con flexc">
@@ -111,10 +114,8 @@
                             <div class="userProfile_text">
                                 <div class="userProfile_text_name">Debjeet Das</div>
                                 <div class="userProfile_text_role flexc">Admin</div>
-                                <!-- <div class="userProfile_blog_stats">
-                                    Published 15K
-                                </div> -->
                             </div>
+                            <div class="userProfile_blog_stats">15k Blogs Published</div>
 
                         </div>
 
@@ -128,13 +129,62 @@
                         </div>
                         <div class="userProfile_info_wrap flexc">
                             <div class="userProfile_info info_about">
-                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                                Hey! I am a Developer from INDIA, currently doing my BTech in Computer Science & Engineering.
+                                <br>
+                                <br>
+                                I want to help and contribute to the world by being a developer... 🥰
+                                <br><br><br><br>
+                                <span><i class="fal fa-map-marker-alt"></i> Kolkata, India</span>
                             </div>
                             <div class="userProfile_info info_details">
-                                published 12K
+
+                                <div class="info_details_con flexc">
+                                    <div class="info_details_subSec info_details_sec1">
+                                        <div class="info_details_sec1_userAnalytics_con">
+
+                                            <div class="info_details_sec1_userAnalytics userAnalytics_publishedCon">
+                                                <div class="sec1_userAnalytics_title">published</div>
+                                                <div class="sec1_userAnalytics_count_wrap flexc">
+                                                    <div class="sec1_userAnalytics_count_icn"><i class="fal fa-file-signature"></i></div>
+                                                    <div class="sec1_userAnalytics_count_val">15</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="info_details_sec1_userAnalytics userAnalytics_draftCon">
+                                                <div class="sec1_userAnalytics_title">Draft</div>
+                                                <div class="sec1_userAnalytics_count_wrap flexc">
+                                                    <div class="sec1_userAnalytics_count_icn"><i class="fal fa-file-exclamation"></i></div>
+                                                    <div class="sec1_userAnalytics_count_val">3</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="info_details_sec1_userAnalytics userAnalytics_viewCon">
+                                                <div class="sec1_userAnalytics_title">blog Veiws</div>
+                                                <div class="sec1_userAnalytics_count_wrap flexc">
+                                                    <div class="sec1_userAnalytics_count_icn"><i class="fal fa-globe-asia"></i></div>
+                                                    <div class="sec1_userAnalytics_count_val">86</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="info_details_sec1_userAnalytics userAnalytics_reportCon">
+                                                <div class="sec1_userAnalytics_title">report</div>
+                                                <div class="sec1_userAnalytics_count_wrap flexc">
+                                                    <div class="sec1_userAnalytics_count_icn"><i class="fal fa-exclamation-circle"></i></div>
+                                                    <div class="sec1_userAnalytics_count_val">0</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="info_details_subSec info_details_sec2">nbn</div>
+                                </div>
                             </div>
                             <div class="userProfile_info info_contact">
-                                debjeet194@gmail.com
+                                <div class="info_contact_label">EMAIL</div>
+                                <div class="info_contact_text contact_text_email">debjeet194@gmail.com</div>
+                                <div class="info_contact_label">WEBSITE</div>
+                                <div class="info_contact_text contact_text_website">https://dasdebjeet.github.io</div>
+
                             </div>
                         </div>
                     </div>
