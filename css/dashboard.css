@@ -3,6 +3,7 @@
 .dashboard_modal {
     flex-direction: column;
     position: fixed;
+
     visibility: hidden;
     opacity: 0;
 
@@ -37,9 +38,10 @@
     position: relative;
     background: #ffffff;
     width: 50%;
-    min-height: 520px;
+    min-height: 525px;
     border-radius: 5px;
     backdrop-filter: blur(5px);
+    transition: all 0.2s ease-in-out;
 }
 
 .dashboard_userMgnt_userProfile_modal_closeBtn {
@@ -107,7 +109,6 @@
 }
 
 .userProfile_text_name {
-    margin-top: -7px;
     color: #ffffff;
     font-size: 25px;
 }
@@ -115,7 +116,7 @@
 .userProfile_text_role {
     background: #ff2200c4;
     width: 70px;
-    margin-top: 10px;
+    margin-top: 12px;
     padding: 5px 2px;
     font-size: 11px;
     color: #ffffff;
@@ -134,13 +135,13 @@
 
 .userProfile_info_con {
     margin: 100px 0 50px;
-    padding: 0 70px;
+    padding: 0 50px;
 }
 
 .userProfile_info_head {
     justify-content: flex-start;
     padding-bottom: 5px;
-    border-bottom: 2px solid #9b9b9b14;
+    border-bottom: 1px solid #9b9b9b14;
 }
 
 .userProfile_info_head_title {
@@ -163,7 +164,6 @@
     background: var(--themec);
     width: 100%;
     height: 2px;
-
 }
 
 .userProfile_info_wrap {
@@ -191,13 +191,15 @@
 }
 
 .info_details_sec1 {
-    width: 50%;
+    width: 55%;
 }
 
 .info_details_sec2 {
-    width: 50%;
+    width: 45%;
     /* border: 1px solid red; */
 }
+
+/* sec1 */
 
 .info_details_sec1_userAnalytics_con {
     display: grid;
@@ -210,6 +212,7 @@
 .info_details_sec1_userAnalytics {
     background: #fae5fe;
     padding: 10px 12px;
+    height: 80px;
     font-size: 15px;
     border-radius: 5px;
     box-shadow: 5px 5px 5px #cecece3d;
@@ -275,14 +278,12 @@
     font-size: 13px;
 }
 
-
+/* sec2 */
 
 .info_details_sec2_userMiniBlog_con {
-    margin-left: 15px;
     height: 100%;
     height: 176px;
     overflow-x: auto;
-    /* border: 1px solid red; */
 }
 
 .info_details_sec2_userMiniBlog_wrap {
@@ -300,7 +301,7 @@
 
 .sec2_userMiniBlog_thumbnail {
     width: 150px;
-    height: 75px;
+    height: 70px;
     border-radius: inherit;
 }
 
@@ -324,7 +325,7 @@
 
 .sec2_userMiniBlog_content_date {
     margin-top: 15px;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
 }
 

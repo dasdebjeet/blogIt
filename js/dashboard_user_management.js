@@ -7,6 +7,7 @@ $(document).ready(() => {
             "visibility": 'hidden',
             "opacity": '0'
         })
+        $(".dashboard_userMgnt_userProfile_modal_wrap").css("display", 'none')
     }
 
     $(".cell_btn_view").click(() => {

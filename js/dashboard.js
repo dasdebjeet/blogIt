@@ -27,14 +27,25 @@ $(document).ready(() => {
         });
     })
 
+    // sideNavbar page load
     var dash_side_menus = document.querySelectorAll('.dashboard_sidebar_menu')
     for (const menu of dash_side_menus) {
         menu.addEventListener('click', (e) => {
             e.stopImmediatePropagation();
-            var dash_side_val = $(menu).attr("dashborad_id")
-            $(".dashboard_con_content").load("./includes/dashboard_" + dash_side_val + ".php")
+            var val = $(menu).attr("dashborad_id")
+            $(".dashboard_con_content").load("./includes/dashboard_" + val + ".php")
         })
     }
+
+    var dash_management_menus = document.querySelectorAll('.dashboard_sidebar_menu_mangtMenu')
+    for (const menu of dash_management_menus) {
+        menu.addEventListener('click', (e) => {
+            e.stopImmediatePropagation();
+            var val = $(menu).attr("dashborad_id")
+            $(".dashboard_con_content").load("./includes/dashboard_" + val + ".php")
+        })
+    }
+
 
 
 

@@ -116,7 +116,6 @@
                                 <div class="userProfile_text_role flexc">Admin</div>
                             </div>
                             <div class="userProfile_blog_stats">15k Blogs Published</div>
-
                         </div>
 
                     </div>
@@ -315,8 +314,8 @@
                     <div class="dashboard_sidebar_menu dashboard_sidebar_menu_mangt flexc" dashborad_id="">
                         <i class='bx bx-server'></i>Management
                         <div class="dashboard_sidebar_menu_mangtDropMenu">
-                            <div class="dashboard_sidebar_menu_mangtMenu"><i class='bx bx-user'></i>Users</div>
-                            <div class="dashboard_sidebar_menu_mangtMenu"><i class='bx bx-file'></i>Others Blog</div>
+                            <div class="dashboard_sidebar_menu_mangtMenu" dashborad_id="user_management"><i class='bx bx-user'></i>Users</div>
+                            <div class="dashboard_sidebar_menu_mangtMenu" dashborad_id=""><i class='bx bx-file'></i>Others Blog</div>
                         </div>
                     </div>
                 </div>
