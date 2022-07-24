@@ -33,11 +33,115 @@
 
 
 
+/* usertable seachbar */
+.dashboard_userMgnt_seachbar_con {
+    /* justify-content: flex-start; */
+    justify-content: space-between;
+    margin: 20px;
+    height: 35px;
+}
+
+.dashboard_userMgnt_seachbar {
+    background: #f5f5f5;
+    width: 280px;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+}
+
+.dashboard_userMgnt_seachbar {
+    height: 100%;
+}
+
+.userMgnt_seachbar_icon {
+    width: 30px;
+    height: 100%;
+    color: #b5b5b5;
+    border-radius: 0 5px 5px 0;
+}
+
+.userMgnt_seachbar_input {
+    background: transparent;
+    width: calc(100% - 30px);
+    height: 100%;
+    padding: 5px;
+    padding-left: 0px;
+    font-size: 14px;
+}
+
+.dashboard_userMgnt_seachbar_filter {
+    position: relative;
+
+    height: 100%;
+}
+
+.dashboard_userMgnt_seachbar_filter select {
+    margin: 0 10px;
+    background: #f5f5f5;
+    height: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+
+
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+}
+
+
+.dashboard_userMgnt_seachbar_filter::before {
+    background: #f5f5f5;
+    border: 1px solid #e5e5e5;
+
+
+    content: "/&#8595";
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 33px;
+    height: 33px;
+    text-align: center;
+    font-size: 28px;
+    border-radius: 0 5px 5px 0;
+    /* line-height: 45px; */
+    pointer-events: none;
+}
+
+.dashboard_userMgnt_seachbar_filter select option {
+    background: #f5f5f5;
+
+    padding: 5px;
+    outline: 0 !important;
+    box-shadow: none;
+
+}
+
+option:focus,
+option:active {
+    box-shadow: none !important;
+    outline: none;
+}
+
+
+
+
+.dashboard_userMgnt_seachbar_btn {
+    background: var(--themec);
+    padding: 0 20px;
+    height: 100%;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
 /* usertable pagation */
+
 .dashboard_userMgnt_pagination_con {
     justify-content: space-between;
     width: 200px;
-    margin: 10px 20px;
+    /* margin: 10px 20px; */
     user-select: none;
 }
 

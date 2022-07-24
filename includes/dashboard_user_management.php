@@ -4,15 +4,40 @@
         <div class="dashboard_userMgnt_title">Users</div>
 
 
-        <div class="dashboard_userMgnt_pagination_con flexc">
-            <div class="dashboard_userMgnt_pagination userMgnt_pagination_rnd"><i class="fal fa-angle-left"></i></div>
-            <div class="dashboard_userMgnt_pagination userMgnt_pagination_active">1</div>
-            <div class="dashboard_userMgnt_pagination">2</div>
-            <div class="dashboard_userMgnt_pagination">3</div>
-            ....
-            <div class="dashboard_userMgnt_pagination">10</div>
-            <div class="dashboard_userMgnt_pagination userMgnt_pagination_rnd"><i class="fal fa-angle-right"></i></div>
+        <div class="dashboard_userMgnt_seachbar_con flexc">
+            <div class="dashboard_userMgnt_seachbar flexc">
+                <div class="userMgnt_seachbar_icon flexc"><i class="bx bx-search"></i></div>
+                <input class="userMgnt_seachbar_input" type="text" placeholder="search by user name, role, status">
+            </div>
+
+            <div class="dashboard_userMgnt_seachbar_filter">
+                <select>
+                    <option value="">All</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Contributor">Contributor</option>
+                    <option value="Newbie">Newbie</option>
+                </select>
+            </div>
+
+
+            <div class="dashboard_userMgnt_seachbar_btn flexc">search</div>
+
+            <div style="width:50%"></div>
+
+            <div class="dashboard_userMgnt_pagination_con flexc">
+                <div class="dashboard_userMgnt_pagination userMgnt_pagination_rnd"><i class="fal fa-angle-left"></i></div>
+                <div class="dashboard_userMgnt_pagination userMgnt_pagination_active">1</div>
+                <div class="dashboard_userMgnt_pagination">2</div>
+                <div class="dashboard_userMgnt_pagination">3</div>
+                ....
+                <div class="dashboard_userMgnt_pagination">10</div>
+                <div class="dashboard_userMgnt_pagination userMgnt_pagination_rnd"><i class="fal fa-angle-right"></i></div>
+            </div>
+
         </div>
+
+
+
 
 
         <div class="dashboard_userMgnt_userTable">
