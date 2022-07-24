@@ -1,7 +1,18 @@
 <script src="./js/dashboard_user_management.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 <div class="dashboard_userMgnt_con">
     <div class="dashboard_userMgnt_wrap">
-        <!-- <div class="dashboard_userMgnt_title">Users</div> -->
+        <div class="dashboard_userMgnt_title">Users</div>
+
+
+        <div class="dashboard_userMgnt_pagination_con flexc">
+            <div class="dashboard_userMgnt_pagination userMgnt_pagination_rnd"><i class="fal fa-angle-left"></i></div>
+            <div class="dashboard_userMgnt_pagination userMgnt_pagination_active">1</div>
+            <div class="dashboard_userMgnt_pagination">2</div>
+            <div class="dashboard_userMgnt_pagination">3</div>
+            ....
+            <div class="dashboard_userMgnt_pagination">10</div>
+            <div class="dashboard_userMgnt_pagination userMgnt_pagination_rnd"><i class="fal fa-angle-right"></i></div>
+        </div>
 
 
         <div class="dashboard_userMgnt_userTable">
@@ -15,7 +26,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="userTable_cell">Name</div>
+                    <div class="userTable_cell">Name <i class="fal fa-sort-alpha-up"></i></div>
                     <div class="userTable_cell userTable_cell_hide">Blogs</div>
                     <div class="userTable_cell userTable_cell_hide">Reports</div>
                     <div class="userTable_cell userTable_cell_hide">Last seen</div>
