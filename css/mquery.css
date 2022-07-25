@@ -303,6 +303,21 @@ screen and (max-width: 600px) {
 
     /* dashboard page -- blog (publish, draft & trash, submitted for reveiw)*/
 
+    .dashboard_userMgnt_seachbar_wrap {
+        margin-bottom: 15px;
+        width: 100% !important;
+    }
+
+    .dashboard_userMgnt_pagination_con {
+        margin: 30px 40px 0;
+        width: 100% !important;
+    }
+
+    .dashboard_userMgnt_pagination {
+        width: 30px;
+        height: 30px;
+    }
+
     .dashboard_blog_sec1,
     .dashboard_blog_sec2 {
         width: 100% !important;

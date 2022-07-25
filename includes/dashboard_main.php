@@ -180,7 +180,7 @@
         });
     })
 
-    var themec = "#ff3b1d"
+    var themec = "#0c8"
     var options = {
         series: [{
             name: 'Veiws',

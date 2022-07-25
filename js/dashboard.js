@@ -19,6 +19,7 @@ $(document).ready(() => {
         $(".dashboard_sidebar").toggleClass("active_dashboard_sidebar")
         $(".dashboard_con").toggleClass("active_dashboard_con")
     });
+    
 
     $(".selectAll_article_check").click(() => {
         var checkedStatus = $(".article_selectAll_inp")[0].checked;
@@ -45,8 +46,6 @@ $(document).ready(() => {
             $(".dashboard_con_content").load("./includes/dashboard_" + val + ".php")
         })
     }
-
-
 
 
     // dashboard -- mobile bottom navbar
