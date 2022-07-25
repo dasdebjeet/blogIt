@@ -362,9 +362,6 @@ screen and (max-width: 600px) {
     }
 
     /* dashboard page -- user management*/
-
-    /* users table */
-
     .userTable_cell_hide {
         display: none;
     }

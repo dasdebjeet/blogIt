@@ -97,9 +97,6 @@ $(document).ready(() => {
         }
 
 
-
-
-
         // // 
         // else if (search_val != "" && role_val == "all" && status_val != "all") {
         //     $(".dashboard_userMgnt_userTable .userTable_body .userTable_row").filter(function () {

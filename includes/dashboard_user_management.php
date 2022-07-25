@@ -5,7 +5,6 @@
 
 
         <div class="dashboard_userMgnt_seachbar_con flexc">
-
             <div class="dashboard_userMgnt_seachbar_wrap">
                 <div class="seachbar_wrap_title">What are you looking for?</div>
                 <div class="dashboard_userMgnt_seachbar flexc">
@@ -88,9 +87,37 @@
                 <div class="dashboard_userMgnt_pagination">10</div>
                 <div class="dashboard_userMgnt_pagination userMgnt_pagination_rnd"><i class="fal fa-angle-right"></i></div>
             </div>
-
         </div>
 
+
+        <div class="dashboard_userMgnt_tableToolBar_con flexc">
+
+            <div class="dashboard_userMgnt_seachbar_status_filter">
+                <div class="dashboard_userMgnt_seachbar_status_filter_current flexc" tabindex="2">
+                    <div class="dashboard_userMgnt_seachbar_status_filter_value flexc">
+                        <input class="dashboard_userMgnt_seachbar_status_filter_input" type="radio" id="userMgnt_inpStatus_active" value="active" name="userMgnt_inpStatus_val" checked="checked" />
+                        <p class="dashboard_userMgnt_seachbar_status_filter_input_text flexc">Active</p>
+                    </div>
+                    <div class="dashboard_userMgnt_seachbar_status_filter_value flexc">
+                        <input class="dashboard_userMgnt_seachbar_status_filter_input" type="radio" id="userMgnt_inpStatus_disable" value="disable" name="userMgnt_inpStatus_val" checked="checked" />
+                        <p class="dashboard_userMgnt_seachbar_status_filter_input_text flexc">Disable</p>
+                    </div>
+                    <div class="dashboard_userMgnt_seachbar_status_filter_value flexc">
+                        <input class="dashboard_userMgnt_seachbar_status_filter_input" type="radio" id="userMgnt_inpStatus_all" value="all" name="userMgnt_inpStatus_val" checked="checked" />
+                        <p class="dashboard_userMgnt_seachbar_status_filter_input_text flexc">All</p>
+                    </div>
+                    <div class="dashboard_userMgnt_seachbar_status_filter_icon flexc"><i class="fal fa-angle-down"></i></div>
+                </div>
+                <ul class="dashboard_userMgnt_seachbar_status_filter_list">
+                    <li><label class="dashboard_userMgnt_seachbar_status_filter_option" for="userMgnt_inpStatus_all">All</label></li>
+
+                    <li><label class="dashboard_userMgnt_seachbar_status_filter_option" for="userMgnt_inpStatus_active">Active</label></li>
+                    <li><label class="dashboard_userMgnt_seachbar_status_filter_option" for="userMgnt_inpStatus_disable">Disable</label></li>
+                </ul>
+            </div>
+
+            <div class="dashboard_userMgnt_tableToolBar_disableBtn flexc">Disable All</div>
+        </div>
 
 
 

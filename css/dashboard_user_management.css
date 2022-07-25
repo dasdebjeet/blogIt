@@ -281,6 +281,19 @@
 
 /*  */
 
+.dashboard_userMgnt_tableToolBar_con {
+    padding: 0 20px 20px;
+}
+
+.dashboard_userMgnt_tableToolBar_disableBtn {
+    background: #ff3b1d21;
+    padding: 0px 25px;
+    height: 35px;
+    font-size: 14px;
+    border: 2px solid var(--themec);
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /* dashboard user Table */
 
@@ -293,13 +306,14 @@
 }
 
 .userTable_head {
-    background: #9b9b9b14;
+    background: #e5e5e5;
     display: table-header-group;
     font-size: 16px;
     font-weight: 600;
 }
 
 .userTable_body {
+    background: #f7f7f7;
     display: table-row-group;
 }
 
@@ -336,9 +350,9 @@
     padding: 20px 10px 20px 20px;
 }
 
-.userTable_body>.userTable_row:nth-child(even) {
+/* .userTable_body>.userTable_row:nth-child(even) {
     background: #9b9b9b14;
-}
+} */
 
 .userTable_body>.userTable_row:hover {
     background: #ff3b1d12;
