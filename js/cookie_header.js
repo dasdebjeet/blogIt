@@ -5,14 +5,15 @@ $(document).ready(() => {
     var usrImg_el = (img_add) => {
         if (img_add == null) {
             var navUser_img = "<img class='nav_userProfile_img' src='./assests/users_img/default_profile_img.png'>"
+            $(".dashboard_user_profile").html('<img src="./assests/users_img/default_profile_img.png" class="user_img">')
         } else {
             var navUser_img = "<img class='nav_userProfile_img' src='./assests/users_img/" + img_add + "'>"
+            $(".dashboard_user_profile").html('<img src="./assests/users_img/' + img_add + '" class="user_img">')
         }
         $(".nav_userProfile>img").remove()
         $(".navLogin_btn").remove()
         $(navUser_img).appendTo(".nav_userProfile")
 
-        $(".dashboard_user_profile").html('<img src="./assests/users_img/' + img_add + '" class="user_img">')
     }
 
 
