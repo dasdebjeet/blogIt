@@ -90,33 +90,44 @@
         </div>
 
 
-        <div class="dashboard_userMgnt_tableToolBar_con flexc">
+        <div class="dashboard_userMgnt_tableToolBar_con">
+            <div class="dashboard_userMgnt_tableToolBar_wrap flexc">
 
-            <div class="dashboard_userMgnt_seachbar_status_filter">
-                <div class="dashboard_userMgnt_seachbar_status_filter_current flexc" tabindex="2">
-                    <div class="dashboard_userMgnt_seachbar_status_filter_value flexc">
-                        <input class="dashboard_userMgnt_seachbar_status_filter_input" type="radio" id="userMgnt_inpStatus_active" value="active" name="userMgnt_inpStatus_val" checked="checked" />
-                        <p class="dashboard_userMgnt_seachbar_status_filter_input_text flexc">Active</p>
+                <div class="dashboard_userMgnt_seachbar_roleEdit_filter_con">
+                    <div class="dashboard_userMgnt_seachbar_roleEdit_filter_title">Edit users</div>
+
+                    <div class="dashboard_userMgnt_seachbar_roleEdit_filter">
+                        <div class="dashboard_userMgnt_seachbar_roleEdit_filter_current flexc" tabindex="1">
+                            <div class="dashboard_userMgnt_seachbar_roleEdit_filter_value flexc">
+                                <input class="dashboard_userMgnt_seachbar_roleEdit_filter_input" type="radio" id="userMgnt_inpRoleEdit_admin" value="admin" name="userMgnt_inpRoleEdit_val" checked="checked" />
+                                <p class="dashboard_userMgnt_seachbar_roleEdit_filter_input_text flexc">Admin</p>
+                            </div>
+                            <div class="dashboard_userMgnt_seachbar_roleEdit_filter_value flexc">
+                                <input class="dashboard_userMgnt_seachbar_roleEdit_filter_input" type="radio" id="userMgnt_inpRoleEdit_contributor" value="contributor" name="userMgnt_inpRoleEdit_val" checked="checked" />
+                                <p class="dashboard_userMgnt_seachbar_roleEdit_filter_input_text flexc">Contributor</p>
+                            </div>
+                            <div class="dashboard_userMgnt_seachbar_roleEdit_filter_value flexc">
+                                <input class="dashboard_userMgnt_seachbar_roleEdit_filter_input" type="radio" id="userMgnt_inpRoleEdit_newbie" value="newbie" name="userMgnt_inpRoleEdit_val" checked="checked" />
+                                <p class="dashboard_userMgnt_seachbar_roleEdit_filter_input_text flexc">Newbie</p>
+                            </div>
+                            <div class="dashboard_userMgnt_seachbar_roleEdit_filter_value flexc">
+                                <input class="dashboard_userMgnt_seachbar_roleEdit_filter_input" type="radio" id="userMgnt_inpRoleEdit_changeRole" value="" name="userMgnt_inpRoleEdit_val" checked="checked" />
+                                <p class="dashboard_userMgnt_seachbar_roleEdit_filter_input_text flexc">Change role</p>
+                            </div>
+                            <div class="dashboard_userMgnt_seachbar_roleEdit_filter_icon flexc"><i class="fal fa-angle-down"></i></div>
+                        </div>
+                        <ul class="dashboard_userMgnt_seachbar_roleEdit_filter_list">
+                            <li><label class="dashboard_userMgnt_seachbar_roleEdit_filter_option" for="userMgnt_inpRoleEdit_changeRole">Change role</label></li>
+
+                            <li><label class="dashboard_userMgnt_seachbar_roleEdit_filter_option" for="userMgnt_inpRoleEdit_admin">Admin</label></li>
+                            <li><label class="dashboard_userMgnt_seachbar_roleEdit_filter_option" for="userMgnt_inpRoleEdit_contributor">Contributor</label></li>
+                            <li><label class="dashboard_userMgnt_seachbar_roleEdit_filter_option" for="userMgnt_inpRoleEdit_newbie">Newbie</label></li>
+                        </ul>
                     </div>
-                    <div class="dashboard_userMgnt_seachbar_status_filter_value flexc">
-                        <input class="dashboard_userMgnt_seachbar_status_filter_input" type="radio" id="userMgnt_inpStatus_disable" value="disable" name="userMgnt_inpStatus_val" checked="checked" />
-                        <p class="dashboard_userMgnt_seachbar_status_filter_input_text flexc">Disable</p>
-                    </div>
-                    <div class="dashboard_userMgnt_seachbar_status_filter_value flexc">
-                        <input class="dashboard_userMgnt_seachbar_status_filter_input" type="radio" id="userMgnt_inpStatus_all" value="all" name="userMgnt_inpStatus_val" checked="checked" />
-                        <p class="dashboard_userMgnt_seachbar_status_filter_input_text flexc">All</p>
-                    </div>
-                    <div class="dashboard_userMgnt_seachbar_status_filter_icon flexc"><i class="fal fa-angle-down"></i></div>
                 </div>
-                <ul class="dashboard_userMgnt_seachbar_status_filter_list">
-                    <li><label class="dashboard_userMgnt_seachbar_status_filter_option" for="userMgnt_inpStatus_all">All</label></li>
 
-                    <li><label class="dashboard_userMgnt_seachbar_status_filter_option" for="userMgnt_inpStatus_active">Active</label></li>
-                    <li><label class="dashboard_userMgnt_seachbar_status_filter_option" for="userMgnt_inpStatus_disable">Disable</label></li>
-                </ul>
+                <div class="dashboard_userMgnt_tableToolBar_disableBtn flexc">Disable All</div>
             </div>
-
-            <div class="dashboard_userMgnt_tableToolBar_disableBtn flexc">Disable All</div>
         </div>
 
 
@@ -135,7 +146,7 @@
                         </div>
                     </div>
 
-                    <div class="userTable_cell">Name <i class="fal fa-sort-alpha-up"></i></div>
+                    <div class="userTable_cell userTable_cell_nameSort">Name <i class="fal fa-sort-alpha-up"></i></div>
                     <div class="userTable_cell userTable_cell_hide">Blogs</div>
                     <div class="userTable_cell userTable_cell_hide">Reports</div>
                     <div class="userTable_cell userTable_cell_hide">Last seen</div>

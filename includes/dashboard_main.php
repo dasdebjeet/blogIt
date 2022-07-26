@@ -173,9 +173,11 @@
 
 
 <script>
-    $(".selectAll_article_check").click(() => {
-        var checkedStatus = $(".article_selectAll_inp")[0].checked;
-        $('input[name="article_select"]').each(function () {
+    $(".dashboard_blog_post_overveiw_table .selectAll_article_check").click(() => {
+        var checkedStatus = $(".dashboard_blog_post_overveiw_table .article_selectAll_inp")[0].checked;
+        console.log(checkedStatus)
+        // console.log($(".dashboard_blog_post_overveiw_table .article_selectAll_inp")[0])
+        $('.dashboard_blog_post_overveiw_table input[name="article_select"]').each(function () {
             $(this).prop('checked', checkedStatus);
         });
     })

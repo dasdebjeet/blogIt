@@ -19,14 +19,6 @@ $(document).ready(() => {
         $(".dashboard_sidebar").toggleClass("active_dashboard_sidebar")
         $(".dashboard_con").toggleClass("active_dashboard_con")
     });
-    
-
-    $(".selectAll_article_check").click(() => {
-        var checkedStatus = $(".article_selectAll_inp")[0].checked;
-        $('input[name="article_select"]').each(function () {
-            $(this).prop('checked', checkedStatus);
-        });
-    })
 
     // sideNavbar page load
     var dash_side_menus = document.querySelectorAll('.dashboard_sidebar_menu')

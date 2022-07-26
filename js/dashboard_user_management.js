@@ -41,17 +41,32 @@ $(document).ready(() => {
     }
 
 
-
-
     // user table checkbox
-
-    $(".userTable_head .userTable_cell .selectAll_article_check").click(() => {
-        var checkedStatus = $(".userTable_head .userTable_cell .article_selectAll_inp")[0].checked;
+    var checkedStatus
+    $(".userTable_head .userTable_cell .selectAll_article_check .article_selectAll_inp").click(() => {
+        checkedStatus = $(".userTable_head .userTable_cell .article_selectAll_inp")[0].checked;
         $('.userTable_body .userTable_cell input[name="article_select"]').each(function () {
             $(this).prop('checked', checkedStatus);
         });
     })
 
+
+    $(".overveiw_blog_article_sel").click(() => {
+        var cSum = 0
+        $('.userTable_body .userTable_cell input[name="article_select"]').each(function () {
+            var numCheck = $(this).prop('checked')
+            if (numCheck) {
+                cSum += 1
+            }
+        });
+        // console.log(cSum)
+        if (cSum > 0) {
+            $(".dashboard_userMgnt_tableToolBar_con").slideDown();
+        } else {
+            $(".dashboard_userMgnt_tableToolBar_con").slideUp();
+        }
+
+    })
 
     // user summary search
 
@@ -117,6 +132,4 @@ $(document).ready(() => {
     //         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     //     });
     // });
-
-
 })

@@ -51,7 +51,7 @@
     width: 100%;
     height: 35px;
     border-radius: 5px;
-    border: 1px solid #e5e5e5;
+    border: 2px solid #e5e5e5;
 }
 
 .userMgnt_seachbar_icon {
@@ -74,6 +74,7 @@
 /*user management sort & filter */
 
 .dashboard_userMgnt_seachbar_role_filter,
+.dashboard_userMgnt_seachbar_roleEdit_filter,
 .dashboard_userMgnt_seachbar_status_filter {
     background: #f5f5f5;
     position: relative;
@@ -82,11 +83,12 @@
     height: 100%;
     color: #60666d;
     border-radius: 5px;
-    border: 1px solid #e5e5e5;
+    border: 2px solid #e5e5e5;
     user-select: none;
 }
 
 .dashboard_userMgnt_seachbar_role_filter_current,
+.dashboard_userMgnt_seachbar_roleEdit_filter_current,
 .dashboard_userMgnt_seachbar_status_filter_current {
     justify-content: flex-start;
     position: relative;
@@ -99,6 +101,7 @@
 }
 
 .dashboard_userMgnt_seachbar_role_filter_current:focus+.dashboard_userMgnt_seachbar_role_filter_list,
+.dashboard_userMgnt_seachbar_roleEdit_filter_current:focus+.dashboard_userMgnt_seachbar_roleEdit_filter_list,
 .dashboard_userMgnt_seachbar_status_filter_current:focus+.dashboard_userMgnt_seachbar_status_filter_list {
     opacity: 1;
     -webkit-animation-name: none;
@@ -106,17 +109,20 @@
 }
 
 .dashboard_userMgnt_seachbar_role_filter_current:focus+.dashboard_userMgnt_seachbar_role_filter_list .dashboard_userMgnt_seachbar_role_filter_option,
+.dashboard_userMgnt_seachbar_roleEdit_filter_current:focus+.dashboard_userMgnt_seachbar_roleEdit_filter_list .dashboard_userMgnt_seachbar_roleEdit_filter_option,
 .dashboard_userMgnt_seachbar_status_filter_current:focus+.dashboard_userMgnt_seachbar_status_filter_list .dashboard_userMgnt_seachbar_status_filter_option {
     cursor: pointer;
 }
 
 .dashboard_userMgnt_seachbar_role_filter_current:focus .dashboard_userMgnt_seachbar_role_filter_icon,
+.dashboard_userMgnt_seachbar_roleEdit_filter_current:focus .dashboard_userMgnt_seachbar_roleEdit_filter_icon,
 .dashboard_userMgnt_seachbar_status_filter_current:focus .dashboard_userMgnt_seachbar_status_filter_icon {
     -webkit-transform: translateY(-50%) rotate(180deg);
     transform: translateY(-50%) rotate(180deg);
 }
 
 .dashboard_userMgnt_seachbar_role_filter_icon,
+.dashboard_userMgnt_seachbar_roleEdit_filter_icon,
 .dashboard_userMgnt_seachbar_status_filter_icon {
     background: transparent;
     position: absolute;
@@ -132,21 +138,25 @@
 }
 
 .dashboard_userMgnt_seachbar_role_filter_value,
+.dashboard_userMgnt_seachbar_roleEdit_filter_value,
 .dashboard_userMgnt_seachbar_status_filter_value {
     height: 100%;
 }
 
 .dashboard_userMgnt_seachbar_role_filter_input,
+.dashboard_userMgnt_seachbar_roleEdit_filter_input,
 .dashboard_userMgnt_seachbar_status_filter_input {
     display: none;
 }
 
 .dashboard_userMgnt_seachbar_role_filter_input:checked+.dashboard_userMgnt_seachbar_role_filter_input_text,
+.dashboard_userMgnt_seachbar_roleEdit_filter_input:checked+.dashboard_userMgnt_seachbar_roleEdit_filter_input_text,
 .dashboard_userMgnt_seachbar_status_filter_input:checked+.dashboard_userMgnt_seachbar_status_filter_input_text {
     display: flex;
 }
 
 .dashboard_userMgnt_seachbar_role_filter_input_text,
+.dashboard_userMgnt_seachbar_roleEdit_filter_input_text,
 .dashboard_userMgnt_seachbar_status_filter_input_text {
     background: transparent;
     display: none;
@@ -158,8 +168,9 @@
 }
 
 .dashboard_userMgnt_seachbar_role_filter_list,
+.dashboard_userMgnt_seachbar_roleEdit_filter_list,
 .dashboard_userMgnt_seachbar_status_filter_list {
-    background: #ffffff;
+    background: #f7f7f7;
     position: absolute;
     top: 40px;
     width: 100%;
@@ -177,26 +188,31 @@
     -webkit-animation-timing-function: step-start;
     animation-timing-function: step-start;
     box-shadow: 10px 10px 30px #d9d9d9;
-    border: 1px solid #e5e5e5;
+    border: 2px solid #e5e5e5;
     border-radius: 5px;
+    overflow: hidden;
     z-index: 999999;
 }
 
 .dashboard_userMgnt_seachbar_role_filter_option,
+.dashboard_userMgnt_seachbar_roleEdit_filter_option,
 .dashboard_userMgnt_seachbar_status_filter_option {
-    background: #ffffff;
+    background: #f7f7f7;
     display: block;
     padding: 5px 10px;
     font-size: 13px;
-    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    /* border-radius: 5px; */
 }
+
+
 
 .dashboard_userMgnt_seachbar_role_filter_option:hover,
 .dashboard_userMgnt_seachbar_role_filter_option:focus,
 .dashboard_userMgnt_seachbar_status_filter_option:hover,
 .dashboard_userMgnt_seachbar_status_filter_option:focus {
+    background: #ffffff;
     color: #546c84;
-    background: #f5f5f5;
 }
 
 @-webkit-keyframes HideList {
@@ -281,18 +297,71 @@
 
 /*  */
 
+/* User management toolbar  */
+
 .dashboard_userMgnt_tableToolBar_con {
-    padding: 0 20px 20px;
+    display: none;
+    user-select: none;
 }
 
+.dashboard_userMgnt_tableToolBar_wrap {
+    background: #fbfbfb;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 20px;
+    box-shadow: inset 0px -15px 10px -15px #c3c3c387, inset 0px 15px 10px -15px #d3d3d390;
+}
+
+.dashboard_userMgnt_seachbar_roleEdit_filter_title {
+    margin: 0 0 10px;
+    color: #60666d;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dashboard_userMgnt_seachbar_roleEdit_filter {
+    background: #e5e5e5;
+    height: 35px;
+    color: #6a6a6a;
+    border: 2px solid #979797;
+}
+
+.dashboard_userMgnt_seachbar_roleEdit_filter_current {
+    width: 150px;
+}
+
+.dashboard_userMgnt_seachbar_roleEdit_filter_list {
+    background: #f7f7f7;
+    color: #6a6a6a;
+    border: 2px solid #979797;
+}
+
+.dashboard_userMgnt_seachbar_roleEdit_filter_option {
+    background: #f7f7f7;
+}
+
+.dashboard_userMgnt_seachbar_roleEdit_filter_option:hover,
+.dashboard_userMgnt_seachbar_roleEdit_filter_option:focus {
+    background: #d1d1d1;
+    color: #979797;
+}
+
+
 .dashboard_userMgnt_tableToolBar_disableBtn {
-    background: #ff3b1d21;
+    background: #e5e5e5;
+    margin-left: 20px;
     padding: 0px 25px;
     height: 35px;
+    color: #6a6a6a;
     font-size: 14px;
-    border: 2px solid var(--themec);
+    border: 2px solid #979797;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.dashboard_userMgnt_tableToolBar_disableBtn:hover {
+    opacity: 0.8;
 }
 
 /* dashboard user Table */
@@ -319,7 +388,6 @@
 
 .userTable_row {
     display: table-row;
-    height: 40px;
 }
 
 .userTable_cell {
