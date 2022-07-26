@@ -1,4 +1,21 @@
 $(document).ready(() => {
+    var log_oldStat = 0;
+    var log_newStat = 0;
+
+    var usrImg_el = (img_add) => {
+        if (img_add == null) {
+            var navUser_img = "<img class='nav_userProfile_img' src='./assests/users_img/default_profile_img.png'>"
+        } else {
+            var navUser_img = "<img class='nav_userProfile_img' src='./assests/users_img/" + img_add + "'>"
+        }
+        $(".nav_userProfile>img").remove()
+        $(".navLogin_btn").remove()
+        $(navUser_img).appendTo(".nav_userProfile")
+
+        $(".dashboard_user_profile").html('<img src="./assests/users_img/' + img_add + '" class="user_img">')
+    }
+
+
     var userImg_loader = () => {
         $.ajax({
             type: 'POST',
@@ -47,21 +64,7 @@ $(document).ready(() => {
     }
     userImg_loader()
 
-    var log_oldStat = 0;
-    var log_newStat = 0;
 
-    var usrImg_el = (img_add) => {
-        if (img_add == null) {
-            var navUser_img = "<img class='nav_userProfile_img' src='./assests/users_img/default_profile_img.png'>"
-        } else {
-            var navUser_img = "<img class='nav_userProfile_img' src='./assests/users_img/" + img_add + "'>"
-        }
-        $(".nav_userProfile>img").remove()
-        $(".navLogin_btn").remove()
-        $(navUser_img).appendTo(".nav_userProfile")
-
-        $(".dashboard_user_profile").html('<img src="./assests/users_img/' + img_add + '" class="user_img">')
-    }
 
     setInterval(() => {
         userImg_loader()
