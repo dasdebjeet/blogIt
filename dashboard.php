@@ -293,15 +293,29 @@
                         <div class="dashboard_mobile_bottom_navbar_menu_icon flexc"><i class='bx bx-edit-alt'></i></div>
                         <div class="dashboard_mobile_bottom_navbar_menu_name flexc">Create</div>
                     </div>
-                    <div class="dashboard_mobile_bottom_navbar_menu flexc" dashborad_id="">
-                        <div class="dashboard_mobile_bottom_navbar_menu_icon flexc"><i class='bx bx-server'></i></div>
+                    <div class="dashboard_mobile_bottom_navbar_menu flexc">
+                        <div class="dashboard_mobile_bottom_navbar_menu_icon mobile_userMagnet_btn flexc"><i class='bx bx-server'></i></div>
                         <div class="dashboard_mobile_bottom_navbar_menu_name flexc">Management</div>
                     </div>
+
+
+
                 </ul>
             </div>
 
+            <div class="dashboard_mobile_bottom_navbar_menu_mangtDropMenu">
+                <div class="dashboard_mobile_bottom_navbar_menu_mangtMenu flexc" dashborad_id="user_management">
+                    <div class="dashboard_mobile_bottom_navbar_menu_mangtMenu_icn flexc"><i class='bx bx-user'></i></div>
+                    Users
+                </div>
+                <div class="dashboard_mobile_bottom_navbar_menu_mangtMenu flexc" dashborad_id="">
+                    <div class="dashboard_mobile_bottom_navbar_menu_mangtMenu_icn flexc"><i class='bx bx-file'></i></div>
+                    Others Blog
+                </div>
+            </div>
 
-            <div class="dashboard_dummy_sidebar"></div>
+            <div class="dashboard_dummy_sidebar">
+            </div>
 
 
             <div class="dashboard_sidebar">

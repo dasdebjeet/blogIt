@@ -146,7 +146,7 @@
                         </div>
                     </div>
 
-                    <div class="userTable_cell userTable_cell_nameSort">Name <i class="fal fa-sort-alpha-up"></i></div>
+                    <div class="userTable_cell userTable_cell_nameSort">Name</div>
                     <div class="userTable_cell userTable_cell_hide">Blogs</div>
                     <div class="userTable_cell userTable_cell_hide">Reports</div>
                     <div class="userTable_cell userTable_cell_hide">Last seen</div>

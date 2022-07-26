@@ -48,6 +48,7 @@ $(document).ready(() => {
             $(".dashboard_mobile_bottom_navbar").css("transform", 'translateY(0px)')
         } else {
             $(".dashboard_mobile_bottom_navbar").css("transform", 'translateY(100px)')
+            $(".dashboard_mobile_bottom_navbar_menu_mangtDropMenu").css("transform", 'translateY(130px)')
         }
         lastScrollTop = st;
     })
@@ -56,12 +57,18 @@ $(document).ready(() => {
     var dash_mobile_menus = document.querySelectorAll('.dashboard_mobile_bottom_navbar_menu')
     for (const menu of dash_mobile_menus) {
         menu.addEventListener('click', (e) => {
+            $(".dashboard_mobile_bottom_navbar_menu_mangtDropMenu").css("transform", 'translateY(130px)')
+
             e.stopImmediatePropagation();
             $(".dashboard_mobile_bottom_navbar_menu").removeClass("mobile_bottom_navbar_menu_active")
             $(menu).addClass("mobile_bottom_navbar_menu_active")
 
             var dash_side_val = $(menu).attr("dashborad_id")
-            $(".dashboard_con_content").load("./includes/dashboard_" + dash_side_val + ".php")
+            if (dash_side_val != undefined) {
+                $(".dashboard_con_content").load("./includes/dashboard_" + dash_side_val + ".php")
+            } else {
+                $(".dashboard_mobile_bottom_navbar_menu_mangtDropMenu").css("transform", 'translateY(-100px)')
+            }
             // var loaded = $(".dashboard_con_content").load("./includes/dashboard_" + dash_side_val + ".php")
             // console.log(loaded)
             // if (loaded) {
@@ -70,6 +77,13 @@ $(document).ready(() => {
         })
     }
 
-
-
+    var dash_management_mobile_menus = document.querySelectorAll('.dashboard_mobile_bottom_navbar_menu_mangtMenu')
+    for (const menu of dash_management_mobile_menus) {
+        menu.addEventListener('click', (e) => {
+            e.stopImmediatePropagation();
+            var val = $(menu).attr("dashborad_id")
+            $(".dashboard_con_content").load("./includes/dashboard_" + val + ".php")
+            $(".dashboard_mobile_bottom_navbar_menu_mangtDropMenu").css("transform", 'translateY(130px)')
+        })
+    }
 })

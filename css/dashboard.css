@@ -679,10 +679,9 @@
     padding: 30px;
 }
 
-/* dsahboard -- mobile navbar */
+/* dashboard -- mobile navbar */
 .dashboard_mobile_bottom_navbar {
     display: none;
-    background: var(--lightgrey);
     background: #000000;
     position: fixed;
     bottom: 0;
@@ -699,6 +698,7 @@
 }
 
 .dashboard_mobile_bottom_navbar_menu_con {
+    position: relative;
     width: 100%;
     padding: 0 20px;
     justify-content: space-between;
@@ -708,7 +708,6 @@
     position: relative;
     list-style: none;
     cursor: pointer;
-    z-index: 1;
 }
 
 .dashboard_mobile_bottom_navbar_menu_icon {
@@ -741,6 +740,41 @@
 .mobile_bottom_navbar_menu_active .dashboard_mobile_bottom_navbar_menu_name {
     opacity: 1;
     transform: translateY(10px);
+}
+
+/* dash mobileNavbar user management */
+
+.dashboard_mobile_bottom_navbar_menu_mangtDropMenu {
+    background: #000000;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    margin: 10px;
+    padding: 10px 20px;
+    width: calc(100% - 20px);
+    color: #ffffff;
+    border-radius: 10px;
+    user-select: none;
+    box-shadow: 10px 10px 60px #353535;
+    transform: translateY(130px);
+    transition: all .5s ease-in-out;
+    z-index: 9999;
+}
+
+.dashboard_mobile_bottom_navbar_menu_mangtMenu {
+    justify-content: flex-start;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.dashboard_mobile_bottom_navbar_menu_mangtMenu:hover {
+    color: var(--themec);
+}
+
+.dashboard_mobile_bottom_navbar_menu_mangtMenu_icn {
+    width: 60px;
+    height: 50px;
+    font-size: 18px;
 }
 
 /* dashboard -- desktop sidebar */
