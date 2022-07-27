@@ -297,9 +297,6 @@
                         <div class="dashboard_mobile_bottom_navbar_menu_icon mobile_userMagnet_btn flexc"><i class='bx bx-server'></i></div>
                         <div class="dashboard_mobile_bottom_navbar_menu_name flexc">Management</div>
                     </div>
-
-
-
                 </ul>
             </div>
 

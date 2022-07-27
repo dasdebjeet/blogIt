@@ -365,6 +365,11 @@
 }
 
 /* dashboard user Table */
+.dashboard_userMgnt_userTable_con {
+    background: #f7f7f7;
+    min-height: calc(100vh - 315px);
+    border-radius: 0 0 5px 5px;
+}
 
 .dashboard_userMgnt_userTable {
     display: table;
@@ -382,12 +387,12 @@
 }
 
 .userTable_body {
-    background: #f7f7f7;
     display: table-row-group;
 }
 
 .userTable_row {
     display: table-row;
+    transition: all 0.2s ease-in-out;
 }
 
 .userTable_cell {
@@ -423,7 +428,7 @@
 } */
 
 .userTable_body>.userTable_row:hover {
-    background: #ff3b1d12;
+    background: #f1f1f1;
 }
 
 .userTable_body>.userTable_row:nth-last-child {
