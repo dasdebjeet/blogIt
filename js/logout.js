@@ -5,7 +5,7 @@ $(document).ready(() => {
             url: './includes/logout.php'
         }).done((response) => {
             // console.log(response)
-            if (response == "Succesfully logouted") {
+            if (response == "Logout Succesfully") {
                 location.reload(true)
             }
             // $(".navLogin_btn").remove()

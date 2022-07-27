@@ -367,7 +367,7 @@
 /* dashboard user Table */
 .dashboard_userMgnt_userTable_con {
     background: #f7f7f7;
-    min-height: calc(100vh - 315px);
+    /* min-height: calc(100vh - 315px); */
     border-radius: 0 0 5px 5px;
 }
 
@@ -406,7 +406,6 @@
     padding-left: 20px;
 }
 
-.dashboard_userMgnt_userTable .userTable_cell:nth-child(2),
 .dashboard_userMgnt_userTable .userTable_cell:nth-child(2) {
     text-align: left;
 }
