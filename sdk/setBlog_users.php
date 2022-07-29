@@ -4,7 +4,6 @@
     if(isset($_POST["user_fetch"]) == "blogUsers_data"){
         $obj = new user;
 
-        // echo "moraaaa";
         $result = $obj->show_users();
         // $results = json_decode($result);
         if($result){

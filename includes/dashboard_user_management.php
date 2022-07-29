@@ -306,5 +306,4 @@
 </div>
 
 
-<script src="./js/dashboard_user_loader.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>
 <script src="./js/dashboard_user_management.js?<?php echo date('l jS \of F Y h:i:s A'); ?>"></script>

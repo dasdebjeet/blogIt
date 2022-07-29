@@ -5,7 +5,7 @@ $(document).ready(() => {
             url: "./sdk/setBlog_users.php",
             data: "&user_fetch=blogUsers_data"
         }).done((response) => {
-            // console.log(response)
+            console.log(response)
             for (var i = 0; i < response.length; i++) {
 
                 var time_ago = (time) => {
@@ -104,15 +104,14 @@ $(document).ready(() => {
                             </div>
                         </div>
 
-                        <div class="userTable_cell userTable_cell_hide">0 K</div>
+                        <div class="userTable_cell userTable_cell_hide">` + response[i].pubBlog_count + `</div>
                         <div class="userTable_cell userTable_cell_hide">0</div>
                         <div class="userTable_cell userTable_cell_hide">` + dateToYMD(new Date(response[i].last_seen)) + `</div>
                         <div class="userTable_cell userTable_cell_hide"><div class="userTable_cell_status ` + statColor(response[i].status) + `">` + response[i].status + `</div></div>
                         <div class="userTable_cell"><div class="userTable_cell_btn cell_btn_disable flexc"><i class="fal fa-ban"></i></div></div>
                         <div class="userTable_cell"><div class="userTable_cell_btn cell_btn_view flexc"><i class="fal fa-eye"></i></div></div>
                         <div class="userTable_cell userTable_cell_hide"><div class="userTable_cell_btn cell_btn_more flexc"><i class="far fa-angle-down"></i></div></div>
-                </div>
-                    `
+                </div>`
                 )
             }
 
