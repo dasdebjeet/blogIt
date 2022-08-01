@@ -11,8 +11,8 @@
             //     // echo $results[$i]->user_id.' - '.$results[$i]->user_name."\t\t\t\t";
             //     echo $results[$i];
             // }
-            header('Content-Type: application/json');
-            echo $result;
+            // header('Content-Type: application/json');
+            print_r($result);
         }else{
             echo "couldn't fetch users!";
         }
