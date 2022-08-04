@@ -261,10 +261,9 @@
 /* usertable pagation */
 
 .dashboard_userMgnt_pagination_con {
-    justify-content: space-between;
-    width: 200px;
+    justify-content: end;
     height: 35px;
-    margin-left: 100px;
+    margin-left: 80px;
     user-select: none;
 }
 
@@ -274,6 +273,7 @@
     align-items: center;
     width: 25px;
     height: 25px;
+    margin: 4px;
     font-size: 13px;
     border-radius: 9px;
     cursor: pointer;

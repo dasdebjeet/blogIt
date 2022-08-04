@@ -57,7 +57,10 @@ $(document).ready(() => {
                 $(".sideBar_userProfile_name").text(response[0].user_name)
                 $(".sideBar_userProfile_role").text(response[0].role)
 
-                $(".loginSignup_modal_con").css("display", "none")
+                $(".loginSignup_modal_con").css({
+                    "opacity": '0',
+                    "visibility": 'hidden'
+                })
                 $(".login_modal_error").text("")
                 $("html, body").removeClass("noscroll");
                 $(".login_modal_form").trigger("reset")

@@ -143,7 +143,6 @@
 }
 
 .nav_userProfile:hover .navlogin_dropdown_con {
-    /* display: block; */
     top: 70px;
     opacity: 1;
     visibility: visible;

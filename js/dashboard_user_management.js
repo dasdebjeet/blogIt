@@ -5,16 +5,59 @@ $(document).ready(() => {
             url: "./sdk/setBlog_users.php",
             data: "&fetch_userId=blog_userId"
         }).done((response) => {
-            // console.log(response)
-            for (var i = 0; i < response.length; i++) {
+            response = JSON.parse(response)
+            console.log(response)
 
-                var user_id = response[i].user_id
-                var user_img = response[i].user_img
-                var user_name = response[i].user_name
-                var user_role = response[i].role
-                var user_lastseen = response[i].last_seen
-                var user_status = response[i].status
-                var user_pubBlog_count = response[i].pubBlog_count
+            var users_data = response['arr']
+
+            var page_lim = response['lim']
+            var total_users = response['total_users']
+            var total_pages = response['total_page']
+            var total_pages = 10
+
+
+            var page_arr = []
+            if (total_pages > 4) {
+                page_arr.push('<div class="dashboard_userMgnt_pagination userMgnt_pagination_rnd" data_userTpage_count="prev"><i class="fal fa-angle-left"></i></div>')
+                for (var count = 1; count <= 3; count++) {
+                    if (count == 1) page_arr.push('<div class="dashboard_userMgnt_pagination userMgnt_pagination_active" data_userTpage_count="' + count + '">' + count + '</div>')
+                    else page_arr.push('<div class="dashboard_userMgnt_pagination" data_userTpage_count="' + count + '">' + count + '</div>')
+                }
+                page_arr.push("...")
+                page_arr.push('<div class="dashboard_userMgnt_pagination" data_userTpage_count="' + total_pages + '">' + total_pages + '</div>')
+                page_arr.push('<div class="dashboard_userMgnt_pagination userMgnt_pagination_rnd" data_userTpage_count="next"><i class="fal fa-angle-right"></i></div>')
+            } else {
+                page_arr.push('<div class="dashboard_userMgnt_pagination userMgnt_pagination_rnd" data_userTpage_count="prev"><i class="fal fa-angle-left"></i></div>')
+                for (var count = 1; count <= total_pages; count++) {
+                    if (count == 1) page_arr.push('<div class="dashboard_userMgnt_pagination userMgnt_pagination_active" data_userTpage_count="' + count + '">' + count + '</div>')
+                    else page_arr.push('<div class="dashboard_userMgnt_pagination" data_userTpage_count="' + count + '">' + count + '</div>')
+                }
+                page_arr.push('<div class="dashboard_userMgnt_pagination userMgnt_pagination_rnd" data_userTpage_count="next"><i class="fal fa-angle-right"></i></div>')
+            }
+
+
+            // console.log(page_arr)
+            $(".dashboard_userMgnt_pagination_con").html(page_arr)
+
+            var pagination = document.querySelectorAll('.dashboard_userMgnt_pagination')
+            for (const pag_nav of pagination) {
+                pag_nav.addEventListener('click', (e) => {
+                    console.log($(pag_nav).attr('data_userTpage_count'))
+                    // $(pagination).removeClass("userMgnt_pagination_active")
+                    // $(pag_nav).addClass("userMgnt_pagination_active")
+                })
+            }
+
+
+            for (var i = 0; i < users_data.length; i++) {
+
+                var user_id = users_data[i].user_id
+                var user_img = users_data[i].user_img
+                var user_name = users_data[i].user_name
+                var user_role = users_data[i].role
+                var user_lastseen = users_data[i].last_seen
+                var user_status = users_data[i].status
+                var user_pubBlog_count = users_data[i].pubBlog_count
 
                 var time_ago = (time) => {
                     switch (typeof time) {
