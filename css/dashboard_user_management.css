@@ -267,7 +267,8 @@
     user-select: none;
 }
 
-.dashboard_userMgnt_pagination {
+.dashboard_userMgnt_pagination_btn,
+.dashboard_userMgnt_pagination_count {
     display: flex;
     justify-content: center;
     align-items: center;
