@@ -54,7 +54,7 @@
                             <p class="dashboard_userMgnt_seachbar_status_filter_input_text flexc">Active</p>
                         </div>
                         <div class="dashboard_userMgnt_seachbar_status_filter_value flexc">
-                            <input class="dashboard_userMgnt_seachbar_status_filter_input" type="radio" id="userMgnt_inpStatus_disable" value="disable" name="userMgnt_inpStatus_val" checked="checked" />
+                            <input class="dashboard_userMgnt_seachbar_status_filter_input" type="radio" id="userMgnt_inpStatus_disable" value="disabled" name="userMgnt_inpStatus_val" checked="checked" />
                             <p class="dashboard_userMgnt_seachbar_status_filter_input_text flexc">Disable</p>
                         </div>
                         <div class="dashboard_userMgnt_seachbar_status_filter_value flexc">
@@ -67,7 +67,7 @@
                         <li><label class="dashboard_userMgnt_seachbar_status_filter_option" for="userMgnt_inpStatus_all">All</label></li>
 
                         <li><label class="dashboard_userMgnt_seachbar_status_filter_option" for="userMgnt_inpStatus_active">Active</label></li>
-                        <li><label class="dashboard_userMgnt_seachbar_status_filter_option" for="userMgnt_inpStatus_disable">Disable</label></li>
+                        <li><label class="dashboard_userMgnt_seachbar_status_filter_option" for="userMgnt_inpStatus_disable">Disabled</label></li>
                     </ul>
                 </div>
             </div>

@@ -309,8 +309,17 @@ screen and (max-width: 600px) {
     }
 
     .dashboard_userMgnt_pagination_con {
-        margin: 30px 40px 0;
+        justify-content: center;
+        margin: 30px 20px 0;
         width: 100% !important;
+    }
+
+    .dashboard_userMgnt_pagination_btn,
+    .dashboard_userMgnt_pagination_count {
+        margin: 3px 8px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
     }
 
     .dashboard_userMgnt_pagination {

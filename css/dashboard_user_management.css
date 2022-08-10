@@ -392,6 +392,7 @@
 }
 
 .userTable_row {
+    position: relative;
     display: table-row;
     transition: all 0.2s ease-in-out;
 }
