@@ -23,12 +23,13 @@
 
 
         public function get_userId(){
-            $stmt = $this->connect()->prepare("SELECT users.user_id, users.user_img, users.user_name, users.role, users.last_seen, users.status FROM `users` ORDER BY users.role='admin' DESC, users.status='active' DESC");
+            $rec_limit = 4;
+
+            $stmt = $this->connect()->prepare("SELECT users.user_id, users.user_img, users.user_name, users.role, users.last_seen, users.status FROM `users` ORDER BY users.role='admin' DESC, users.status='active' DESC LIMIT 0, $rec_limit");
             $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-
-            $rec_limit = 4;
+            
             $total_user_rec = sizeof($result);
             $total_page = ceil($total_user_rec/$rec_limit);
 

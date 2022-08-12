@@ -115,143 +115,6 @@ $(document).ready(() => {
                 </div>`
             )
 
-        }
-
-    }
-
-    var loadUsers = () => {
-        $.ajax({
-            type: "POST",
-            url: "./sdk/setBlog_users.php",
-            data: "&fetch_userId=blog_userId"
-        }).done((response) => {
-            response = JSON.parse(response)
-            // console.log(response)
-
-            var users_data = response['arr']
-
-            var page_lim = response['lim']
-            var total_users = response['total_users']
-            var total_pages = response['total_page']
-            var total_pages = 20
-
-
-            var prev_page = 0
-            var cur_page = 1
-            var next_page = 2
-
-            var page_arr = []
-            if (total_pages > 4) {
-                page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" data_userT_page_nav="prev" data_userTpage_count="prev"><i class="fal fa-angle-left"></i></div>')
-                for (var count = 1; count <= 3; count++) {
-                    if (count == 1) page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" data_userTpage_count="' + count + '">' + count + '</div>')
-                    else page_arr.push('<div class="dashboard_userMgnt_pagination_count" data_userTpage_count="' + count + '">' + count + '</div>')
-                }
-                page_arr.push("...")
-                page_arr.push('<div class="dashboard_userMgnt_pagination_count" data_userTpage_count="' + total_pages + '">' + total_pages + '</div>')
-                page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" data_userT_page_nav="next" data_userTpage_count="next"><i class="fal fa-angle-right"></i></div>')
-            } else {
-                page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" data_userT_page_nav="prev" data_userTpage_count="prev"><i class="fal fa-angle-left"></i></div>')
-                for (var count = 1; count <= total_pages; count++) {
-                    if (count == 1) page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" data_userTpage_count="' + count + '">' + count + '</div>')
-                    else page_arr.push('<div class="dashboard_userMgnt_pagination_count" data_userTpage_count="' + count + '">' + count + '</div>')
-                }
-                page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" data_userT_page_nav="next" data_userTpage_count="next"><i class="fal fa-angle-right"></i></div>')
-            }
-
-
-            // console.log(page_arr)
-            $(".dashboard_userMgnt_pagination_con").html(page_arr)
-
-            var pagination_links = document.querySelectorAll('.dashboard_userMgnt_pagination_count')
-            for (const pag_link of pagination_links) {
-                pag_link.addEventListener('click', (e) => {
-                    console.log($(pag_link).attr('data_userTpage_count'))
-
-                    cur_page = $(pag_link).attr('data_userTpage_count')
-                    $(pagination_links).removeClass("userMgnt_pagination_active")
-                    $(pag_link).addClass("userMgnt_pagination_active")
-                })
-            }
-
-
-
-            var pagination_btn = document.querySelectorAll('.dashboard_userMgnt_pagination_btn')
-            for (const pag_nav of pagination_btn) {
-                pag_nav.addEventListener('click', (e) => {
-                    // console.log($(pag_nav).attr('data_userTpage_count'))
-                    var nav_direc = $(pag_nav).attr('data_userT_page_nav')
-                    var nav_count = $(pag_nav).attr('data_userTpage_count')
-
-                    // if (prev_page > -1 && next_page < total_pages) {
-                    if (nav_direc == "prev") {
-                        prev_page -= 1
-                        next_page -= 1
-                        cur_page -= 1
-                        $(pag_nav).attr('data_userTpage_count', prev_page)
-                        $(pagination_links).removeClass("userMgnt_pagination_active")
-                        $("[data_userTpage_count=" + cur_page + "]").addClass("userMgnt_pagination_active")
-
-                    } else if (nav_direc == "next") {
-                        prev_page += 1
-                        next_page += 1
-                        cur_page += 1
-                        $(pag_nav).attr('data_userTpage_count', next_page)
-                        $(pagination_links).removeClass("userMgnt_pagination_active")
-                        $("[data_userTpage_count=" + cur_page + "]").addClass("userMgnt_pagination_active")
-
-                    }
-                    console.log(prev_page, cur_page, next_page, page_arr[3])
-                    // }
-
-
-                    // $(pagination_btn).removeClass("userMgnt_pagination_active")
-                    // $(pag_nav).addClass("userMgnt_pagination_active")
-                })
-            }
-
-            userContent(users_data)
-
-            var dashboard_modal_close = () => {
-                $("html, body").removeClass("noscroll");
-                $(".dashboard_modal").css({
-                    "visibility": 'hidden',
-                    "opacity": '0'
-                })
-                $(".dashboard_userMgnt_userProfile_modal_wrap").css("display", 'none')
-            }
-
-            $(".cell_btn_view").click(() => {
-                $("html, body").addClass("noscroll");
-                $(".dashboard_modal").css({
-                    "visibility": 'visible',
-                    "opacity": '1'
-                })
-                $(".dashboard_userMgnt_userProfile_modal_wrap").css("display", "block")
-            })
-
-            $(".dashboard_userMgnt_userProfile_modal_closeBtn").on("click", (e) => {
-                dashboard_modal_close()
-            })
-
-            $(".dashboard_modal").on("click", (e) => {
-                if (e.target.classList.contains("dashboard_modal")) {
-                    dashboard_modal_close()
-                }
-            })
-
-            var head_titles = document.querySelectorAll('.userProfile_info_head_title')
-            for (const title of head_titles) {
-                title.addEventListener('click', (e) => {
-                    var title_name = $(title).text().toLowerCase()
-
-                    $(".userProfile_info_head_title").removeClass('info_head_title_active')
-                    $(title).addClass('info_head_title_active')
-
-                    $(".userProfile_info").hide()
-                    $(`.info_${title_name}`).show()
-                })
-            }
 
 
             // user table checkbox
@@ -281,8 +144,165 @@ $(document).ready(() => {
 
             })
 
-            // user summary search
 
+
+            // user profile preveiw
+            $(".cell_btn_view").click(() => {
+                $("html, body").addClass("noscroll");
+                $(".dashboard_modal").css({
+                    "visibility": 'visible',
+                    "opacity": '1'
+                })
+                $(".dashboard_userMgnt_userProfile_modal_wrap").css("display", "block")
+            })
+
+
+            // user profile info tabs
+            var head_titles = document.querySelectorAll('.userProfile_info_head_title')
+            for (const title of head_titles) {
+                title.addEventListener('click', (e) => {
+                    var title_name = $(title).text().toLowerCase()
+
+                    $(".userProfile_info_head_title").removeClass('info_head_title_active')
+                    $(title).addClass('info_head_title_active')
+
+                    $(".userProfile_info").hide()
+                    $(`.info_${title_name}`).show()
+                })
+            }
+
+            var dashboard_modal_close = () => {
+                $("html, body").removeClass("noscroll");
+                $(".dashboard_modal").css({
+                    "visibility": 'hidden',
+                    "opacity": '0'
+                })
+                $(".dashboard_userMgnt_userProfile_modal_wrap").css("display", 'none')
+            }
+
+            $(".dashboard_userMgnt_userProfile_modal_closeBtn").on("click", (e) => {
+                dashboard_modal_close()
+            })
+
+            $(".dashboard_modal").on("click", (e) => {
+                if (e.target.classList.contains("dashboard_modal")) {
+                    dashboard_modal_close()
+                }
+            })
+
+        }
+
+    }
+
+    var loadUsers = () => {
+        $.ajax({
+            type: "POST",
+            url: "./sdk/setBlog_users.php",
+            data: "&fetch_userId=blog_userId"
+        }).done((response) => {
+            response = JSON.parse(response)
+            // console.log(response)
+            // offset = (page number - 1)*limit
+
+            var users_data = response['arr']
+
+            var page_lim = response['lim']
+            var total_users = response['total_users']
+            var total_pages = response['total_page']
+            var total_pages = 20
+
+
+            var prev_page = 0
+            var cur_page = 10
+            var next_page = 2
+
+            var page_arr = []
+            var pagination_fn = (cur_page, total_pages) => {
+                page_arr = []
+                if (total_pages > 4) {
+                    page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" data_userT_page_nav="prev" data_userTpage_count="prev"><i class="fal fa-angle-left"></i></div>')
+                    for (var count = cur_page; count <= cur_page + 2; count++) {
+                        if (count == cur_page) page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" data_userTpage_count="' + count + '">' + count + '</div>')
+                        else page_arr.push('<div class="dashboard_userMgnt_pagination_count" data_userTpage_count="' + count + '">' + count + '</div>')
+                    }
+                    page_arr.push("...")
+                    page_arr.push('<div class="dashboard_userMgnt_pagination_count" data_userTpage_count="' + total_pages + '">' + total_pages + '</div>')
+                    page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" data_userT_page_nav="next" data_userTpage_count="next"><i class="fal fa-angle-right"></i></div>')
+                } else {
+                    page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" data_userT_page_nav="prev" data_userTpage_count="prev"><i class="fal fa-angle-left"></i></div>')
+                    for (var count = 1; count <= total_pages; count++) {
+                        if (count == 1) page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" data_userTpage_count="' + count + '">' + count + '</div>')
+                        else page_arr.push('<div class="dashboard_userMgnt_pagination_count" data_userTpage_count="' + count + '">' + count + '</div>')
+                    }
+                    page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" data_userT_page_nav="next" data_userTpage_count="next"><i class="fal fa-angle-right"></i></div>')
+                }
+
+                return page_arr
+            }
+
+            // console.log(page_arr)
+            $(".dashboard_userMgnt_pagination_con").html(pagination_fn(cur_page, total_pages))
+
+            var pagination_links = document.querySelectorAll('.dashboard_userMgnt_pagination_count')
+            for (const pag_link of pagination_links) {
+                pag_link.addEventListener('click', (e) => {
+                    var act_page = parseInt($(pag_link).attr('data_userTpage_count'))
+                    // console.log(act_page)
+                    console.log(parseInt(cur_page) + 2, act_page)
+                    var dummy_page = parseInt(cur_page) + 2
+
+                    if (dummy_page == act_page) {
+                        $(".dashboard_userMgnt_pagination_con").html(pagination_fn(act_page, total_pages))
+                    }
+
+                    cur_page = act_page
+                    $(pagination_links).removeClass("userMgnt_pagination_active")
+                    $(pag_link).addClass("userMgnt_pagination_active")
+                })
+            }
+
+            var pagination_btn = document.querySelectorAll('.dashboard_userMgnt_pagination_btn')
+            for (const pag_nav of pagination_btn) {
+                pag_nav.addEventListener('click', (e) => {
+                    // console.log($(pag_nav).attr('data_userTpage_count'))
+                    var nav_direc = $(pag_nav).attr('data_userT_page_nav')
+                    var nav_count = $(pag_nav).attr('data_userTpage_count')
+
+                    // if (prev_page > -1 && next_page < total_pages) {
+                    if (nav_direc == "prev") {
+                        prev_page -= 1
+                        next_page -= 1
+                        cur_page -= 1
+                        $(pag_nav).attr('data_userTpage_count', prev_page)
+                        $(pagination_links).removeClass("userMgnt_pagination_active")
+                        $("[data_userTpage_count=" + cur_page + "]").addClass("userMgnt_pagination_active")
+
+                    } else if (nav_direc == "next") {
+                        prev_page += 1
+                        next_page += 1
+                        cur_page += 1
+                        $(pag_nav).attr('data_userTpage_count', next_page)
+                        $(pagination_links).removeClass("userMgnt_pagination_active")
+                        $("[data_userTpage_count=" + cur_page + "]").addClass("userMgnt_pagination_active")
+
+                    }
+
+                    console.log(prev_page, cur_page, next_page, page_arr[3])
+                    // }
+
+
+                    // $(pagination_btn).removeClass("userMgnt_pagination_active")
+                    // $(pag_nav).addClass("userMgnt_pagination_active")
+                })
+            }
+
+
+
+            userContent(users_data)
+
+
+            // user summary search
+            // $(".userMgnt_seachbar_input").keyup(() => {
             $(".dashboard_userMgnt_seachbar_btn").click(() => {
                 var search_val = $(".userMgnt_seachbar_input").val().toLowerCase()
                 var role_val = $('.dashboard_userMgnt_seachbar_role_filter_value input[name="userMgnt_inpRole_val"]:checked').val().toLowerCase()
@@ -308,6 +328,10 @@ $(document).ready(() => {
                             </div>`)
                     }
                 })
+
+
+
+
 
 
                 // // without name all

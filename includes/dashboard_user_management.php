@@ -8,7 +8,7 @@
                 <div class="seachbar_wrap_title">What are you looking for?</div>
                 <div class="dashboard_userMgnt_seachbar flexc">
                     <div class="userMgnt_seachbar_icon flexc"><i class="bx bx-search"></i></div>
-                    <input class="userMgnt_seachbar_input" type="text" placeholder="search by user name, role, status">
+                    <input class="userMgnt_seachbar_input" type="text" placeholder="search by user name">
                 </div>
             </div>
 
