@@ -23,20 +23,25 @@
 
 
         public function get_userId(){
-            $rec_limit = 4;
+            $rec_limit = 1;
 
-            $stmt = $this->connect()->prepare("SELECT users.user_id, users.user_img, users.user_name, users.role, users.last_seen, users.status FROM `users` ORDER BY users.role='admin' DESC, users.status='active' DESC LIMIT 0, $rec_limit");
-            $stmt->execute();
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $stmt1 = $this->connect()->prepare("SELECT users.user_id, users.user_img, users.user_name, users.role, users.last_seen, users.status FROM `users` ORDER BY users.role='admin' DESC, users.status='active'");
+            $stmt1->execute();
+            $result1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
+
+
+            $stmt2 = $this->connect()->prepare("SELECT users.user_id, users.user_img, users.user_name, users.role, users.last_seen, users.status FROM `users` ORDER BY users.role='admin' DESC, users.status='active' DESC LIMIT 0, $rec_limit");
+            $stmt2->execute();
+            $result2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
             
-            $total_user_rec = sizeof($result);
+            $total_user_rec = sizeof($result1);
             $total_page = ceil($total_user_rec/$rec_limit);
 
-            // echo "rec = ".$total_user_rec."\nlim = ".$rec_limit."\npages = ".$total_page."\n";
+            // return ("rec = ".$total_user_rec."\nlim = ".$rec_limit."\npages = ".$total_page."\n");
 
 
-            return $this->get_userBlogId($result, $rec_limit, $total_user_rec, $total_page);
+            return $this->get_userBlogId($result2, $rec_limit, $total_user_rec, $total_page);
         }
 
 

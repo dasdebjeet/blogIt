@@ -194,6 +194,11 @@ $(document).ready(() => {
 
     }
 
+
+    var pg_num = 1
+    var art_lim
+    var total_users
+    var total_pages
     var loadUsers = () => {
         $.ajax({
             type: "POST",
@@ -201,15 +206,15 @@ $(document).ready(() => {
             data: "&fetch_userId=blog_userId"
         }).done((response) => {
             response = JSON.parse(response)
-            // console.log(response)
+            console.log(response)
             // offset = (page number - 1)*limit
 
             var users_data = response['arr']
 
-            var page_lim = response['lim']
-            var total_users = response['total_users']
-            var total_pages = response['total_page']
-            var total_pages = 20
+            art_lim = response['rec_limit']
+            total_users = response['total_users']
+            total_pages = response['total_page']
+            // var total_pages = 20
 
 
             var prev_page = 0
@@ -217,84 +222,111 @@ $(document).ready(() => {
             var next_page = 2
 
             var page_arr = []
-            var pagination_fn = (cur_page, total_pages) => {
+
+            // var offset = (pg_num - 1) * art_lim
+            // console.log(offset, total_pages, art_len)
+
+            var pagination_loader = (pg_num, total_pages) => {
+                // console.log(pg_num, total_pages)
                 page_arr = []
-                if (total_pages > 4) {
-                    page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" data_userT_page_nav="prev" data_userTpage_count="prev"><i class="fal fa-angle-left"></i></div>')
-                    for (var count = cur_page; count <= cur_page + 2; count++) {
-                        if (count == cur_page) page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" data_userTpage_count="' + count + '">' + count + '</div>')
-                        else page_arr.push('<div class="dashboard_userMgnt_pagination_count" data_userTpage_count="' + count + '">' + count + '</div>')
+                if (total_pages > 1) {
+                    if (total_pages > 3) {
+                        page_arr.push('<div class="dashboard_userMgnt_pagination_btn dashboard_page_pagination_btn_disable userMgnt_pagination_rnd"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-left"></i></div>')
+                        // page_arr.push('<div class="page_pagination_num_wrap userMgnt_pagination_rnd">')
+                        for (var count = pg_num; count <= pg_num + 2; count++) {
+                            if (count == pg_num) page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                            else page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                        }
+                        page_arr.push('<span class="dashboard_page_pagination_dots">...</span>')
+                        page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + total_pages + '">' + total_pages + '</div>')
+                        // page_arr.push('</div>')
+                        page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" dashboard_data_pg_num="' + (pg_num + 1) + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-right"></i></div>')
+
+                    } else {
+                        page_arr.push('<div class="dashboard_userMgnt_pagination_btn dashboard_page_pagination_btn_disable userMgnt_pagination_rnd"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-left"></i></div>')
+                        // page_arr.push('<div class="page_pagination_num_wrap userMgnt_pagination_rnd">')
+                        for (var count = 1; count <= total_pages; count++) {
+                            if (count == 1) page_arr.push(' <div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                            else page_arr.push(' <div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                        }
+                        // page_arr.push('</div>')
+                        page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" dashboard_data_pg_num="' + (pg_num + 1) + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-right"></i></div>')
                     }
-                    page_arr.push("...")
-                    page_arr.push('<div class="dashboard_userMgnt_pagination_count" data_userTpage_count="' + total_pages + '">' + total_pages + '</div>')
-                    page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" data_userT_page_nav="next" data_userTpage_count="next"><i class="fal fa-angle-right"></i></div>')
                 } else {
-                    page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" data_userT_page_nav="prev" data_userTpage_count="prev"><i class="fal fa-angle-left"></i></div>')
+                    page_arr.push('<div class="dashboard_userMgnt_pagination_btn dashboard_page_pagination_btn_disable userMgnt_pagination_rnd"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-left"></i></div>')
+                    // page_arr.push('<div class="page_pagination_num_wrap userMgnt_pagination_rnd">')
                     for (var count = 1; count <= total_pages; count++) {
-                        if (count == 1) page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" data_userTpage_count="' + count + '">' + count + '</div>')
-                        else page_arr.push('<div class="dashboard_userMgnt_pagination_count" data_userTpage_count="' + count + '">' + count + '</div>')
+                        if (count == 1) page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                        else page_arr.push(' <div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + count + '">' + count + '</div>')
                     }
-                    page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" data_userT_page_nav="next" data_userTpage_count="next"><i class="fal fa-angle-right"></i></div>')
+                    // page_arr.push('</div>')
+                    page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" dashboard_data_pg_num="' + (pg_num + 1) + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-right"></i></div>')
                 }
+
 
                 return page_arr
             }
 
+
             // console.log(page_arr)
-            $(".dashboard_userMgnt_pagination_con").html(pagination_fn(cur_page, total_pages))
+            $(".dashboard_userMgnt_pagination_con").html(pagination_loader(pg_num, total_pages))
 
-            var pagination_links = document.querySelectorAll('.dashboard_userMgnt_pagination_count')
-            for (const pag_link of pagination_links) {
-                pag_link.addEventListener('click', (e) => {
-                    var act_page = parseInt($(pag_link).attr('data_userTpage_count'))
-                    // console.log(act_page)
-                    console.log(parseInt(cur_page) + 2, act_page)
-                    var dummy_page = parseInt(cur_page) + 2
+            // var pagination_links = document.querySelectorAll('.dashboard_userMgnt_pagination_count')
+            // for (const pag_link of pagination_links) {
+            //     pag_link.addEventListener('click', (e) => {
+            //         var act_page = parseInt($(pag_link).attr('data_userTpage_count'))
+            //         // console.log(act_page)
+            //         console.log(parseInt(cur_page) + 2, act_page)
+            //         var dummy_page = parseInt(cur_page) + 2
 
-                    if (dummy_page == act_page) {
-                        $(".dashboard_userMgnt_pagination_con").html(pagination_fn(act_page, total_pages))
-                    }
+            //         if (dummy_page == act_page) {
+            //             $(".dashboard_userMgnt_pagination_con").html(pagination_fn(act_page, total_pages))
+            //         }
 
-                    cur_page = act_page
-                    $(pagination_links).removeClass("userMgnt_pagination_active")
-                    $(pag_link).addClass("userMgnt_pagination_active")
-                })
-            }
+            //         cur_page = act_page
+            //         $(pagination_links).removeClass("userMgnt_pagination_active")
+            //         $(pag_link).addClass("userMgnt_pagination_active")
+            //     })
+            // }
 
-            var pagination_btn = document.querySelectorAll('.dashboard_userMgnt_pagination_btn')
-            for (const pag_nav of pagination_btn) {
-                pag_nav.addEventListener('click', (e) => {
-                    // console.log($(pag_nav).attr('data_userTpage_count'))
-                    var nav_direc = $(pag_nav).attr('data_userT_page_nav')
-                    var nav_count = $(pag_nav).attr('data_userTpage_count')
+            // var pagination_btn = document.querySelectorAll('.dashboard_userMgnt_pagination_btn')
+            // for (const pag_nav of pagination_btn) {
+            //     pag_nav.addEventListener('click', (e) => {
+            //         // console.log($(pag_nav).attr('data_userTpage_count'))
+            //         var nav_direc = $(pag_nav).attr('data_userT_page_nav')
+            //         var nav_count = $(pag_nav).attr('data_userTpage_count')
 
-                    // if (prev_page > -1 && next_page < total_pages) {
-                    if (nav_direc == "prev") {
-                        prev_page -= 1
-                        next_page -= 1
-                        cur_page -= 1
-                        $(pag_nav).attr('data_userTpage_count', prev_page)
-                        $(pagination_links).removeClass("userMgnt_pagination_active")
-                        $("[data_userTpage_count=" + cur_page + "]").addClass("userMgnt_pagination_active")
+            //         // if (prev_page > -1 && next_page < total_pages) {
+            //         if (nav_direc == "prev") {
+            //             prev_page -= 1
+            //             next_page -= 1
+            //             cur_page -= 1
+            //             $(pag_nav).attr('data_userTpage_count', prev_page)
+            //             $(pagination_links).removeClass("userMgnt_pagination_active")
+            //             $("[data_userTpage_count=" + cur_page + "]").addClass("userMgnt_pagination_active")
 
-                    } else if (nav_direc == "next") {
-                        prev_page += 1
-                        next_page += 1
-                        cur_page += 1
-                        $(pag_nav).attr('data_userTpage_count', next_page)
-                        $(pagination_links).removeClass("userMgnt_pagination_active")
-                        $("[data_userTpage_count=" + cur_page + "]").addClass("userMgnt_pagination_active")
+            //         } else if (nav_direc == "next") {
+            //             prev_page += 1
+            //             next_page += 1
+            //             cur_page += 1
+            //             $(pag_nav).attr('data_userTpage_count', next_page)
+            //             $(pagination_links).removeClass("userMgnt_pagination_active")
+            //             $("[data_userTpage_count=" + cur_page + "]").addClass("userMgnt_pagination_active")
 
-                    }
+            //         }
 
-                    console.log(prev_page, cur_page, next_page, page_arr[3])
-                    // }
+            //         console.log(prev_page, cur_page, next_page, page_arr[3])
+            //         // }
 
 
-                    // $(pagination_btn).removeClass("userMgnt_pagination_active")
-                    // $(pag_nav).addClass("userMgnt_pagination_active")
-                })
-            }
+            //         // $(pagination_btn).removeClass("userMgnt_pagination_active")
+            //         // $(pag_nav).addClass("userMgnt_pagination_active")
+            //     })
+            // }
+
+
+
+
 
 
 
@@ -381,7 +413,116 @@ $(document).ready(() => {
 
 
 
+    var old_num = 1
+    var new_num
+    var pagination_fcn = (n) => {
 
+        var cur_pg = n
+        var prv_pg = parseInt(n - 1)
+        var nxt_pg = parseInt(n + 1)
+
+        new_num = cur_pg
+
+        var n_page_arr = []
+        if (new_num != old_num) {
+            if (total_pages > 3) {
+                if (cur_pg == 1) {
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_btn dashboard_page_pagination_btn_disable userMgnt_pagination_rnd"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-left"></i></div>')
+                    for (var count = pg_num; count <= pg_num + 2; count++) {
+                        if (count == pg_num) n_page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                        else n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                    }
+                    n_page_arr.push('<span class="dashboard_page_pagination_dots">...</span>')
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + total_pages + '">' + total_pages + '</div>')
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" dashboard_data_pg_num="' + nxt_pg + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-right"></i></div>')
+
+                } else if ((total_pages - cur_pg) > 4) {
+                    n_page_arr.push('<div class="page_pagination_btn" dashboard_data_pg_num="' + (prv_pg) + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-left"></i></div>')
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + (cur_pg - 1) + '">' + (cur_pg - 1) + '</div>')
+                    for (var count = cur_pg; count <= cur_pg + 1; count++) {
+                        if (count == cur_pg) n_page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                        else n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                    }
+                    n_page_arr.push('<span class="dashboard_page_pagination_dots">...</span>')
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + total_pages + '">' + total_pages + '</div>')
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" dashboard_data_pg_num="' + nxt_pg + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-right"></i></div>')
+
+                } else if (cur_pg != total_pages) {
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" dashboard_data_pg_num="' + prv_pg + '""><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-left"></i></div>')
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="1">1</div>')
+                    n_page_arr.push('<span class="dashboard_page_pagination_dots">...</span>')
+                    for (var count = cur_pg; count <= cur_pg + 2; count++) {
+                        console.log(count)
+                        if (count == cur_pg) n_page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                        else n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                    }
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" dashboard_data_pg_num="' + nxt_pg + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-right"></i></div>')
+
+                } else {
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" dashboard_data_pg_num="' + prv_pg + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-left"></i></div>')
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="1">1</div>')
+                    n_page_arr.push('<span class="dashboard_page_pagination_dots">...</span>')
+                    for (var count = cur_pg - 2; count <= cur_pg; count++) {
+                        if (count == cur_pg) n_page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                        else n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                    }
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_btn dashboard_page_pagination_btn_disable userMgnt_pagination_rnd"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-right"></i></div>')
+                }
+            } else {
+                if (cur_pg == 1) {
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" dashboard_data_pg_num="' + prv_pg + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-left"></i></div>')
+                    for (var count = pg_num; count <= total_pages - 1; count++) {
+                        if (count == pg_num) n_page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                        else n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                    }
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_count flexc" dashboard_data_pg_num="' + total_pages + '">' + total_pages + '</div>')
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_btn dashboard_page_pagination_btn_disable userMgnt_pagination_rnd" dashboard_data_pg_num="' + nxt_pg + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-right"></i></div>')
+                } else if (cur_pg == total_pages) {
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd" dashboard_data_pg_num="' + prv_pg + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-left"></i></div>')
+                    for (var count = pg_num; count <= total_pages; count++) {
+                        if (count == total_pages) n_page_arr.push('<div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                        else n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                    }
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_btn dashboard_page_pagination_btn_disable userMgnt_pagination_rnd"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-right"></i></div>')
+                } else {
+                    n_page_arr.push('<div class="page_pagination_btn" dashboard_data_pg_num="' + prv_pg + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-left"></i></div>')
+                    for (var count = 1; count < cur_pg; count++) {
+                        console.log(count, nxt_pg, prv_pg)
+                        n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                    }
+                    for (var count = cur_pg; count <= total_pages; count++) {
+                        if (count == cur_pg) n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                        else n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + count + '">' + count + '</div>')
+                    }
+                    n_page_arr.push('<div class="dashboard_userMgnt_pagination_count" dashboard_data_pg_num="' + nxt_pg + '"><div class="dashboard_userMgnt_pagination_btn_overlay"></div><i class="fal fa-angle-right"></i></div>')
+                }
+            }
+
+            return n_page_arr
+        }
+
+    }
+
+
+
+
+    $(document).on("click", (e) => {
+        if ($(e.target).hasClass("dashboard_userMgnt_pagination_count") || $(e.target).hasClass("dashboard_userMgnt_pagination_btn_overlay") && !($(e.target).hasClass("dashboard_page_pagination_btn_disable"))) {
+            if ($(e.target).hasClass("dashboard_userMgnt_pagination_btn_overlay")) var n = $(e.target).parent().attr('dashboard_data_pg_num')
+            else var n = $(e.target).attr('dashboard_data_pg_num')
+
+            if (n != undefined) {
+                n = parseInt(n)
+                console.log(typeof n)
+
+                var offset = (n - 1) * art_lim
+                $(".dashboard_userMgnt_pagination_con").html(pagination_fcn(n))
+                old_num = new_num
+            }
+        }
+
+
+    })
 
 
 
