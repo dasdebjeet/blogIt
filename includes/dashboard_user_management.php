@@ -78,13 +78,13 @@
             <!-- <div style="width:50%"></div> -->
 
             <div class="dashboard_userMgnt_pagination_con flexc">
-                <div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd"><i class="fal fa-angle-left"></i></div>
+                <!-- <div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd"><i class="fal fa-angle-left"></i></div>
                 <div class="dashboard_userMgnt_pagination_count userMgnt_pagination_active">1</div>
                 <div class="dashboard_userMgnt_pagination_count">2</div>
                 <div class="dashboard_userMgnt_pagination_count">3</div>
                 ....
                 <div class="dashboard_userMgnt_pagination_count">10</div>
-                <div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd"><i class="fal fa-angle-right"></i></div>
+                <div class="dashboard_userMgnt_pagination_btn userMgnt_pagination_rnd"><i class="fal fa-angle-right"></i></div> -->
             </div>
         </div>
 

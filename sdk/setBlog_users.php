@@ -2,9 +2,11 @@
     require_once "getblog_users.php";
 
     if(isset($_REQUEST["fetch_userId"]) == "blog_userId"){
+        $offest = $_POST["offset"];
+
         $obj = new user;
 
-        $result = $obj->get_userId();
+        $result = $obj->get_userId($offest);
         $result = json_encode($result);
         if($result){
             header('Content-Type: application/json');

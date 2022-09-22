@@ -13,7 +13,7 @@
                     $result2 = $stmt->fetchAll(PDO::FETCH_ASSOC);       
                     $arr[$i]['pubBlog_count'] = $result2[0]['pubBlog_count'];
                 }              
-                return json_encode(['arr' => $arr, 'limt' => $rec_limit, 'total_users' => $total_user_rec, 'total_page' => $total_page]);
+                return json_encode(['arr' => $arr, 'limit' => $rec_limit, 'total_users' => $total_user_rec, 'total_page' => $total_page]);
             }else{
                 return FALSE;
             }
@@ -22,15 +22,15 @@
 
 
 
-        public function get_userId(){
-            $rec_limit = 1;
+        public function get_userId($offest){
+            $rec_limit = 2;
 
             $stmt1 = $this->connect()->prepare("SELECT users.user_id, users.user_img, users.user_name, users.role, users.last_seen, users.status FROM `users` ORDER BY users.role='admin' DESC, users.status='active'");
             $stmt1->execute();
             $result1 = $stmt1->fetchAll(PDO::FETCH_ASSOC);
 
 
-            $stmt2 = $this->connect()->prepare("SELECT users.user_id, users.user_img, users.user_name, users.role, users.last_seen, users.status FROM `users` ORDER BY users.role='admin' DESC, users.status='active' DESC LIMIT 0, $rec_limit");
+            $stmt2 = $this->connect()->prepare("SELECT users.user_id, users.user_img, users.user_name, users.role, users.last_seen, users.status FROM `users` ORDER BY users.role='admin' DESC, users.status='active' DESC LIMIT $offest, $rec_limit");
             $stmt2->execute();
             $result2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
 
